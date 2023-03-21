@@ -23,7 +23,7 @@ def round_robin():
             number = number + 1
 
 
-def heat_up_cpu() -> bool:
+def heat_up_cpu():
     process_cnt = 1
     processes = []
     q = multiprocessing.Queue()
