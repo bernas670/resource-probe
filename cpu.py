@@ -15,6 +15,11 @@ def cpu_temperature() -> float:
 
 
 def round_robin():
+"""Functions to heat CPU 
+
+Based on the implementation of https://gist.github.com/ishan1608/87cb762f31b7af70a867 
+but capable of terminating when the temperature reaches a threshold
+"""
     while(True):
         number = 0
         if(number >= sys.maxsize):
@@ -24,6 +29,11 @@ def round_robin():
 
 
 def heat_up_cpu():
+"""Functions to heat CPU 
+
+Based on the implementation of https://gist.github.com/ishan1608/87cb762f31b7af70a867 
+but capable of terminating when the temperature reaches a threshold
+"""
     process_cnt = 1
     processes = []
     q = multiprocessing.Queue()

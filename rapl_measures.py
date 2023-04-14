@@ -6,13 +6,8 @@ from threading import Thread
 import time
 
 
-def get_cmap(n, name='hsv'):
-    '''Returns a function that maps each index in 0, 1, ..., n-1 to a distinct 
-    RGB color; the keyword argument name must be a standard mpl colormap name.'''
-    return plt.cm.get_cmap(name, n)
-
 class DataRAPL:
-
+	"""The DataRAPL class stores the data collected during the execution of a program """
 	def __init__(self):
 		self.durations = []
 		self.package = []
@@ -24,6 +19,7 @@ class DataRAPL:
 		self.dram.append(dram)
 
 	def save_data(self,path,name, graph):
+		"""Saves the duration, energy and dram consumption to a csv file and generates plots with the data"""
 		with open(path + "data_" + name + ".csv","w") as file:
 			writer = csv.writer(file)
 			writer.writerow(['duration','package','dram'])
@@ -37,17 +33,17 @@ class DataRAPL:
 			self.create_graphs(path,name)
 
 	def create_graphs(self, path, name):
-		
+		"""Creates 2 plots, one for Package Energy Consumption and another for DRAM Energy Consumption"""
 		plt.title("Package Energy Consumption graph")
-		plt.xlabel("Time")
-		plt.ylabel("Package Energy")
+		plt.xlabel("Time(μs)")
+		plt.ylabel("Package Energy Consumption(μJ)")
 		plt.plot(self.durations, self.package, color ="green")
 		plt.savefig(path + "pck_energy_plt_" + name + '.png')
 		plt.clf()
 
 		plt.title("Dram Energy Consumption graph")
-		plt.xlabel("Time")
-		plt.ylabel("Dram Energy")
+		plt.xlabel("Time(μs)")
+		plt.ylabel("Dram Energy Consumption(μJ)")
 		plt.plot(self.durations, self.dram, color ="green")
 		plt.savefig(path + "dram_energy_plt_" + name + '.png')
 		plt.clf()
@@ -56,8 +52,18 @@ class DataRAPL:
 
 
 class CollectorRAPL:
-
+	"""The CollectorRAPL class is responsible for executing the programs and collecting data"""
 	def __init__(self,cmd,path,name,freq = 0.0,meas_type = False,iter = 10):
+		"""
+
+			cmd - Execution cmd
+			path - Path to store collected data
+			name - Name to store the files
+			freq - Frequency of measurements (not used if meas_type = False)
+			meas_type - If measurements are done during or at the start and end of the program exec
+			iter - number of repetitions of the exec
+		"""
+
 		self.freq = float(freq)
 		self.meas_type = meas_type
 		if meas_type == True and freq <= 0.0:
@@ -68,11 +74,12 @@ class CollectorRAPL:
 		self.path = path
 		self.name = name
 
+		# Initializes the RAPL API
 		rapl.setup()
-
 		self.meter = rapl.Measurement('Energy Consumption')
 
 	def execute_thread(self):
+		# Can't use stdout=sub.PIPE because it hangs for some reason
 		cmp = sub.Popen(self.cmd, shell=True)
 		ret = cmp.wait()
 
@@ -81,7 +88,7 @@ class CollectorRAPL:
 
 
 	def collect_multiple(self):
-
+		"""Runs the program and collects data during the execution of the program"""
 		for i in range(self.iter):
 			sub_data = DataRAPL()
 			self.meter.begin()
@@ -89,7 +96,8 @@ class CollectorRAPL:
 			exec.start()
 
 			while exec.is_alive():
-				#time.sleep(self.freq)
+				#For small duration programs freq should be very low or it wont measure many time
+				time.sleep(self.freq)
 				self.meter.end()
 				sub_data.add_data(self.meter.result.duration,self.meter.result.pkg,self.meter.result.dram)
 
@@ -100,13 +108,13 @@ class CollectorRAPL:
 
 
 	def collect_single(self):
+		"""Runs the program and collects data only at the start and end of the execution of the program"""
 		data = DataRAPL()
 
 		for i in range(self.iter):
 			print(self.cmd)
 			self.meter.begin()
-			#res = sub.run(self.cmd.split(" "), shell=True, capture_output=True, text=True)
-
+			# Can't use stdout=sub.PIPE because it hangs for some reason
 			cmp = sub.Popen(self.cmd, shell=True)
 			ret = cmp.wait()
 
@@ -132,12 +140,10 @@ def main():
 	#col = CollectorRAPL("python3 test/test.py","test/","test2",0.1,True)
 
 	#col.collect_multiple()
+	pass
 	 
 
 
 
 if __name__ == '__main__':
 	main()
-
-#Result(label='bar', timestamp=1681220978.6671045, duration=2494.895, pkg=[57739.0], dram=[977.0])
-#Result(label='bar', timestamp=1681220978.6671045, duration=5070.584, pkg=[105529.0], dram=[1526.0])
