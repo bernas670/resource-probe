@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess as sub
 
 def print_errors(errors):
@@ -6,18 +7,24 @@ def print_errors(errors):
 	for error in errors:
 		print("->" + error)
 
-def compile_all() -> int:
+def action_all(action) -> int:
 	errors = []
 
 	directory = "."
-	for filename in os.scandir(directory):
-		if filename.is_dir() and filename.name != "__pycache__" and filename.name != ".git" and filename.name != "Compilers":
-			print("Compiling: "+ filename.path)
-			cmp = sub.Popen("cd " + filename.path + " && make compile", shell=True, stdout=sub.PIPE,stderr=sub.STDOUT)
-			ret = cmp.wait()
 
-			if ret != 0:
-			   errors.append(filename.path)
+	exclude = set(['Compilers','__pycache__','.git'])
+
+	for root,dirs,files in os.walk(directory):
+		dirs[:] = [d for d in dirs if d not in exclude]
+
+		for file in files:
+				if file == "Makefile" and root != ".":
+					print("Compiling: "+ root + "/" + file)
+					cmp = sub.Popen("cd " + root + " && make " + action, shell=True, stdout=sub.PIPE,stderr=sub.STDOUT)
+					ret = cmp.wait()
+
+					if ret != 0:
+			   			errors.append(root + "/" + file)
 
 	if len(errors) != 0:
 		print_errors(errors)
@@ -30,7 +37,11 @@ def compile_all() -> int:
 
 
 def main() -> int:
-	return compile_all()
+	if len(sys.argv) != 2 and sys.argv[1] not in ['compile','run', 'measure', 'clean']:
+		print("Usage: Python3 compile_all.py [compile | run | measure]")
+		return -1
+	else:
+		return action_all(sys.argv[1])
 
 
 if __name__ == '__main__':
