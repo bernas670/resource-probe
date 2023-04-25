@@ -1,3 +1,3 @@
 
 compile:
-	
+	cat test

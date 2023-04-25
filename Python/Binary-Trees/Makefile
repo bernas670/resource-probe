@@ -1,0 +1,3 @@
+
+compile:
+	touch test.txt

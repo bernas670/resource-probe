@@ -1,5 +1,6 @@
+ERR = $(error Compilation Failed!)
 
-compile:
-	echo $DISS_C
-	echo $DISS_JAVA
-	echo $DISS_PYTHON
+compile: 
+	python3 ../compile_all.py ; [ $? -eq -1 ] && $(ERR)
+
+#TODO: ADD OPTIONS

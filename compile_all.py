@@ -6,12 +6,12 @@ def print_errors(errors):
 	for error in errors:
 		print("->" + error)
 
-def compile_all():
+def compile_all() -> int:
 	errors = []
 
 	directory = "."
 	for filename in os.scandir(directory):
-		if filename.is_dir() and filename.name != "__pycache__" and filename.name != ".git":
+		if filename.is_dir() and filename.name != "__pycache__" and filename.name != ".git" and filename.name != "Compilers":
 			print("Compiling: "+ filename.path)
 			cmp = sub.Popen("cd " + filename.path + " && make compile", shell=True, stdout=sub.PIPE,stderr=sub.STDOUT)
 			ret = cmp.wait()
@@ -21,13 +21,16 @@ def compile_all():
 
 	if len(errors) != 0:
 		print_errors(errors)
+		return -1
 	else:
 		print("All makefiles ran without errors")
+		return 0
 
 
 
-def main():
-	compile_all()
+
+def main() -> int:
+	return compile_all()
 
 
 if __name__ == '__main__':
