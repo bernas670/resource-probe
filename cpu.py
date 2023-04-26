@@ -15,11 +15,11 @@ def cpu_temperature() -> float:
 
 
 def round_robin():
-"""Functions to heat CPU 
+    """Functions to heat CPU 
 
-Based on the implementation of https://gist.github.com/ishan1608/87cb762f31b7af70a867 
-but capable of terminating when the temperature reaches a threshold
-"""
+    Based on the implementation of https://gist.github.com/ishan1608/87cb762f31b7af70a867 
+    but capable of terminating when the temperature reaches a threshold
+    """
     while(True):
         number = 0
         if(number >= sys.maxsize):
@@ -28,18 +28,18 @@ but capable of terminating when the temperature reaches a threshold
             number = number + 1
 
 
-def heat_up_cpu():
-"""Functions to heat CPU 
-
-Based on the implementation of https://gist.github.com/ishan1608/87cb762f31b7af70a867 
-but capable of terminating when the temperature reaches a threshold
-"""
+def heat_up_cpu(temperature):
+    """Functions to heat CPU 
+    
+    Based on the implementation of https://gist.github.com/ishan1608/87cb762f31b7af70a867 
+    but capable of terminating when the temperature reaches a threshold
+    """
     process_cnt = 1
     processes = []
     q = multiprocessing.Queue()
 
     print("[CPU] - Spawning Processes to to Heat up CPU")
-    while(process_cnt <= multiprocessing.cpu_count() or cpu_temperature() > 60.0):
+    while(process_cnt <= multiprocessing.cpu_count() or cpu_temperature() > temperature):
         temp = multiprocessing.Process(target=round_robin)
         processes.append(temp)
         temp.start()
@@ -47,7 +47,7 @@ but capable of terminating when the temperature reaches a threshold
 
     print("[CPU] - Awaiting for spawned Processes to Finish or CPU temperature get high enough")
     cpu_temp = cpu_temperature()
-    while (cpu_temp < 60.0):
+    while (cpu_temp < temperature):
         cpu_temp = cpu_temperature()
 
     for process in processes:
