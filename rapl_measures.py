@@ -53,30 +53,42 @@ class DataRAPL:
 
 class CollectorRAPL:
 	"""The CollectorRAPL class is responsible for executing the programs and collecting data"""
-	def __init__(self,cmd,path,name,freq = 0.0,meas_type = False,iter = 10):
+	def __init__(self, cmd, path, name, freq = 0.0, multithreaded = False, iter = 10, energy = True, memory = True):
 		"""
-
 			cmd - Execution cmd
 			path - Path to store collected data
 			name - Name to store the files
-			freq - Frequency of measurements (not used if meas_type = False)
-			meas_type - If measurements are done during or at the start and end of the program exec
+			freq - Frequency of measurements (not used if multithreaded = False)
+			multithreaded - If measurements are done during or at the start and end of the program exec
 			iter - number of repetitions of the exec
 		"""
 
 		self.freq = float(freq)
-		self.meas_type = meas_type
-		if meas_type == True and freq <= 0.0:
+		self.multithreaded = multithreaded
+		if multithreaded == True and freq <= 0.0:
 			raise Exception("Measurement Frequency cannot be below or equal to zero")
 
 		self.iter = int(iter)
 		self.cmd = cmd
 		self.path = path
 		self.name = name
+		self.energy = energy
+		self.memory = memory
 
 		# Initializes the RAPL API
 		rapl.setup()
 		self.meter = rapl.Measurement('Energy Consumption')
+  
+	def execute_command(self):
+		if self.memory:
+			process = sub.Popen(f"/usr/bin/time -f '%M' {self.command}", shell=True, stdout=sub.DEVNULL, stderr=sub.PIPE)
+		else:
+			process = sub.Popen(self.cmd, shell=True)
+		
+		process.wait()
+   
+		return process
+
 
 	def execute_thread(self):
 		# Can't use stdout=sub.PIPE because it hangs for some reason
@@ -92,7 +104,7 @@ class CollectorRAPL:
 		for i in range(self.iter):
 			sub_data = DataRAPL()
 			self.meter.begin()
-			exec = Thread(target=self.execute_thread)
+			exec = Thread(target=self.execute_command)
 			exec.start()
 
 			while exec.is_alive():
@@ -101,10 +113,16 @@ class CollectorRAPL:
 				self.meter.end()
 				sub_data.add_data(self.meter.result.duration,self.meter.result.pkg,self.meter.result.dram)
 
-			exec.join()
+			process = exec.join()
+			if process.returncode != 0:
+				raise Exception("[" + self.cmd +"] - Error when executing this command")
+   
+			if self.memory:
+				# TODO: add logic to save peak_rss
+				peak_rss = int(process.stderr.read().decode().strip())
+				print(peak_rss)
+   
 			sub_data.save_data(self.path,self.name + str(i),True)
-
-
 
 
 	def collect_single(self):
@@ -114,36 +132,30 @@ class CollectorRAPL:
 		for i in range(self.iter):
 			print(self.cmd)
 			self.meter.begin()
+   
+   
+			process = self.execute_command()
 			# Can't use stdout=sub.PIPE because it hangs for some reason
-			cmp = sub.Popen(self.cmd, shell=True)
-			ret = cmp.wait()
+			# cmp = sub.Popen(self.cmd, shell=True)
+			# ret = cmp.wait()
 
 			self.meter.end()
-			print(ret)
-			if ret != 0:
-			   raise Exception("[" + self.cmd +"] - Error when executing this command")
+   
+			if process.returncode != 0:
+				raise Exception("[" + self.cmd +"] - Error when executing this command")
+
+			if self.memory:
+				# TODO: add logic to save peak_rss
+				peak_rss = int(process.stderr.read().decode().strip())
+				print(peak_rss)
 
 			data.add_data(self.meter.result.duration,self.meter.result.pkg,self.meter.result.dram)
 
 		data.save_data(self.path,self.name,False)
 
 
-
-
-
-
-def main():
-	#col = CollectorRAPL("python3 test/test.py","test/","test",2.0,True)
-
-	#col.collect_single()
-
-	#col = CollectorRAPL("python3 test/test.py","test/","test2",0.1,True)
-
-	#col.collect_multiple()
-	pass
-	 
-
-
-
-if __name__ == '__main__':
-	main()
+	def collect(self):
+		if self.multithreaded:
+			self.collect_multiple()
+		else:
+			self.collect_single()
