@@ -38,7 +38,7 @@ def action_all(action) -> int:
 
 def main() -> int:
 	if len(sys.argv) != 2 and sys.argv[1] not in ['compile','run', 'measure', 'clean']:
-		print("Usage: Python3 compile_all.py [compile | run | measure]")
+		print("Usage: Python3 compile_all.py [compile | run | measure | clean]")
 		return -1
 	else:
 		return action_all(sys.argv[1])
