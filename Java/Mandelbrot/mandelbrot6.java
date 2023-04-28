@@ -12,7 +12,7 @@
 import java.io.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public final class mandelbrot {
+public final class mandelbrot6 {
     static byte[][] out;
     static AtomicInteger yCt;
     static double[] Crb;

@@ -11,7 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class binarytrees {
+public class binarytrees7 {
 
     private static final int MIN_DEPTH = 4;
     private static final ExecutorService EXECUTOR_SERVICE = 

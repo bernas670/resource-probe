@@ -9,7 +9,7 @@
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public final class fannkuchredux implements Runnable
+public final class fannkuchredux3 implements Runnable
 {
     private static final int NCHUNKS = 150;
     private static       int CHUNKSZ;
@@ -159,7 +159,7 @@ public final class fannkuchredux implements Runnable
         int nthreads = 1;
         Thread[] threads = new Thread[nthreads];
         for ( int i=0; i<nthreads; ++i ) {
-            threads[i] = new Thread( new fannkuchredux() );
+            threads[i] = new Thread( new fannkuchredux3() );
             threads[i].start();
         }
         for ( Thread t : threads ) {

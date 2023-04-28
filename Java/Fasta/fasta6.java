@@ -13,7 +13,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class fasta {
+public class fasta6 {
     /** Maximum length of the FASTA sequence lines. */
     private static final int LINE_LENGTH = 60;
 

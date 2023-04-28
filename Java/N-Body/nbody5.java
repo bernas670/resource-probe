@@ -5,7 +5,7 @@
    double[] instead of Object[] by Han Kai
 */
 
-public final class nbody {
+public final class nbody5 {
    public static void main(String[] args) {
       int n = Integer.parseInt(args[0]);
 

@@ -9,7 +9,7 @@ import java.util.*;
 import java.io.*;
 import java.util.concurrent.*;
 
-public class knucleotide {
+public class knucleotide6 {
     static ArrayList<Callable< Map<ByteString, ByteString> > > createFragmentTasks(final byte[] sequence, int[] fragmentLengths) {
 	ArrayList<Callable<Map<ByteString, ByteString>>> tasks = new ArrayList<Callable<Map<ByteString, ByteString>>>();
 	for (int fragmentLength : fragmentLengths) {

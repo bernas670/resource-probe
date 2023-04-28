@@ -2,8 +2,8 @@ import os
 import sys
 import subprocess as sub
 
-def print_errors(errors):
-	print("The makefiles of the following folders failed to compile")
+def print_errors(errors, action):
+	print("The makefiles of the following folders failed to " + action)
 	for error in errors:
 		print("->" + error)
 
@@ -19,7 +19,7 @@ def action_all(action) -> int:
 
 		for file in files:
 				if file == "Makefile" and root != ".":
-					print("Compiling: "+ root + "/" + file)
+					print("Performing " + action +": "+ root + "/" + file)
 					cmp = sub.Popen("cd " + root + " && make " + action, shell=True, stdout=sub.PIPE,stderr=sub.STDOUT)
 					ret = cmp.wait()
 
@@ -27,7 +27,7 @@ def action_all(action) -> int:
 			   			errors.append(root + "/" + file)
 
 	if len(errors) != 0:
-		print_errors(errors)
+		print_errors(errors, action)
 		return -1
 	else:
 		print("All makefiles ran without errors")

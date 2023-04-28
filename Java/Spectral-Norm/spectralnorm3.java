@@ -8,7 +8,7 @@ based on the Go entry by K P anonymous
 
 import java.text.DecimalFormat;
 
-public class spectralnorm {
+public class spectralnorm3 {
     private static final DecimalFormat formatter = new DecimalFormat("#.000000000");
     private static final int NCPU = Runtime.getRuntime().availableProcessors();
 

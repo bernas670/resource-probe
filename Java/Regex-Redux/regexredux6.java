@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.regex.Pattern;
 import java.util.stream.*;
 
-public class regexredux {
+public class regexredux6 {
 
     public static void main(String[] args) throws IOException {
 

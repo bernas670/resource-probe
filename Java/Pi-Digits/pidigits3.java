@@ -3,7 +3,7 @@
 //
 // Translated from Mr Ledrug's C program by Jeremy Zerfas.
 
-final class pidigits extends Java_GMP_Wrapper{
+final class pidigits3 extends Java_GMP_Wrapper{
     // These variables are used to store pointers to the GMP numbers we will be
     // using in this program. These pointers are being stored as Java 64 bit
     // signed longs and this could potentially cause a few problems. One problem
