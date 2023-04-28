@@ -7,7 +7,7 @@ def main(command, temperature, energy, memory, multithreaded, interval, repetiti
     # TODO: implement --no-energy
     # TODO: save memory measurements
     
-    collector = CollectorRAPL(command, "/test", "test", interval, multithreaded, repetitions, energy, memory)
+    collector = CollectorRAPL(command, "./test", "test", interval, multithreaded, repetitions, energy, memory)
     collector.collect()
     
     return 

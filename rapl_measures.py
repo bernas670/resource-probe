@@ -20,7 +20,8 @@ class DataRAPL:
 
 	def save_data(self,path,name, graph):
 		"""Saves the duration, energy and dram consumption to a csv file and generates plots with the data"""
-		with open(path + "data_" + name + ".csv","w") as file:
+		print(path)
+		with open(path + "/data_" + name + ".csv","w") as file:
 			writer = csv.writer(file)
 			writer.writerow(['duration','package','dram'])
 
@@ -81,7 +82,7 @@ class CollectorRAPL:
   
 	def execute_command(self):
 		if self.memory:
-			process = sub.Popen(f"/usr/bin/time -f '%M' {self.command}", shell=True, stdout=sub.DEVNULL, stderr=sub.PIPE)
+			process = sub.Popen(f"/usr/bin/time -f '%M' {self.cmd}", shell=True, stdout=sub.DEVNULL, stderr=sub.PIPE)
 		else:
 			process = sub.Popen(self.cmd, shell=True)
 		
