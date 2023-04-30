@@ -39,22 +39,22 @@ clean:
 	rm -r -f java-20
 
 run:
-	-(cd ./java-6 && $(JAVA6)java spectralnorm3); cd ..
-	-(cd ./java-7 && $(JAVA7)java spectralnorm3); cd ..
-	-(cd ./java-8.0 && $(JAVA80)java spectralnorm3); cd ..
-	-(cd ./java-8.1 && $(JAVA81)java spectralnorm3); cd ..
-	-(cd ./java-9 && $(JAVA9)java spectralnorm3); cd ..
-	-(cd ./java-10 && $(JAVA10)java spectralnorm3); cd ..
-	-(cd ./java-11 && $(JAVA11)java spectralnorm3); cd ..
-	-(cd ./java-12 && $(JAVA12)java spectralnorm3); cd ..
-	-(cd ./java-13 && $(JAVA13)java spectralnorm3); cd ..
-	-(cd ./java-14 && $(JAVA14)java spectralnorm3); cd ..
-	-(cd ./java-15 && $(JAVA15)java spectralnorm3); cd ..
-	-(cd ./java-16 && $(JAVA16)java spectralnorm3); cd ..
-	-(cd ./java-17 && $(JAVA17)java spectralnorm3); cd ..
-	-(cd ./java-18 && $(JAVA18)java spectralnorm3); cd ..
-	-(cd ./java-19 && $(JAVA19)java spectralnorm3); cd ..
-	-(cd ./java-20 && $(JAVA20)java spectralnorm3); cd ..
+#	(cd ./java-6 && $(JAVA6)java spectralnorm3); cd ..
+#	(cd ./java-7 && $(JAVA7)java spectralnorm3); cd ..
+#	(cd ./java-8.0 && $(JAVA80)java spectralnorm3); cd ..
+#	(cd ./java-8.1 && $(JAVA81)java spectralnorm3); cd ..
+#	(cd ./java-9 && $(JAVA9)java spectralnorm3); cd ..
+	(cd ./java-10 && $(JAVA10)java spectralnorm3); cd ..
+	(cd ./java-11 && $(JAVA11)java spectralnorm3); cd ..
+	(cd ./java-12 && $(JAVA12)java spectralnorm3); cd ..
+	(cd ./java-13 && $(JAVA13)java spectralnorm3); cd ..
+	(cd ./java-14 && $(JAVA14)java spectralnorm3); cd ..
+	(cd ./java-15 && $(JAVA15)java spectralnorm3); cd ..
+	(cd ./java-16 && $(JAVA16)java spectralnorm3); cd ..
+	(cd ./java-17 && $(JAVA17)java spectralnorm3); cd ..
+	(cd ./java-18 && $(JAVA18)java spectralnorm3); cd ..
+	(cd ./java-19 && $(JAVA19)java spectralnorm3); cd ..
+	(cd ./java-20 && $(JAVA20)java spectralnorm3); cd ..
 
 	
 
@@ -80,36 +80,36 @@ make_dirs:
 	mkdir -p java-20
 
 copy_files:
-	sudo cp spectralnorm3.java ./java-6/spectralnorm3.java
-	-$(JAVA6)javac ./java-6/spectralnorm3.java
-	sudo cp spectralnorm3.java ./java-7/spectralnorm3.java
-	-$(JAVA7)javac ./java-7/spectralnorm3.java
-	sudo cp spectralnorm3.java ./java-8.0/spectralnorm3.java
-	-$(JAVA80)javac ./java-8.0/spectralnorm3.java
-	sudo cp spectralnorm3.java ./java-8.1/spectralnorm3.java
-	-$(JAVA81)javac ./java-8.1/spectralnorm3.java
-	sudo cp spectralnorm3.java ./java-9/spectralnorm3.java
-	-$(JAVA9)javac ./java-9/spectralnorm3.java
+#	sudo cp spectralnorm3.java ./java-6/spectralnorm3.java
+#	$(JAVA6)javac ./java-6/spectralnorm3.java
+#	sudo cp spectralnorm3.java ./java-7/spectralnorm3.java
+#	$(JAVA7)javac ./java-7/spectralnorm3.java
+#	sudo cp spectralnorm3.java ./java-8.0/spectralnorm3.java
+#	$(JAVA80)javac ./java-8.0/spectralnorm3.java
+#	sudo cp spectralnorm3.java ./java-8.1/spectralnorm3.java
+#	$(JAVA81)javac ./java-8.1/spectralnorm3.java
+#	sudo cp spectralnorm3.java ./java-9/spectralnorm3.java
+#	$(JAVA9)javac ./java-9/spectralnorm3.java
 	sudo cp spectralnorm3.java ./java-10/spectralnorm3.java
-	-$(JAVA10)javac ./java-10/spectralnorm3.java
+	$(JAVA10)javac ./java-10/spectralnorm3.java
 	sudo cp spectralnorm3.java ./java-11/spectralnorm3.java
-	-$(JAVA11)javac ./java-11/spectralnorm3.java
+	$(JAVA11)javac ./java-11/spectralnorm3.java
 	sudo cp spectralnorm3.java ./java-12/spectralnorm3.java
-	-$(JAVA12)javac ./java-12/spectralnorm3.java
+	$(JAVA12)javac ./java-12/spectralnorm3.java
 	sudo cp spectralnorm3.java ./java-13/spectralnorm3.java
-	-$(JAVA13)javac ./java-13/spectralnorm3.java
+	$(JAVA13)javac ./java-13/spectralnorm3.java
 	sudo cp spectralnorm3.java ./java-14/spectralnorm3.java
-	-$(JAVA14)javac ./java-14/spectralnorm3.java
+	$(JAVA14)javac ./java-14/spectralnorm3.java
 	sudo cp spectralnorm3.java ./java-15/spectralnorm3.java
-	-$(JAVA15)javac ./java-15/spectralnorm3.java
+	$(JAVA15)javac ./java-15/spectralnorm3.java
 	sudo cp spectralnorm3.java ./java-16/spectralnorm3.java
-	-$(JAVA16)javac ./java-16/spectralnorm3.java
+	$(JAVA16)javac ./java-16/spectralnorm3.java
 	sudo cp spectralnorm3.java ./java-17/spectralnorm3.java 
-	-$(JAVA17)javac ./java-17/spectralnorm3.java
+	$(JAVA17)javac ./java-17/spectralnorm3.java
 	sudo cp spectralnorm3.java ./java-18/spectralnorm3.java
-	-$(JAVA18)javac ./java-18/spectralnorm3.java 
+	$(JAVA18)javac ./java-18/spectralnorm3.java 
 	sudo cp spectralnorm3.java ./java-19/spectralnorm3.java
-	-$(JAVA19)javac ./java-19/spectralnorm3.java
+	$(JAVA19)javac ./java-19/spectralnorm3.java
 	sudo cp spectralnorm3.java ./java-20/spectralnorm3.java
-	-$(JAVA20)javac ./java-20/spectralnorm3.java
+	$(JAVA20)javac ./java-20/spectralnorm3.java
 	

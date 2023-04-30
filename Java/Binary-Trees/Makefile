@@ -39,22 +39,22 @@ clean:
 	rm -r -f java-20
 
 run:
-	-(cd ./java-6 && $(JAVA6)java binarytrees7 21); cd ..
-	-(cd ./java-7 && $(JAVA7)java binarytrees7 21); cd ..
-	-(cd ./java-8.0 && $(JAVA80)java binarytrees7 21); cd ..
-	-(cd ./java-8.1 && $(JAVA81)java binarytrees7 21); cd ..
-	-(cd ./java-9 && $(JAVA9)java binarytrees7 21); cd ..
-	-(cd ./java-10 && $(JAVA10)java binarytrees7 21); cd ..
-	-(cd ./java-11 && $(JAVA11)java binarytrees7 21); cd ..
-	-(cd ./java-12 && $(JAVA12)java binarytrees7 21); cd ..
-	-(cd ./java-13 && $(JAVA13)java binarytrees7 21); cd ..
-	-(cd ./java-14 && $(JAVA14)java binarytrees7 21); cd ..
-	-(cd ./java-15 && $(JAVA15)java binarytrees7 21); cd ..
-	-(cd ./java-16 && $(JAVA16)java binarytrees7 21); cd ..
-	-(cd ./java-17 && $(JAVA17)java binarytrees7 21); cd ..
-	-(cd ./java-18 && $(JAVA18)java binarytrees7 21); cd ..
-	-(cd ./java-19 && $(JAVA19)java binarytrees7 21); cd ..
-	-(cd ./java-20 && $(JAVA20)java binarytrees7 21); cd ..
+#	(cd ./java-6 && $(JAVA6)java binarytrees7 21); cd ..
+#	(cd ./java-7 && $(JAVA7)java binarytrees7 21); cd ..
+	(cd ./java-8.0 && $(JAVA80)java binarytrees7 21); cd ..
+	(cd ./java-8.1 && $(JAVA81)java binarytrees7 21); cd ..
+	(cd ./java-9 && $(JAVA9)java binarytrees7 21); cd ..
+	(cd ./java-10 && $(JAVA10)java binarytrees7 21); cd ..
+	(cd ./java-11 && $(JAVA11)java binarytrees7 21); cd ..
+	(cd ./java-12 && $(JAVA12)java binarytrees7 21); cd ..
+	(cd ./java-13 && $(JAVA13)java binarytrees7 21); cd ..
+	(cd ./java-14 && $(JAVA14)java binarytrees7 21); cd ..
+	(cd ./java-15 && $(JAVA15)java binarytrees7 21); cd ..
+	(cd ./java-16 && $(JAVA16)java binarytrees7 21); cd ..
+	(cd ./java-17 && $(JAVA17)java binarytrees7 21); cd ..
+	(cd ./java-18 && $(JAVA18)java binarytrees7 21); cd ..
+	(cd ./java-19 && $(JAVA19)java binarytrees7 21); cd ..
+	(cd ./java-20 && $(JAVA20)java binarytrees7 21); cd ..
 
 	
 
@@ -80,36 +80,36 @@ make_dirs:
 	mkdir -p java-20
 
 copy_files:
-	sudo cp binarytrees7.java ./java-6/binarytrees7.java
-	-$(JAVA6)javac ./java-6/binarytrees7.java
-	sudo cp binarytrees7.java ./java-7/binarytrees7.java
-	-$(JAVA7)javac ./java-7/binarytrees7.java
+#	sudo cp binarytrees7.java ./java-6/binarytrees7.java
+#	$(JAVA6)javac ./java-6/binarytrees7.java
+#	sudo cp binarytrees7.java ./java-7/binarytrees7.java
+#	$(JAVA7)javac ./java-7/binarytrees7.java
 	sudo cp binarytrees7.java ./java-8.0/binarytrees7.java
-	-$(JAVA80)javac ./java-8.0/binarytrees7.java
+	$(JAVA80)javac ./java-8.0/binarytrees7.java
 	sudo cp binarytrees7.java ./java-8.1/binarytrees7.java
-	-$(JAVA81)javac ./java-8.1/binarytrees7.java
+	$(JAVA81)javac ./java-8.1/binarytrees7.java
 	sudo cp binarytrees7.java ./java-9/binarytrees7.java
-	-$(JAVA9)javac ./java-9/binarytrees7.java
+	$(JAVA9)javac ./java-9/binarytrees7.java
 	sudo cp binarytrees7.java ./java-10/binarytrees7.java
-	-$(JAVA10)javac ./java-10/binarytrees7.java
+	$(JAVA10)javac ./java-10/binarytrees7.java
 	sudo cp binarytrees7.java ./java-11/binarytrees7.java
-	-$(JAVA11)javac ./java-11/binarytrees7.java
+	$(JAVA11)javac ./java-11/binarytrees7.java
 	sudo cp binarytrees7.java ./java-12/binarytrees7.java
-	-$(JAVA12)javac ./java-12/binarytrees7.java
+	$(JAVA12)javac ./java-12/binarytrees7.java
 	sudo cp binarytrees7.java ./java-13/binarytrees7.java
-	-$(JAVA13)javac ./java-13/binarytrees7.java
+	$(JAVA13)javac ./java-13/binarytrees7.java
 	sudo cp binarytrees7.java ./java-14/binarytrees7.java
-	-$(JAVA14)javac ./java-14/binarytrees7.java
+	$(JAVA14)javac ./java-14/binarytrees7.java
 	sudo cp binarytrees7.java ./java-15/binarytrees7.java
-	-$(JAVA15)javac ./java-15/binarytrees7.java
+	$(JAVA15)javac ./java-15/binarytrees7.java
 	sudo cp binarytrees7.java ./java-16/binarytrees7.java
-	-$(JAVA16)javac ./java-16/binarytrees7.java
+	$(JAVA16)javac ./java-16/binarytrees7.java
 	sudo cp binarytrees7.java ./java-17/binarytrees7.java 
-	-$(JAVA17)javac ./java-17/binarytrees7.java
+	$(JAVA17)javac ./java-17/binarytrees7.java
 	sudo cp binarytrees7.java ./java-18/binarytrees7.java
-	-$(JAVA18)javac ./java-18/binarytrees7.java 
+	$(JAVA18)javac ./java-18/binarytrees7.java 
 	sudo cp binarytrees7.java ./java-19/binarytrees7.java
-	-$(JAVA19)javac ./java-19/binarytrees7.java
+	$(JAVA19)javac ./java-19/binarytrees7.java
 	sudo cp binarytrees7.java ./java-20/binarytrees7.java
-	-$(JAVA20)javac ./java-20/binarytrees7.java
+	$(JAVA20)javac ./java-20/binarytrees7.java
 	

@@ -39,22 +39,22 @@ clean:
 	rm -r -f java-20
 
 run:
-	-(cd ./java-6 && $(JAVA6)java mandelbrot6); cd ..
-	-(cd ./java-7 && $(JAVA7)java mandelbrot6); cd ..
-	-(cd ./java-8.0 && $(JAVA80)java mandelbrot6); cd ..
-	-(cd ./java-8.1 && $(JAVA81)java mandelbrot6); cd ..
-	-(cd ./java-9 && $(JAVA9)java mandelbrot6); cd ..
-	-(cd ./java-10 && $(JAVA10)java mandelbrot6); cd ..
-	-(cd ./java-11 && $(JAVA11)java mandelbrot6); cd ..
-	-(cd ./java-12 && $(JAVA12)java mandelbrot6); cd ..
-	-(cd ./java-13 && $(JAVA13)java mandelbrot6); cd ..
-	-(cd ./java-14 && $(JAVA14)java mandelbrot6); cd ..
-	-(cd ./java-15 && $(JAVA15)java mandelbrot6); cd ..
-	-(cd ./java-16 && $(JAVA16)java mandelbrot6); cd ..
-	-(cd ./java-17 && $(JAVA17)java mandelbrot6); cd ..
-	-(cd ./java-18 && $(JAVA18)java mandelbrot6); cd ..
-	-(cd ./java-19 && $(JAVA19)java mandelbrot6); cd ..
-	-(cd ./java-20 && $(JAVA20)java mandelbrot6); cd ..
+	(cd ./java-6 && $(JAVA6)java mandelbrot6); cd ..
+	(cd ./java-7 && $(JAVA7)java mandelbrot6); cd ..
+	(cd ./java-8.0 && $(JAVA80)java mandelbrot6); cd ..
+	(cd ./java-8.1 && $(JAVA81)java mandelbrot6); cd ..
+	(cd ./java-9 && $(JAVA9)java mandelbrot6); cd ..
+	(cd ./java-10 && $(JAVA10)java mandelbrot6); cd ..
+	(cd ./java-11 && $(JAVA11)java mandelbrot6); cd ..
+	(cd ./java-12 && $(JAVA12)java mandelbrot6); cd ..
+	(cd ./java-13 && $(JAVA13)java mandelbrot6); cd ..
+	(cd ./java-14 && $(JAVA14)java mandelbrot6); cd ..
+	(cd ./java-15 && $(JAVA15)java mandelbrot6); cd ..
+	(cd ./java-16 && $(JAVA16)java mandelbrot6); cd ..
+	(cd ./java-17 && $(JAVA17)java mandelbrot6); cd ..
+	(cd ./java-18 && $(JAVA18)java mandelbrot6); cd ..
+	(cd ./java-19 && $(JAVA19)java mandelbrot6); cd ..
+	(cd ./java-20 && $(JAVA20)java mandelbrot6); cd ..
 
 	
 
@@ -81,35 +81,35 @@ make_dirs:
 
 copy_files:
 	sudo cp mandelbrot6.java ./java-6/mandelbrot6.java
-	-$(JAVA6)javac ./java-6/mandelbrot6.java
+	$(JAVA6)javac ./java-6/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-7/mandelbrot6.java
-	-$(JAVA7)javac ./java-7/mandelbrot6.java
+	$(JAVA7)javac ./java-7/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-8.0/mandelbrot6.java
-	-$(JAVA80)javac ./java-8.0/mandelbrot6.java
+	$(JAVA80)javac ./java-8.0/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-8.1/mandelbrot6.java
-	-$(JAVA81)javac ./java-8.1/mandelbrot6.java
+	$(JAVA81)javac ./java-8.1/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-9/mandelbrot6.java
-	-$(JAVA9)javac ./java-9/mandelbrot6.java
+	$(JAVA9)javac ./java-9/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-10/mandelbrot6.java
-	-$(JAVA10)javac ./java-10/mandelbrot6.java
+	$(JAVA10)javac ./java-10/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-11/mandelbrot6.java
-	-$(JAVA11)javac ./java-11/mandelbrot6.java
+	$(JAVA11)javac ./java-11/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-12/mandelbrot6.java
-	-$(JAVA12)javac ./java-12/mandelbrot6.java
+	$(JAVA12)javac ./java-12/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-13/mandelbrot6.java
-	-$(JAVA13)javac ./java-13/mandelbrot6.java
+	$(JAVA13)javac ./java-13/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-14/mandelbrot6.java
-	-$(JAVA14)javac ./java-14/mandelbrot6.java
+	$(JAVA14)javac ./java-14/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-15/mandelbrot6.java
-	-$(JAVA15)javac ./java-15/mandelbrot6.java
+	$(JAVA15)javac ./java-15/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-16/mandelbrot6.java
-	-$(JAVA16)javac ./java-16/mandelbrot6.java
+	$(JAVA16)javac ./java-16/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-17/mandelbrot6.java 
-	-$(JAVA17)javac ./java-17/mandelbrot6.java
+	$(JAVA17)javac ./java-17/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-18/mandelbrot6.java
-	-$(JAVA18)javac ./java-18/mandelbrot6.java 
+	$(JAVA18)javac ./java-18/mandelbrot6.java 
 	sudo cp mandelbrot6.java ./java-19/mandelbrot6.java
-	-$(JAVA19)javac ./java-19/mandelbrot6.java
+	$(JAVA19)javac ./java-19/mandelbrot6.java
 	sudo cp mandelbrot6.java ./java-20/mandelbrot6.java
-	-$(JAVA20)javac ./java-20/mandelbrot6.java
+	$(JAVA20)javac ./java-20/mandelbrot6.java
 	

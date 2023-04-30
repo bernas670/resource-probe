@@ -39,22 +39,22 @@ clean:
 	rm -r -f java-20
 
 run:
-	-(cd ./java-6 && $(JAVA6)java fannkuchredux3); cd ..
-	-(cd ./java-7 && $(JAVA7)java fannkuchredux3); cd ..
-	-(cd ./java-8.0 && $(JAVA80)java fannkuchredux3); cd ..
-	-(cd ./java-8.1 && $(JAVA81)java fannkuchredux3); cd ..
-	-(cd ./java-9 && $(JAVA9)java fannkuchredux3); cd ..
-	-(cd ./java-10 && $(JAVA10)java fannkuchredux3); cd ..
-	-(cd ./java-11 && $(JAVA11)java fannkuchredux3); cd ..
-	-(cd ./java-12 && $(JAVA12)java fannkuchredux3); cd ..
-	-(cd ./java-13 && $(JAVA13)java fannkuchredux3); cd ..
-	-(cd ./java-14 && $(JAVA14)java fannkuchredux3); cd ..
-	-(cd ./java-15 && $(JAVA15)java fannkuchredux3); cd ..
-	-(cd ./java-16 && $(JAVA16)java fannkuchredux3); cd ..
-	-(cd ./java-17 && $(JAVA17)java fannkuchredux3); cd ..
-	-(cd ./java-18 && $(JAVA18)java fannkuchredux3); cd ..
-	-(cd ./java-19 && $(JAVA19)java fannkuchredux3); cd ..
-	-(cd ./java-20 && $(JAVA20)java fannkuchredux3); cd ..
+	(cd ./java-6 && $(JAVA6)java fannkuchredux3); cd ..
+	(cd ./java-7 && $(JAVA7)java fannkuchredux3); cd ..
+	(cd ./java-8.0 && $(JAVA80)java fannkuchredux3); cd ..
+	(cd ./java-8.1 && $(JAVA81)java fannkuchredux3); cd ..
+	(cd ./java-9 && $(JAVA9)java fannkuchredux3); cd ..
+	(cd ./java-10 && $(JAVA10)java fannkuchredux3); cd ..
+	(cd ./java-11 && $(JAVA11)java fannkuchredux3); cd ..
+	(cd ./java-12 && $(JAVA12)java fannkuchredux3); cd ..
+	(cd ./java-13 && $(JAVA13)java fannkuchredux3); cd ..
+	(cd ./java-14 && $(JAVA14)java fannkuchredux3); cd ..
+	(cd ./java-15 && $(JAVA15)java fannkuchredux3); cd ..
+	(cd ./java-16 && $(JAVA16)java fannkuchredux3); cd ..
+	(cd ./java-17 && $(JAVA17)java fannkuchredux3); cd ..
+	(cd ./java-18 && $(JAVA18)java fannkuchredux3); cd ..
+	(cd ./java-19 && $(JAVA19)java fannkuchredux3); cd ..
+	(cd ./java-20 && $(JAVA20)java fannkuchredux3); cd ..
 
 	
 
@@ -81,35 +81,35 @@ make_dirs:
 
 copy_files:
 	sudo cp fannkuchredux3.java ./java-6/fannkuchredux3.java
-	-$(JAVA6)javac ./java-6/fannkuchredux3.java
+	$(JAVA6)javac ./java-6/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-7/fannkuchredux3.java
-	-$(JAVA7)javac ./java-7/fannkuchredux3.java
+	$(JAVA7)javac ./java-7/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-8.0/fannkuchredux3.java
-	-$(JAVA80)javac ./java-8.0/fannkuchredux3.java
+	$(JAVA80)javac ./java-8.0/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-8.1/fannkuchredux3.java
-	-$(JAVA81)javac ./java-8.1/fannkuchredux3.java
+	$(JAVA81)javac ./java-8.1/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-9/fannkuchredux3.java
-	-$(JAVA9)javac ./java-9/fannkuchredux3.java
+	$(JAVA9)javac ./java-9/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-10/fannkuchredux3.java
-	-$(JAVA10)javac ./java-10/fannkuchredux3.java
+	$(JAVA10)javac ./java-10/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-11/fannkuchredux3.java
-	-$(JAVA11)javac ./java-11/fannkuchredux3.java
+	$(JAVA11)javac ./java-11/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-12/fannkuchredux3.java
-	-$(JAVA12)javac ./java-12/fannkuchredux3.java
+	$(JAVA12)javac ./java-12/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-13/fannkuchredux3.java
-	-$(JAVA13)javac ./java-13/fannkuchredux3.java
+	$(JAVA13)javac ./java-13/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-14/fannkuchredux3.java
-	-$(JAVA14)javac ./java-14/fannkuchredux3.java
+	$(JAVA14)javac ./java-14/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-15/fannkuchredux3.java
-	-$(JAVA15)javac ./java-15/fannkuchredux3.java
+	$(JAVA15)javac ./java-15/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-16/fannkuchredux3.java
-	-$(JAVA16)javac ./java-16/fannkuchredux3.java
+	$(JAVA16)javac ./java-16/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-17/fannkuchredux3.java 
-	-$(JAVA17)javac ./java-17/fannkuchredux3.java
+	$(JAVA17)javac ./java-17/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-18/fannkuchredux3.java
-	-$(JAVA18)javac ./java-18/fannkuchredux3.java 
+	$(JAVA18)javac ./java-18/fannkuchredux3.java 
 	sudo cp fannkuchredux3.java ./java-19/fannkuchredux3.java
-	-$(JAVA19)javac ./java-19/fannkuchredux3.java
+	$(JAVA19)javac ./java-19/fannkuchredux3.java
 	sudo cp fannkuchredux3.java ./java-20/fannkuchredux3.java
-	-$(JAVA20)javac ./java-20/fannkuchredux3.java
+	$(JAVA20)javac ./java-20/fannkuchredux3.java
 	

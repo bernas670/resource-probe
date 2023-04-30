@@ -16,17 +16,17 @@ clean:
 	rm -r -f python3.11 
 
 run:
-	-python2.6 ./python2.6/binarytrees-5.py 21
-	-python2.7 ./python2.7/binarytrees-5.py 21
-	-python3.0 ./python3.0/binarytrees-5.py 21
-	-python3.4 ./python3.4/binarytrees-5.py 21
-	-python3.5 ./python3.5/binarytrees-5.py 21
-	-python3.6 ./python3.6/binarytrees-5.py 21
-	-python3.7 ./python3.7/binarytrees-5.py 21
-	-python3.8 ./python3.8/binarytrees-5.py 21
-	-python3.9 ./python3.9/binarytrees-5.py 21
-	-python3.10 ./python3.10/binarytrees-5.py 21
-	-python3.11 ./python3.11/binarytrees-5.py 21
+	python2.6 ./python2.6/binarytrees-5.py 21
+	python2.7 ./python2.7/binarytrees-5.py 21
+	python3.0 ./python3.0/binarytrees-5.py 21
+	python3.4 ./python3.4/binarytrees-5.py 21
+	python3.5 ./python3.5/binarytrees-5.py 21
+	python3.6 ./python3.6/binarytrees-5.py 21
+	python3.7 ./python3.7/binarytrees-5.py 21
+	python3.8 ./python3.8/binarytrees-5.py 21
+	python3.9 ./python3.9/binarytrees-5.py 21
+	python3.10 ./python3.10/binarytrees-5.py 21
+	python3.11 ./python3.11/binarytrees-5.py 21
 	
 
 measure:
