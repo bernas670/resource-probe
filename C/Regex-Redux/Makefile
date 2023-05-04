@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-3.5/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-3.6/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-3.7/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-3.8/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-4.0/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-5.0/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-6.0/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-7.0/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-8.0/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-3.4/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-3.5/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-3.6/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-3.7/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-3.8/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-4.0/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-5.0/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-6.0/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-7.0/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-8.0/regexredux-5 0 < ../../regexredux-input5000000.txt
 #	./clang-9.0/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-10.0/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-11.1/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-12.0/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-13.0/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-14.0/regexredux-5 0 < ../../regexredux-input5000000.txt
-#	./clang-15.0/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-10.0/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-11.1/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-12.0/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-13.0/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-14.0/regexredux-5 0 < ../../regexredux-input5000000.txt
+	./clang-15.0/regexredux-5 0 < ../../regexredux-input5000000.txt
 
 	
 
@@ -84,21 +84,21 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-#	$(CLang34)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-3.4/regexredux-5 -lpcre2
-#	$(CLang35)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-3.5/regexredux-5 -lpcre2
-#	$(CLang36)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-3.6/regexredux-5 -lpcre2
-#	$(CLang37)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-3.7/regexredux-5 -lpcre2
-#	$(CLang38)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-3.8/regexredux-5 -lpcre2
-#	$(CLang4)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-4.0/regexredux-5 -lpcre2
-#	$(CLang5)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-5.0/regexredux-5 -lpcre2
-#	$(CLang6)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-6.0/regexredux-5 -lpcre2
-#	$(CLang7)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-7.0/regexredux-5 -lpcre2
-#	$(CLang8)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-8.0/regexredux-5 -lpcre2
-#	$(CLang9)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-9.0/regexredux-5 -lpcre2
-#	$(CLang10)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-10.0/regexredux-5 -lpcre2
-#	$(CLang11)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-11.1/regexredux-5 -lpcre2
-#	$(CLang12)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-12.0/regexredux-5 -lpcre2
-#	$(CLang13)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-13.0/regexredux-5 -lpcre2
-#	$(CLang14)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-14.0/regexredux-5 -lpcre2
-#	$(CLang15)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp regexredux-5.c -o ./clang-15.0/regexredux-5 -lpcre2
+	$(CLang34)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-3.4/regexredux-5 -lpcre2-8
+	$(CLang35)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-3.5/regexredux-5 -lpcre2-8
+	$(CLang36)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-3.6/regexredux-5 -lpcre2-8
+	$(CLang37)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-3.7/regexredux-5 -lpcre2-8
+	$(CLang38)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-3.8/regexredux-5 -lpcre2-8
+	$(CLang4)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-4.0/regexredux-5 -lpcre2-8
+	$(CLang5)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-5.0/regexredux-5 -lpcre2-8
+	$(CLang6)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-6.0/regexredux-5 -lpcre2-8
+	$(CLang7)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-7.0/regexredux-5 -lpcre2-8
+	$(CLang8)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-8.0/regexredux-5 -lpcre2-8
+#	$(CLang9)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-9.0/regexredux-5 -lpcre2-8
+	$(CLang10)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-10.0/regexredux-5 -lpcre2-8
+	$(CLang11)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-11.1/regexredux-5 -lpcre2-8
+	$(CLang12)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-12.0/regexredux-5 -lpcre2-8
+	$(CLang13)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-13.0/regexredux-5 -lpcre2-8
+	$(CLang14)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-14.0/regexredux-5 -lpcre2-8
+	$(CLang15)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  regexredux-5.c -o ./clang-15.0/regexredux-5 -lpcre2-8
 	

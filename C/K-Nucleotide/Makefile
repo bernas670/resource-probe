@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-	./clang-3.4/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-3.5/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-3.6/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-3.7/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-3.8/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-4.0/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-5.0/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-6.0/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-7.0/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-8.0/knucleotide 0 < ../../knucleotide-input10000.txt
-#	./clang-9.0/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-10.0/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-11.1/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-12.0/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-13.0/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-14.0/knucleotide 0 < ../../knucleotide-input10000.txt
-	./clang-15.0/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-3.4/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-3.5/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-3.6/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-3.7/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-3.8/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-4.0/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-5.0/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-6.0/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-7.0/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-8.0/knucleotide 0 < ../../knucleotide-input25000000.txt
+#	./clang-9.0/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-10.0/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-11.1/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-12.0/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-13.0/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-14.0/knucleotide 0 < ../../knucleotide-input25000000.txt
+	./clang-15.0/knucleotide 0 < ../../knucleotide-input25000000.txt
 
 	
 
@@ -84,21 +84,21 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-	$(CLang34)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-3.4/knucleotide
-	$(CLang35)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-3.5/knucleotide
-	$(CLang36)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-3.6/knucleotide
-	$(CLang37)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-3.7/knucleotide
-	$(CLang38)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-3.8/knucleotide
-	$(CLang4)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-4.0/knucleotide
-	$(CLang5)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-5.0/knucleotide
-	$(CLang6)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-6.0/knucleotide
-	$(CLang7)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-7.0/knucleotide
-	$(CLang8)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-8.0/knucleotide
-#	$(CLang9)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-9.0/knucleotide
-	$(CLang10)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-10.0/knucleotide
-	$(CLang11)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-11.1/knucleotide
-	$(CLang12)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-12.0/knucleotide
-	$(CLang13)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-13.0/knucleotide
-	$(CLang14)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-14.0/knucleotide
-	$(CLang15)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -fopenmp -include khash.h knucleotide.c -o ./clang-15.0/knucleotide
+	$(CLang34)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-3.4/knucleotide
+	$(CLang35)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-3.5/knucleotide
+	$(CLang36)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-3.6/knucleotide
+	$(CLang37)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-3.7/knucleotide
+	$(CLang38)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-3.8/knucleotide
+	$(CLang4)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-4.0/knucleotide
+	$(CLang5)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-5.0/knucleotide
+	$(CLang6)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-6.0/knucleotide
+	$(CLang7)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-7.0/knucleotide
+	$(CLang8)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-8.0/knucleotide
+#	$(CLang9)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-9.0/knucleotide
+	$(CLang10)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-10.0/knucleotide
+	$(CLang11)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-11.1/knucleotide
+	$(CLang12)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-12.0/knucleotide
+	$(CLang13)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-13.0/knucleotide
+	$(CLang14)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-14.0/knucleotide
+	$(CLang15)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native  -include khash.h knucleotide.c -o ./clang-15.0/knucleotide
 	

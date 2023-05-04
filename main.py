@@ -5,7 +5,6 @@ def main(command, folder, file,temperature, energy, memory, multithreaded, inter
     
     # TODO: add temperature
     # TODO: implement --no-energy
-    # TODO: save memory measurements
     
     collector = CollectorRAPL(command, folder, file, interval, multithreaded, repetitions, energy, memory)
     collector.collect()

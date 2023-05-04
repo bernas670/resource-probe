@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/pidigits-2 10000
-#	./clang-3.5/pidigits-2 10000
-#	./clang-3.6/pidigits-2 10000
-#	./clang-3.7/pidigits-2 10000
-#	./clang-3.8/pidigits-2 10000
-#	./clang-4.0/pidigits-2 10000
-#	./clang-5.0/pidigits-2 10000
-#	./clang-6.0/pidigits-2 10000
-#	./clang-7.0/pidigits-2 10000
-#	./clang-8.0/pidigits-2 10000
+	./clang-3.4/pidigits-2 10000
+	./clang-3.5/pidigits-2 10000
+	./clang-3.6/pidigits-2 10000
+	./clang-3.7/pidigits-2 10000
+	./clang-3.8/pidigits-2 10000
+	./clang-4.0/pidigits-2 10000
+	./clang-5.0/pidigits-2 10000
+	./clang-6.0/pidigits-2 10000
+	./clang-7.0/pidigits-2 10000
+	./clang-8.0/pidigits-2 10000
 #	./clang-9.0/pidigits-2 10000
-#	./clang-10.0/pidigits-2 10000
-#	./clang-11.1/pidigits-2 10000
-#	./clang-12.0/pidigits-2 10000
-#	./clang-13.0/pidigits-2 10000
-#	./clang-14.0/pidigits-2 10000
-#	./clang-15.0/pidigits-2 10000
+	./clang-10.0/pidigits-2 10000
+	./clang-11.1/pidigits-2 10000
+	./clang-12.0/pidigits-2 10000
+	./clang-13.0/pidigits-2 10000
+	./clang-14.0/pidigits-2 10000
+	./clang-15.0/pidigits-2 10000
 
 	
 

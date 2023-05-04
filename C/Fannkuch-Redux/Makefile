@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/fannkuchredux-6 12
-#	./clang-3.5/fannkuchredux-6 12
-#	./clang-3.6/fannkuchredux-6 12
-	./clang-3.7/fannkuchredux-6 12
-	./clang-3.8/fannkuchredux-6 12
-	./clang-4.0/fannkuchredux-6 12
-	./clang-5.0/fannkuchredux-6 12
-	./clang-6.0/fannkuchredux-6 12
-	./clang-7.0/fannkuchredux-6 12
-	./clang-8.0/fannkuchredux-6 12
-#	./clang-9.0/fannkuchredux-6 12
-	./clang-10.0/fannkuchredux-6 12
-	./clang-11.1/fannkuchredux-6 12
-	./clang-12.0/fannkuchredux-6 12
-	./clang-13.0/fannkuchredux-6 12
-	./clang-14.0/fannkuchredux-6 12
-	./clang-15.0/fannkuchredux-6 12
+	./clang-3.4/fannkuchredux-5 12
+	./clang-3.5/fannkuchredux-5 12
+	./clang-3.6/fannkuchredux-5 12
+	./clang-3.7/fannkuchredux-5 12
+	./clang-3.8/fannkuchredux-5 12
+	./clang-4.0/fannkuchredux-5 12
+	./clang-5.0/fannkuchredux-5 12
+	./clang-6.0/fannkuchredux-5 12
+	./clang-7.0/fannkuchredux-5 12
+	./clang-8.0/fannkuchredux-5 12
+#	./clang-9.0/fannkuchredux-5 12
+	./clang-10.0/fannkuchredux-5 12
+	./clang-11.1/fannkuchredux-5 12
+	./clang-12.0/fannkuchredux-5 12
+	./clang-13.0/fannkuchredux-5 12
+	./clang-14.0/fannkuchredux-5 12
+	./clang-15.0/fannkuchredux-5 12
 
 	
 
@@ -84,21 +84,21 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-#	$(CLang34)clang -pipe -Wall -O3 -fomit-frame-pointer -march=ivybridge -pthread fannkuchredux-6.c -o ./clang-3.4/fannkuchredux-6
-#	$(CLang35)clang -pipe -Wall -O3 -fomit-frame-pointer -march=ivybridge -pthread fannkuchredux-6.c -o ./clang-3.5/fannkuchredux-6
-#	$(CLang36)clang -pipe -Wall -O3 -fomit-frame-pointer -march=ivybridge -pthread fannkuchredux-6.c -o ./clang-3.6/fannkuchredux-6
-	$(CLang37)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-3.7/fannkuchredux-6
-	$(CLang38)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-3.8/fannkuchredux-6
-	$(CLang4)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-4.0/fannkuchredux-6
-	$(CLang5)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-5.0/fannkuchredux-6
-	$(CLang6)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-6.0/fannkuchredux-6
-	$(CLang7)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-7.0/fannkuchredux-6
-	$(CLang8)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-8.0/fannkuchredux-6
-#	$(CLang9)clang fannkuchredux-6.c -o ./clang-9.0/fannkuchredux-6
-	$(CLang10)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-10.0/fannkuchredux-6
-	$(CLang11)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-11.1/fannkuchredux-6
-	$(CLang12)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-12.0/fannkuchredux-6
-	$(CLang13)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-13.0/fannkuchredux-6
-	$(CLang14)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-14.0/fannkuchredux-6
-	$(CLang15)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-6.c -o ./clang-15.0/fannkuchredux-6
+	$(CLang34)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-3.4/fannkuchredux-5
+	$(CLang35)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-3.5/fannkuchredux-5
+	$(CLang36)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-3.6/fannkuchredux-5
+	$(CLang37)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-3.7/fannkuchredux-5
+	$(CLang38)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-3.8/fannkuchredux-5
+	$(CLang4)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-4.0/fannkuchredux-5
+	$(CLang5)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-5.0/fannkuchredux-5
+	$(CLang6)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-6.0/fannkuchredux-5
+	$(CLang7)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-7.0/fannkuchredux-5
+	$(CLang8)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-8.0/fannkuchredux-5
+#	$(CLang9)clang fannkuchredux-5.c -o ./clang-9.0/fannkuchredux-5
+	$(CLang10)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-10.0/fannkuchredux-5
+	$(CLang11)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-11.1/fannkuchredux-5
+	$(CLang12)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-12.0/fannkuchredux-5
+	$(CLang13)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-13.0/fannkuchredux-5
+	$(CLang14)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-14.0/fannkuchredux-5
+	$(CLang15)clang -pipe -Wall -O3 -fomit-frame-pointer -march=native -pthread fannkuchredux-5.c -o ./clang-15.0/fannkuchredux-5
 	
