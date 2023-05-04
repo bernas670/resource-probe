@@ -1,13 +1,13 @@
 import argparse
 from rapl_measures import CollectorRAPL
 
-def main(command, temperature, energy, memory, multithreaded, interval, repetitions):
+def main(command, folder, file,temperature, energy, memory, multithreaded, interval, repetitions):
     
     # TODO: add temperature
     # TODO: implement --no-energy
     # TODO: save memory measurements
     
-    collector = CollectorRAPL(command, "./test", "test", interval, multithreaded, repetitions, energy, memory)
+    collector = CollectorRAPL(command, folder, file, interval, multithreaded, repetitions, energy, memory)
     collector.collect()
     
     return 
@@ -15,7 +15,9 @@ def main(command, temperature, energy, memory, multithreaded, interval, repetiti
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Measure a command's energy and memory consumption")
-    parser.add_argument('command', type=str, help='The command to execute')
+    parser.add_argument('cmd', type=str, help='The command to execute')
+    parser.add_argument('path', type=str, help='The path where to save the csv and generated graphs')
+    parser.add_argument('file', type=str, help='File naming convention')
     parser.add_argument('temperature', type=int, help='The baseline temperature')
     parser.add_argument('-ne', '--no-energy', dest='energy', action='store_false',
                         help='Turn off energy metrics collection')
@@ -32,4 +34,4 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    main(args.command, args.temperature, args.energy, args.memory, args.multithreaded, args.interval, args.repetitions)
+    main(args.cmd, args.path , args.file ,args.temperature, args.energy, args.memory, args.multithreaded, args.interval, args.repetitions)
