@@ -39,22 +39,22 @@ clean:
 	rm -r -f java-20
 
 run:
-	(cd ./java-6 && $(JAVA6)java knucleotide6); cd ..
-	(cd ./java-7 && $(JAVA7)java knucleotide6); cd ..
-	(cd ./java-8.0 && $(JAVA80)java knucleotide6); cd ..
-	(cd ./java-8.1 && $(JAVA81)java knucleotide6); cd ..
-	(cd ./java-9 && $(JAVA9)java knucleotide6); cd ..
-	(cd ./java-10 && $(JAVA10)java knucleotide6); cd ..
-	(cd ./java-11 && $(JAVA11)java knucleotide6); cd ..
-	(cd ./java-12 && $(JAVA12)java knucleotide6); cd ..
-	(cd ./java-13 && $(JAVA13)java knucleotide6); cd ..
-	(cd ./java-14 && $(JAVA14)java knucleotide6); cd ..
-	(cd ./java-15 && $(JAVA15)java knucleotide6); cd ..
-	(cd ./java-16 && $(JAVA16)java knucleotide6); cd ..
-	(cd ./java-17 && $(JAVA17)java knucleotide6); cd ..
-	(cd ./java-18 && $(JAVA18)java knucleotide6); cd ..
-	(cd ./java-19 && $(JAVA19)java knucleotide6); cd ..
-	(cd ./java-20 && $(JAVA20)java knucleotide6); cd ..
+	(cd ./java-6 && $(JAVA6)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..  
+	(cd ./java-7 && $(JAVA7)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-8.0 && $(JAVA80)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-8.1 && $(JAVA81)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-9 && $(JAVA9)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-10 && $(JAVA10)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-11 && $(JAVA11)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-12 && $(JAVA12)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-13 && $(JAVA13)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-14 && $(JAVA14)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-15 && $(JAVA15)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-16 && $(JAVA16)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-17 && $(JAVA17)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-18 && $(JAVA18)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-19 && $(JAVA19)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
+	(cd ./java-20 && $(JAVA20)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input10000.txt); cd ..
 
 	
 

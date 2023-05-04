@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/fannkuchredux-6 21
-#	./clang-3.5/fannkuchredux-6 21
-#	./clang-3.6/fannkuchredux-6 21
-	./clang-3.7/fannkuchredux-6 21
-	./clang-3.8/fannkuchredux-6 21
-	./clang-4.0/fannkuchredux-6 21
-	./clang-5.0/fannkuchredux-6 21
-	./clang-6.0/fannkuchredux-6 21
-	./clang-7.0/fannkuchredux-6 21
-	./clang-8.0/fannkuchredux-6 21
-#	./clang-9.0/fannkuchredux-6 21
-	./clang-10.0/fannkuchredux-6 21
-	./clang-11.1/fannkuchredux-6 21
-	./clang-12.0/fannkuchredux-6 21
-	./clang-13.0/fannkuchredux-6 21
-	./clang-14.0/fannkuchredux-6 21
-	./clang-15.0/fannkuchredux-6 21
+#	./clang-3.4/fannkuchredux-6 12
+#	./clang-3.5/fannkuchredux-6 12
+#	./clang-3.6/fannkuchredux-6 12
+	./clang-3.7/fannkuchredux-6 12
+	./clang-3.8/fannkuchredux-6 12
+	./clang-4.0/fannkuchredux-6 12
+	./clang-5.0/fannkuchredux-6 12
+	./clang-6.0/fannkuchredux-6 12
+	./clang-7.0/fannkuchredux-6 12
+	./clang-8.0/fannkuchredux-6 12
+#	./clang-9.0/fannkuchredux-6 12
+	./clang-10.0/fannkuchredux-6 12
+	./clang-11.1/fannkuchredux-6 12
+	./clang-12.0/fannkuchredux-6 12
+	./clang-13.0/fannkuchredux-6 12
+	./clang-14.0/fannkuchredux-6 12
+	./clang-15.0/fannkuchredux-6 12
 
 	
 

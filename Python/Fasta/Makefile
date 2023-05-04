@@ -16,17 +16,17 @@ clean:
 	rm -r -f python3.11  
 
 run:
-	python2.6 ./python2.6/fasta-5.py 21
-	python2.7 ./python2.7/fasta-5.py 21
-	python3.0 ./python3.0/fasta-5.py 21
-	python3.4 ./python3.4/fasta-5.py 21
-	python3.5 ./python3.5/fasta-5.py 21
-	python3.6 ./python3.6/fasta-5.py 21
-	python3.7 ./python3.7/fasta-5.py 21
-	python3.8 ./python3.8/fasta-5.py 21
-	python3.9 ./python3.9/fasta-5.py 21
-	python3.10 ./python3.10/fasta-5.py 21
-	python3.11 ./python3.11/fasta-5.py 21
+#	python2.6 ./python2.6/fasta-3.py 25000000
+#	python2.7 ./python2.7/fasta-3.py 25000000
+	python3.0 ./python3.0/fasta-3.py 25000000
+	python3.4 ./python3.4/fasta-3.py 25000000
+	python3.5 ./python3.5/fasta-3.py 25000000
+	python3.6 ./python3.6/fasta-3.py 25000000
+	python3.7 ./python3.7/fasta-3.py 25000000
+	python3.8 ./python3.8/fasta-3.py 25000000
+	python3.9 ./python3.9/fasta-3.py 25000000
+	python3.10 ./python3.10/fasta-3.py 25000000
+	python3.11 ./python3.11/fasta-3.py 25000000
 	
 
 measure:
@@ -46,14 +46,14 @@ make_dirs:
 	mkdir -p python3.11 
 
 copy_files:
-	sudo cp fasta-5.py ./python2.6/fasta-5.py
-	sudo cp fasta-5.py ./python2.7/fasta-5.py
-	sudo cp fasta-5.py ./python3.0/fasta-5.py
-	sudo cp fasta-5.py ./python3.4/fasta-5.py
-	sudo cp fasta-5.py ./python3.5/fasta-5.py
-	sudo cp fasta-5.py ./python3.6/fasta-5.py
-	sudo cp fasta-5.py ./python3.7/fasta-5.py
-	sudo cp fasta-5.py ./python3.8/fasta-5.py
-	sudo cp fasta-5.py ./python3.9/fasta-5.py
-	sudo cp fasta-5.py ./python3.10/fasta-5.py
-	sudo cp fasta-5.py ./python3.11/fasta-5.py 
+	sudo cp fasta-3.py ./python2.6/fasta-3.py
+	sudo cp fasta-3.py ./python2.7/fasta-3.py
+	sudo cp fasta-3.py ./python3.0/fasta-3.py
+	sudo cp fasta-3.py ./python3.4/fasta-3.py
+	sudo cp fasta-3.py ./python3.5/fasta-3.py
+	sudo cp fasta-3.py ./python3.6/fasta-3.py
+	sudo cp fasta-3.py ./python3.7/fasta-3.py
+	sudo cp fasta-3.py ./python3.8/fasta-3.py
+	sudo cp fasta-3.py ./python3.9/fasta-3.py
+	sudo cp fasta-3.py ./python3.10/fasta-3.py
+	sudo cp fasta-3.py ./python3.11/fasta-3.py 

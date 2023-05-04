@@ -12,6 +12,7 @@ clean:
 	python3 compile_all.py clean
 
 measure:
+	sudo chmod -R a+r /sys/class/powercap/intel-rapl
 	python3 compile_all.py measure
 
 	

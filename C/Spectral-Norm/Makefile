@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-	./clang-3.4/spectralnorm-8 21
-	./clang-3.5/spectralnorm-8 21
-	./clang-3.6/spectralnorm-8 21
-	./clang-3.7/spectralnorm-8 21
-	./clang-3.8/spectralnorm-8 21
-	./clang-4.0/spectralnorm-8 21
-	./clang-5.0/spectralnorm-8 21
-	./clang-6.0/spectralnorm-8 21
-	./clang-7.0/spectralnorm-8 21
-	./clang-8.0/spectralnorm-8 21
-#	./clang-9.0/spectralnorm-8 21
-	./clang-10.0/spectralnorm-8 21
-	./clang-11.1/spectralnorm-8 21
-	./clang-12.0/spectralnorm-8 21
-	./clang-13.0/spectralnorm-8 21
-	./clang-14.0/spectralnorm-8 21
-	./clang-15.0/spectralnorm-8 21
+	./clang-3.4/spectralnorm-8 5500
+	./clang-3.5/spectralnorm-8 5500
+	./clang-3.6/spectralnorm-8 5500
+	./clang-3.7/spectralnorm-8 5500
+	./clang-3.8/spectralnorm-8 5500
+	./clang-4.0/spectralnorm-8 5500
+	./clang-5.0/spectralnorm-8 5500
+	./clang-6.0/spectralnorm-8 5500
+	./clang-7.0/spectralnorm-8 5500
+	./clang-8.0/spectralnorm-8 5500
+#	./clang-9.0/spectralnorm-8 5500
+	./clang-10.0/spectralnorm-8 5500
+	./clang-11.1/spectralnorm-8 5500
+	./clang-12.0/spectralnorm-8 5500
+	./clang-13.0/spectralnorm-8 5500
+	./clang-14.0/spectralnorm-8 5500
+	./clang-15.0/spectralnorm-8 5500
 
 	
 

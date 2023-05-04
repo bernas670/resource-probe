@@ -16,17 +16,17 @@ clean:
 	rm -r -f python3.11 
 
 run:
-	python2.6 ./python2.6/knucleotide-8.py 21
-	python2.7 ./python2.7/knucleotide-8.py 21
-	python3.0 ./python3.0/knucleotide-8.py 21
-	python3.4 ./python3.4/knucleotide-8.py 21
-	python3.5 ./python3.5/knucleotide-8.py 21
-	python3.6 ./python3.6/knucleotide-8.py 21
-	python3.7 ./python3.7/knucleotide-8.py 21
-	python3.8 ./python3.8/knucleotide-8.py 21
-	python3.9 ./python3.9/knucleotide-8.py 21
-	python3.10 ./python3.10/knucleotide-8.py 21
-	python3.11 ./python3.11/knucleotide-8.py 21
+#	python2.6 ./python2.6/knucleotide-8.py 0 < ../../knucleotide-input25000000.txt
+#	python2.7 ./python2.7/knucleotide-8.py 0 < ../../knucleotide-input25000000.txt
+	python3.0 ./python3.0/knucleotide-8.py 0 < ../../knucleotide-input25000000.txt
+	python3.4 ./python3.4/knucleotide-8.py 0 < ../../knucleotide-input25000000.txt
+	python3.5 ./python3.5/knucleotide-8.py 0 < ../../knucleotide-input25000000.txt
+	python3.6 ./python3.6/knucleotide-8.py 0 < ../../knucleotide-input25000000.txt
+	python3.7 ./python3.7/knucleotide-8.py 0 < ../../knucleotide-input25000000.txt
+	python3.8 ./python3.8/knucleotide-8.py 0 < ../../knucleotide-input25000000.txt
+	python3.9 ./python3.9/knucleotide-8.py 0 < ../../knucleotide-input25000000.txt
+	python3.10 ./python3.10/knucleotide-8.py 0 < ../../knucleotide-input25000000.txt
+	python3.11 ./python3.11/knucleotide-8.py 0 < ../../knucleotide-input25000000.txt
 	
 
 measure:

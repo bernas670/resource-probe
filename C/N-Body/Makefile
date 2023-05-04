@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/nbody-9 21
-#	./clang-3.5/nbody-9 21
-#	./clang-3.6/nbody-9 21
-	./clang-3.7/nbody-9 21
-	./clang-3.8/nbody-9 21
-	./clang-4.0/nbody-9 21
-	./clang-5.0/nbody-9 21
-	./clang-6.0/nbody-9 21
-	./clang-7.0/nbody-9 21
-	./clang-8.0/nbody-9 21
-#	./clang-9.0/nbody-9 21
-	./clang-10.0/nbody-9 21
-	./clang-11.1/nbody-9 21
-	./clang-12.0/nbody-9 21
-	./clang-13.0/nbody-9 21
-	./clang-14.0/nbody-9 21
-	./clang-15.0/nbody-9 21
+#	./clang-3.4/nbody-9 50000000
+#	./clang-3.5/nbody-9 50000000
+#	./clang-3.6/nbody-9 50000000
+	./clang-3.7/nbody-9 50000000
+	./clang-3.8/nbody-9 50000000
+	./clang-4.0/nbody-9 50000000
+	./clang-5.0/nbody-9 50000000
+	./clang-6.0/nbody-9 50000000
+	./clang-7.0/nbody-9 50000000
+	./clang-8.0/nbody-9 50000000
+#	./clang-9.0/nbody-9 50000000
+	./clang-10.0/nbody-9 50000000
+	./clang-11.1/nbody-9 50000000
+	./clang-12.0/nbody-9 50000000
+	./clang-13.0/nbody-9 50000000
+	./clang-14.0/nbody-9 50000000
+	./clang-15.0/nbody-9 50000000
 
 	
 

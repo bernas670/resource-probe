@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-	./clang-3.4/revcomp-6 21
-	./clang-3.5/revcomp-6 21
-	./clang-3.6/revcomp-6 21
-	./clang-3.7/revcomp-6 21
-	./clang-3.8/revcomp-6 21
-	./clang-4.0/revcomp-6 21
-	./clang-5.0/revcomp-6 21
-	./clang-6.0/revcomp-6 21
-	./clang-7.0/revcomp-6 21
-	./clang-8.0/revcomp-6 21
-	./clang-9.0/revcomp-6 21
-	./clang-10.0/revcomp-6 21
-	./clang-11.1/revcomp-6 21
-	./clang-12.0/revcomp-6 21
-	./clang-13.0/revcomp-6 21
-	./clang-14.0/revcomp-6 21
-	./clang-15.0/revcomp-6 21
+#	./clang-3.4/revcomp-6 21
+#	./clang-3.5/revcomp-6 21
+#	./clang-3.6/revcomp-6 21
+#	./clang-3.7/revcomp-6 21
+#	./clang-3.8/revcomp-6 21
+#	./clang-4.0/revcomp-6 21
+#	./clang-5.0/revcomp-6 21
+#	./clang-6.0/revcomp-6 21
+#	./clang-7.0/revcomp-6 21
+#	./clang-8.0/revcomp-6 21
+#	./clang-9.0/revcomp-6 21
+#	./clang-10.0/revcomp-6 21
+#	./clang-11.1/revcomp-6 21
+#	./clang-12.0/revcomp-6 21
+#	./clang-13.0/revcomp-6 21
+#	./clang-14.0/revcomp-6 21
+#	./clang-15.0/revcomp-6 21
 
 	
 
@@ -84,21 +84,21 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-	$(CLang34)clang++ revcomp-6.cpp -o ./clang-3.4/revcomp-6
-	$(CLang35)clang++ revcomp-6.cpp -o ./clang-3.5/revcomp-6
-	$(CLang36)clang++ revcomp-6.cpp -o ./clang-3.6/revcomp-6
-	$(CLang37)clang++ revcomp-6.cpp -o ./clang-3.7/revcomp-6
-	$(CLang38)clang++ revcomp-6.cpp -o ./clang-3.8/revcomp-6
-	$(CLang4)clang++ revcomp-6.cpp -o ./clang-4.0/revcomp-6
-	$(CLang5)clang++ revcomp-6.cpp -o ./clang-5.0/revcomp-6
-	$(CLang6)clang++ revcomp-6.cpp -o ./clang-6.0/revcomp-6
-	$(CLang7)clang++ revcomp-6.cpp -o ./clang-7.0/revcomp-6
-	$(CLang8)clang++ revcomp-6.cpp -o ./clang-8.0/revcomp-6
-	$(CLang9)clang++ revcomp-6.cpp -o ./clang-9.0/revcomp-6
-	$(CLang10)clang++ revcomp-6.cpp -o ./clang-10.0/revcomp-6
-	$(CLang11)clang++ revcomp-6.cpp -o ./clang-11.1/revcomp-6
-	$(CLang12)clang++ revcomp-6.cpp -o ./clang-12.0/revcomp-6
-	$(CLang13)clang++ revcomp-6.cpp -o ./clang-13.0/revcomp-6
-	$(CLang14)clang++ revcomp-6.cpp -o ./clang-14.0/revcomp-6
-	$(CLang15)clang++ revcomp-6.cpp -o ./clang-15.0/revcomp-6
+#	$(CLang34)clang++ revcomp-6.cpp -o ./clang-3.4/revcomp-6
+#	$(CLang35)clang++ revcomp-6.cpp -o ./clang-3.5/revcomp-6
+#	$(CLang36)clang++ revcomp-6.cpp -o ./clang-3.6/revcomp-6
+#	$(CLang37)clang++ revcomp-6.cpp -o ./clang-3.7/revcomp-6
+#	$(CLang38)clang++ revcomp-6.cpp -o ./clang-3.8/revcomp-6
+#	$(CLang4)clang++ revcomp-6.cpp -o ./clang-4.0/revcomp-6
+#	$(CLang5)clang++ revcomp-6.cpp -o ./clang-5.0/revcomp-6
+#	$(CLang6)clang++ revcomp-6.cpp -o ./clang-6.0/revcomp-6
+#	$(CLang7)clang++ revcomp-6.cpp -o ./clang-7.0/revcomp-6
+#	$(CLang8)clang++ revcomp-6.cpp -o ./clang-8.0/revcomp-6
+#	$(CLang9)clang++ revcomp-6.cpp -o ./clang-9.0/revcomp-6
+#	$(CLang10)clang++ revcomp-6.cpp -o ./clang-10.0/revcomp-6
+#	$(CLang11)clang++ revcomp-6.cpp -o ./clang-11.1/revcomp-6
+#	$(CLang12)clang++ revcomp-6.cpp -o ./clang-12.0/revcomp-6
+#	$(CLang13)clang++ revcomp-6.cpp -o ./clang-13.0/revcomp-6
+#	$(CLang14)clang++ revcomp-6.cpp -o ./clang-14.0/revcomp-6
+#	$(CLang15)clang++ revcomp-6.cpp -o ./clang-15.0/revcomp-6
 	

@@ -16,17 +16,17 @@ clean:
 	rm -r -f python3.11 
 
 run:
-	python2.6 ./python2.6/pidigits-5.py 21
-	python2.7 ./python2.7/pidigits-5.py 21
-	python3.0 ./python3.0/pidigits-5.py 21
-	python3.4 ./python3.4/pidigits-5.py 21
-	python3.5 ./python3.5/pidigits-5.py 21
-	python3.6 ./python3.6/pidigits-5.py 21
-	python3.7 ./python3.7/pidigits-5.py 21
-	python3.8 ./python3.8/pidigits-5.py 21
-	python3.9 ./python3.9/pidigits-5.py 21
-	python3.10 ./python3.10/pidigits-5.py 21
-	python3.11 ./python3.11/pidigits-5.py 21
+#	python2.6 ./python2.6/pidigits-4.py 10000
+#	python2.7 ./python2.7/pidigits-4.py 10000
+	python3.0 ./python3.0/pidigits-4.py 10000
+	python3.4 ./python3.4/pidigits-4.py 10000
+	python3.5 ./python3.5/pidigits-4.py 10000
+	python3.6 ./python3.6/pidigits-4.py 10000
+	python3.7 ./python3.7/pidigits-4.py 10000
+	python3.8 ./python3.8/pidigits-4.py 10000
+	python3.9 ./python3.9/pidigits-4.py 10000
+	python3.10 ./python3.10/pidigits-4.py 10000
+	python3.11 ./python3.11/pidigits-4.py 10000
 	
 
 measure:
@@ -46,14 +46,14 @@ make_dirs:
 	mkdir -p python3.11 
 
 copy_files:
-	sudo cp pidigits-5.py ./python2.6/pidigits-5.py
-	sudo cp pidigits-5.py ./python2.7/pidigits-5.py
-	sudo cp pidigits-5.py ./python3.0/pidigits-5.py
-	sudo cp pidigits-5.py ./python3.4/pidigits-5.py
-	sudo cp pidigits-5.py ./python3.5/pidigits-5.py
-	sudo cp pidigits-5.py ./python3.6/pidigits-5.py
-	sudo cp pidigits-5.py ./python3.7/pidigits-5.py
-	sudo cp pidigits-5.py ./python3.8/pidigits-5.py
-	sudo cp pidigits-5.py ./python3.9/pidigits-5.py
-	sudo cp pidigits-5.py ./python3.10/pidigits-5.py
-	sudo cp pidigits-5.py ./python3.11/pidigits-5.py 
+	sudo cp pidigits-4.py ./python2.6/pidigits-4.py
+	sudo cp pidigits-4.py ./python2.7/pidigits-4.py
+	sudo cp pidigits-4.py ./python3.0/pidigits-4.py
+	sudo cp pidigits-4.py ./python3.4/pidigits-4.py
+	sudo cp pidigits-4.py ./python3.5/pidigits-4.py
+	sudo cp pidigits-4.py ./python3.6/pidigits-4.py
+	sudo cp pidigits-4.py ./python3.7/pidigits-4.py
+	sudo cp pidigits-4.py ./python3.8/pidigits-4.py
+	sudo cp pidigits-4.py ./python3.9/pidigits-4.py
+	sudo cp pidigits-4.py ./python3.10/pidigits-4.py
+	sudo cp pidigits-4.py ./python3.11/pidigits-4.py 

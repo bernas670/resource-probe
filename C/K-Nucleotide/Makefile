@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-	./clang-3.4/knucleotide 21
-	./clang-3.5/knucleotide 21
-	./clang-3.6/knucleotide 21
-	./clang-3.7/knucleotide 21
-	./clang-3.8/knucleotide 21
-	./clang-4.0/knucleotide 21
-	./clang-5.0/knucleotide 21
-	./clang-6.0/knucleotide 21
-	./clang-7.0/knucleotide 21
-	./clang-8.0/knucleotide 21
-#	./clang-9.0/knucleotide 21
-	./clang-10.0/knucleotide 21
-	./clang-11.1/knucleotide 21
-	./clang-12.0/knucleotide 21
-	./clang-13.0/knucleotide 21
-	./clang-14.0/knucleotide 21
-	./clang-15.0/knucleotide 21
+	./clang-3.4/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-3.5/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-3.6/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-3.7/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-3.8/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-4.0/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-5.0/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-6.0/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-7.0/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-8.0/knucleotide 0 < ../../knucleotide-input10000.txt
+#	./clang-9.0/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-10.0/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-11.1/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-12.0/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-13.0/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-14.0/knucleotide 0 < ../../knucleotide-input10000.txt
+	./clang-15.0/knucleotide 0 < ../../knucleotide-input10000.txt
 
 	
 

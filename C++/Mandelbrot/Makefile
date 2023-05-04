@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-	./clang-3.4/mandelbrot-9 21
-	./clang-3.5/mandelbrot-9 21
-	./clang-3.6/mandelbrot-9 21
-	./clang-3.7/mandelbrot-9 21
-	./clang-3.8/mandelbrot-9 21
-	./clang-4.0/mandelbrot-9 21
-	./clang-5.0/mandelbrot-9 21
-	./clang-6.0/mandelbrot-9 21
-	./clang-7.0/mandelbrot-9 21
-	./clang-8.0/mandelbrot-9 21
-	./clang-9.0/mandelbrot-9 21
-	./clang-10.0/mandelbrot-9 21
-	./clang-11.1/mandelbrot-9 21
-	./clang-12.0/mandelbrot-9 21
-	./clang-13.0/mandelbrot-9 21
-	./clang-14.0/mandelbrot-9 21
-	./clang-15.0/mandelbrot-9 21
+#	./clang-3.4/mandelbrot-9 21
+#	./clang-3.5/mandelbrot-9 21
+#	./clang-3.6/mandelbrot-9 21
+#	./clang-3.7/mandelbrot-9 21
+#	./clang-3.8/mandelbrot-9 21
+#	./clang-4.0/mandelbrot-9 21
+#	./clang-5.0/mandelbrot-9 21
+#	./clang-6.0/mandelbrot-9 21
+#	./clang-7.0/mandelbrot-9 21
+#	./clang-8.0/mandelbrot-9 21
+#	./clang-9.0/mandelbrot-9 21
+#	./clang-10.0/mandelbrot-9 21
+#	./clang-11.1/mandelbrot-9 21
+#	./clang-12.0/mandelbrot-9 21
+#	./clang-13.0/mandelbrot-9 21
+#	./clang-14.0/mandelbrot-9 21
+#	./clang-15.0/mandelbrot-9 21
 
 	
 
@@ -84,21 +84,21 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-	$(CLang34)clang++ mandelbrot-9.cpp -o ./clang-3.4/mandelbrot-9
-	$(CLang35)clang++ mandelbrot-9.cpp -o ./clang-3.5/mandelbrot-9
-	$(CLang36)clang++ mandelbrot-9.cpp -o ./clang-3.6/mandelbrot-9
-	$(CLang37)clang++ mandelbrot-9.cpp -o ./clang-3.7/mandelbrot-9
-	$(CLang38)clang++ mandelbrot-9.cpp -o ./clang-3.8/mandelbrot-9
-	$(CLang4)clang++ mandelbrot-9.cpp -o ./clang-4.0/mandelbrot-9
-	$(CLang5)clang++ mandelbrot-9.cpp -o ./clang-5.0/mandelbrot-9
-	$(CLang6)clang++ mandelbrot-9.cpp -o ./clang-6.0/mandelbrot-9
-	$(CLang7)clang++ mandelbrot-9.cpp -o ./clang-7.0/mandelbrot-9
-	$(CLang8)clang++ mandelbrot-9.cpp -o ./clang-8.0/mandelbrot-9
-	$(CLang9)clang++ mandelbrot-9.cpp -o ./clang-9.0/mandelbrot-9
-	$(CLang10)clang++ mandelbrot-9.cpp -o ./clang-10.0/mandelbrot-9
-	$(CLang11)clang++ mandelbrot-9.cpp -o ./clang-11.1/mandelbrot-9
-	$(CLang12)clang++ mandelbrot-9.cpp -o ./clang-12.0/mandelbrot-9
-	$(CLang13)clang++ mandelbrot-9.cpp -o ./clang-13.0/mandelbrot-9
-	$(CLang14)clang++ mandelbrot-9.cpp -o ./clang-14.0/mandelbrot-9
-	$(CLang15)clang++ mandelbrot-9.cpp -o ./clang-15.0/mandelbrot-9
+#	$(CLang34)clang++ mandelbrot-9.cpp -o ./clang-3.4/mandelbrot-9
+#	$(CLang35)clang++ mandelbrot-9.cpp -o ./clang-3.5/mandelbrot-9
+#	$(CLang36)clang++ mandelbrot-9.cpp -o ./clang-3.6/mandelbrot-9
+#	$(CLang37)clang++ mandelbrot-9.cpp -o ./clang-3.7/mandelbrot-9
+#	$(CLang38)clang++ mandelbrot-9.cpp -o ./clang-3.8/mandelbrot-9
+#	$(CLang4)clang++ mandelbrot-9.cpp -o ./clang-4.0/mandelbrot-9
+#	$(CLang5)clang++ mandelbrot-9.cpp -o ./clang-5.0/mandelbrot-9
+#	$(CLang6)clang++ mandelbrot-9.cpp -o ./clang-6.0/mandelbrot-9
+#	$(CLang7)clang++ mandelbrot-9.cpp -o ./clang-7.0/mandelbrot-9
+#	$(CLang8)clang++ mandelbrot-9.cpp -o ./clang-8.0/mandelbrot-9
+#	$(CLang9)clang++ mandelbrot-9.cpp -o ./clang-9.0/mandelbrot-9
+#	$(CLang10)clang++ mandelbrot-9.cpp -o ./clang-10.0/mandelbrot-9
+#	$(CLang11)clang++ mandelbrot-9.cpp -o ./clang-11.1/mandelbrot-9
+#	$(CLang12)clang++ mandelbrot-9.cpp -o ./clang-12.0/mandelbrot-9
+#	$(CLang13)clang++ mandelbrot-9.cpp -o ./clang-13.0/mandelbrot-9
+#	$(CLang14)clang++ mandelbrot-9.cpp -o ./clang-14.0/mandelbrot-9
+#	$(CLang15)clang++ mandelbrot-9.cpp -o ./clang-15.0/mandelbrot-9
 	

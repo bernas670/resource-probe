@@ -16,17 +16,17 @@ clean:
 	rm -r -f python3.11 
 
 run:
-	python2.6 ./python2.6/spectralnorm-8.py 21
-	python2.7 ./python2.7/spectralnorm-8.py 21
-	python3.0 ./python3.0/spectralnorm-8.py 21
-	python3.4 ./python3.4/spectralnorm-8.py 21
-	python3.5 ./python3.5/spectralnorm-8.py 21
-	python3.6 ./python3.6/spectralnorm-8.py 21
-	python3.7 ./python3.7/spectralnorm-8.py 21
-	python3.8 ./python3.8/spectralnorm-8.py 21
-	python3.9 ./python3.9/spectralnorm-8.py 21
-	python3.10 ./python3.10/spectralnorm-8.py 21
-	python3.11 ./python3.11/spectralnorm-8.py 21
+#	python2.6 ./python2.6/spectralnorm-8.py 5500
+#	python2.7 ./python2.7/spectralnorm-8.py 5500
+#	python3.0 ./python3.0/spectralnorm-8.py 5500
+	python3.4 ./python3.4/spectralnorm-8.py 5500
+	python3.5 ./python3.5/spectralnorm-8.py 5500
+	python3.6 ./python3.6/spectralnorm-8.py 5500
+	python3.7 ./python3.7/spectralnorm-8.py 5500
+	python3.8 ./python3.8/spectralnorm-8.py 5500
+	python3.9 ./python3.9/spectralnorm-8.py 5500
+	python3.10 ./python3.10/spectralnorm-8.py 5500
+	python3.11 ./python3.11/spectralnorm-8.py 5500
 	
 
 measure:

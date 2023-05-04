@@ -16,17 +16,17 @@ clean:
 	rm -r -f python3.11 
 	
 run:
-	python2.6 ./python2.6/regexredux-2.py 21
-	python2.7 ./python2.7/regexredux-2.py 21
-	python3.0 ./python3.0/regexredux-2.py 21
-	python3.4 ./python3.4/regexredux-2.py 21
-	python3.5 ./python3.5/regexredux-2.py 21
-	python3.6 ./python3.6/regexredux-2.py 21
-	python3.7 ./python3.7/regexredux-2.py 21
-	python3.8 ./python3.8/regexredux-2.py 21
-	python3.9 ./python3.9/regexredux-2.py 21
-	python3.10 ./python3.10/regexredux-2.py 21
-	python3.11 ./python3.11/regexredux-2.py 21
+	python2.6 ./python2.6/regexredux.py 0 < ../../regexredux-input5000000.txt
+	python2.7 ./python2.7/regexredux.py 0 < ../../regexredux-input5000000.txt
+	python3.0 ./python3.0/regexredux.py 0 < ../../regexredux-input5000000.txt
+	python3.4 ./python3.4/regexredux.py 0 < ../../regexredux-input5000000.txt
+	python3.5 ./python3.5/regexredux.py 0 < ../../regexredux-input5000000.txt
+	python3.6 ./python3.6/regexredux.py 0 < ../../regexredux-input5000000.txt
+	python3.7 ./python3.7/regexredux.py 0 < ../../regexredux-input5000000.txt
+	python3.8 ./python3.8/regexredux.py 0 < ../../regexredux-input5000000.txt
+	python3.9 ./python3.9/regexredux.py 0 < ../../regexredux-input5000000.txt
+	python3.10 ./python3.10/regexredux.py 0 < ../../regexredux-input5000000.txt
+	python3.11 ./python3.11/regexredux.py 0 < ../../regexredux-input5000000.txt
 	
 
 measure:
@@ -46,14 +46,14 @@ make_dirs:
 	mkdir -p python3.11 
 
 copy_files:
-	sudo cp regexredux-2.py ./python2.6/regexredux-2.py
-	sudo cp regexredux-2.py ./python2.7/regexredux-2.py
-	sudo cp regexredux-2.py ./python3.0/regexredux-2.py
-	sudo cp regexredux-2.py ./python3.4/regexredux-2.py
-	sudo cp regexredux-2.py ./python3.5/regexredux-2.py
-	sudo cp regexredux-2.py ./python3.6/regexredux-2.py
-	sudo cp regexredux-2.py ./python3.7/regexredux-2.py
-	sudo cp regexredux-2.py ./python3.8/regexredux-2.py
-	sudo cp regexredux-2.py ./python3.9/regexredux-2.py
-	sudo cp regexredux-2.py ./python3.10/regexredux-2.py
-	sudo cp regexredux-2.py ./python3.11/regexredux-2.py 
+	sudo cp regexredux.py ./python2.6/regexredux.py
+	sudo cp regexredux.py ./python2.7/regexredux.py
+	sudo cp regexredux.py ./python3.0/regexredux.py
+	sudo cp regexredux.py ./python3.4/regexredux.py
+	sudo cp regexredux.py ./python3.5/regexredux.py
+	sudo cp regexredux.py ./python3.6/regexredux.py
+	sudo cp regexredux.py ./python3.7/regexredux.py
+	sudo cp regexredux.py ./python3.8/regexredux.py
+	sudo cp regexredux.py ./python3.9/regexredux.py
+	sudo cp regexredux.py ./python3.10/regexredux.py
+	sudo cp regexredux.py ./python3.11/regexredux.py 

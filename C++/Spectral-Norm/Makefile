@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-	./clang-3.4/spectralnorm-8 21
-	./clang-3.5/spectralnorm-8 21
-	./clang-3.6/spectralnorm-8 21
-	./clang-3.7/spectralnorm-8 21
-	./clang-3.8/spectralnorm-8 21
-	./clang-4.0/spectralnorm-8 21
-	./clang-5.0/spectralnorm-8 21
-	./clang-6.0/spectralnorm-8 21
-	./clang-7.0/spectralnorm-8 21
-	./clang-8.0/spectralnorm-8 21
-	./clang-9.0/spectralnorm-8 21
-	./clang-10.0/spectralnorm-8 21
-	./clang-11.1/spectralnorm-8 21
-	./clang-12.0/spectralnorm-8 21
-	./clang-13.0/spectralnorm-8 21
-	./clang-14.0/spectralnorm-8 21
-	./clang-15.0/spectralnorm-8 21
+#	./clang-3.4/spectralnorm-8 21
+#	./clang-3.5/spectralnorm-8 21
+#	./clang-3.6/spectralnorm-8 21
+#	./clang-3.7/spectralnorm-8 21
+#	./clang-3.8/spectralnorm-8 21
+#	./clang-4.0/spectralnorm-8 21
+#	./clang-5.0/spectralnorm-8 21
+#	./clang-6.0/spectralnorm-8 21
+#	./clang-7.0/spectralnorm-8 21
+#	./clang-8.0/spectralnorm-8 21
+#	./clang-9.0/spectralnorm-8 21
+#	./clang-10.0/spectralnorm-8 21
+#	./clang-11.1/spectralnorm-8 21
+#	./clang-12.0/spectralnorm-8 21
+#	./clang-13.0/spectralnorm-8 21
+#	./clang-14.0/spectralnorm-8 21
+#	./clang-15.0/spectralnorm-8 21
 
 	
 
@@ -84,21 +84,21 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-	$(CLang34)clang++ spectralnorm-8.cpp -o ./clang-3.4/spectralnorm-8
-	$(CLang35)clang++ spectralnorm-8.cpp -o ./clang-3.5/spectralnorm-8
-	$(CLang36)clang++ spectralnorm-8.cpp -o ./clang-3.6/spectralnorm-8
-	$(CLang37)clang++ spectralnorm-8.cpp -o ./clang-3.7/spectralnorm-8
-	$(CLang38)clang++ spectralnorm-8.cpp -o ./clang-3.8/spectralnorm-8
-	$(CLang4)clang++ spectralnorm-8.cpp -o ./clang-4.0/spectralnorm-8
-	$(CLang5)clang++ spectralnorm-8.cpp -o ./clang-5.0/spectralnorm-8
-	$(CLang6)clang++ spectralnorm-8.cpp -o ./clang-6.0/spectralnorm-8
-	$(CLang7)clang++ spectralnorm-8.cpp -o ./clang-7.0/spectralnorm-8
-	$(CLang8)clang++ spectralnorm-8.cpp -o ./clang-8.0/spectralnorm-8
-	$(CLang9)clang++ spectralnorm-8.cpp -o ./clang-9.0/spectralnorm-8
-	$(CLang10)clang++ spectralnorm-8.cpp -o ./clang-10.0/spectralnorm-8
-	$(CLang11)clang++ spectralnorm-8.cpp -o ./clang-11.1/spectralnorm-8
-	$(CLang12)clang++ spectralnorm-8.cpp -o ./clang-12.0/spectralnorm-8
-	$(CLang13)clang++ spectralnorm-8.cpp -o ./clang-13.0/spectralnorm-8
-	$(CLang14)clang++ spectralnorm-8.cpp -o ./clang-14.0/spectralnorm-8
-	$(CLang15)clang++ spectralnorm-8.cpp -o ./clang-15.0/spectralnorm-8
+#	$(CLang34)clang++ spectralnorm-8.cpp -o ./clang-3.4/spectralnorm-8
+#	$(CLang35)clang++ spectralnorm-8.cpp -o ./clang-3.5/spectralnorm-8
+#	$(CLang36)clang++ spectralnorm-8.cpp -o ./clang-3.6/spectralnorm-8
+#	$(CLang37)clang++ spectralnorm-8.cpp -o ./clang-3.7/spectralnorm-8
+#	$(CLang38)clang++ spectralnorm-8.cpp -o ./clang-3.8/spectralnorm-8
+#	$(CLang4)clang++ spectralnorm-8.cpp -o ./clang-4.0/spectralnorm-8
+#	$(CLang5)clang++ spectralnorm-8.cpp -o ./clang-5.0/spectralnorm-8
+#	$(CLang6)clang++ spectralnorm-8.cpp -o ./clang-6.0/spectralnorm-8
+#	$(CLang7)clang++ spectralnorm-8.cpp -o ./clang-7.0/spectralnorm-8
+#	$(CLang8)clang++ spectralnorm-8.cpp -o ./clang-8.0/spectralnorm-8
+#	$(CLang9)clang++ spectralnorm-8.cpp -o ./clang-9.0/spectralnorm-8
+#	$(CLang10)clang++ spectralnorm-8.cpp -o ./clang-10.0/spectralnorm-8
+#	$(CLang11)clang++ spectralnorm-8.cpp -o ./clang-11.1/spectralnorm-8
+#	$(CLang12)clang++ spectralnorm-8.cpp -o ./clang-12.0/spectralnorm-8
+#	$(CLang13)clang++ spectralnorm-8.cpp -o ./clang-13.0/spectralnorm-8
+#	$(CLang14)clang++ spectralnorm-8.cpp -o ./clang-14.0/spectralnorm-8
+#	$(CLang15)clang++ spectralnorm-8.cpp -o ./clang-15.0/spectralnorm-8
 	
