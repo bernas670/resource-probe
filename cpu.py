@@ -68,7 +68,7 @@ def heat_up_cpu(temperature, interval=0.15):
 
     for process in processes:
         print("[CPU] - Terminating process")
-        process.terminate()
+        process.kill()
 
         if not process.is_alive():
             process.join(timeout=0.4)
@@ -87,7 +87,6 @@ def cool_down_cpu(temperature, interval = 0.15):
     prev_temp = temp
 
     while temp > temperature or prev_temp > temperature:
-        print(str(prev_temp) + " - " + str(temp))
         time.sleep(interval)
         prev_temp = temp
         temp = cpu_temperature()
@@ -97,7 +96,7 @@ def cool_down_cpu(temperature, interval = 0.15):
 
 def set_temp(min_temp, max_temp, interval=0.15):
     cur_temp = cpu_temperature()
-    print(cur_temp)
+    print(f"[CPU] - Current initial temperature at {cur_temp}ºC")
 
     if cur_temp < min_temp:
         return heat_up_cpu(min_temp, interval)

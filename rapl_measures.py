@@ -4,6 +4,7 @@ import csv
 import subprocess as sub
 from threading import Thread
 import time
+import cpu
 
 
 class DataRAPL:
@@ -13,25 +14,34 @@ class DataRAPL:
 		self.package = []
 		self.dram = []
 		self.mem = []
+		self.init_temp = []
+		self.fin_temp = []
+		self.mid_temp = []
 
-	def add_data(self, dur, pkg, dram, mem):
+	def add_data(self, dur, pkg, dram, mem,init_temp,mid_temp,fin_temp):
 		self.durations.append(dur)
 		self.package.append(pkg)
 		self.dram.append(dram)
 		self.mem.append(mem)
+		self.init_temp.append(init_temp)
+		self.mid_temp.append(mid_temp)
+		self.fin_temp.append(fin_temp)
 
 	def save_data(self,path,name, graph):
 		"""Saves the duration, energy and dram consumption to a csv file and generates plots with the data"""
 		with open(path + "/data_" + name + ".csv","w") as file:
 			writer = csv.writer(file)
-			writer.writerow(['duration','package','dram','peak_rss'])
+			writer.writerow(['duration','package','dram','peak_rss','initial_temp','mid_temp','final_temp'])
 
 			length = len(self.durations)
 			for i in range(length):
 				writer.writerow([self.durations[i],
 								 self.package[i],
 								 self.dram[i],
-								 self.mem[i]])
+								 self.mem[i],
+								 self.init_temp[i],
+								 self.mid_temp[i],
+								 self.fin_temp[i]])
 		if graph == True:
 			self.create_graphs(path,name)
 
@@ -56,7 +66,7 @@ class DataRAPL:
 
 class CollectorRAPL:
 	"""The CollectorRAPL class is responsible for executing the programs and collecting data"""
-	def __init__(self, cmd, path, name, freq = 0.0, multithreaded = False, iter = 10, energy = True, memory = True):
+	def __init__(self, cmd, path, name,min_temp,max_temp,temp_int, freq = 0.0, multithreaded = False, iter = 10, energy = True, memory = True,):
 		"""
 			cmd - Execution cmd
 			path - Path to store collected data
@@ -65,6 +75,9 @@ class CollectorRAPL:
 			multithreaded - If measurements are done during or at the start and end of the program exec
 			iter - number of repetitions of the exec
 		"""
+		self.min_temp = min_temp
+		self.max_temp = max_temp
+		self.temp_int = temp_int
 
 		self.freq = float(freq)
 		self.multithreaded = multithreaded
@@ -100,6 +113,8 @@ class CollectorRAPL:
 		"""Runs the program and collects data during the execution of the program"""
 		for i in range(self.iter):
 			sub_data = DataRAPL()
+			self.init_temp = cpu.set_temp(self.min_temp,self.max_temp,self.temp_int)
+			
 			self.meter.begin()
 			exec = Thread(target=self.execute_command)
 			exec.start()
@@ -108,16 +123,15 @@ class CollectorRAPL:
 				#For small duration programs freq should be very low or it wont measure many time
 				time.sleep(self.freq)
 				self.meter.end()
-				sub_data.add_data(self.meter.result.duration,self.meter.result.pkg[0],self.meter.result.dram[0],0)
+				sub_data.add_data(self.meter.result.duration,self.meter.result.pkg[0],self.meter.result.dram[0],0, self.init_temp,cpu.cpu_temperature(),0)
 
 			process = exec.join()
 			if self.ret_codes.returncode != 0:
 				raise Exception("[" + self.cmd +"] - Error when executing this command")
    
 			if self.memory:
-				# TODO: add logic to save peak_rss
 				peak_rss = int(self.ret_codes.stderr.read().decode().strip())
-				sub_data.add_data(self.meter.result.duration,self.meter.result.pkg[0],self.meter.result.dram[0],peak_rss)
+				sub_data.add_data(self.meter.result.duration,self.meter.result.pkg[0],self.meter.result.dram[0],peak_rss,self.init_temp,0,cpu.cpu_temperature())
 
 				self.ret_codes = None
    
@@ -129,6 +143,7 @@ class CollectorRAPL:
 		data = DataRAPL()
 
 		for i in range(self.iter):
+			self.init_temp = cpu.set_temp(self.min_temp,self.max_temp,self.temp_int)
 			print(self.cmd)
 			self.meter.begin()
    
@@ -146,9 +161,9 @@ class CollectorRAPL:
 			if self.memory:
 				# TODO: add logic to save peak_rss
 				peak_rss = int(process.stderr.read().decode().strip())
-				data.add_data(self.meter.result.duration,self.meter.result.pkg[0],self.meter.result.dram[0],peak_rss)
+				data.add_data(self.meter.result.duration,self.meter.result.pkg[0],self.meter.result.dram[0],peak_rss, self.init_temp, 0 ,cpu.cpu_temperature())
 			else:
-				data.add_data(self.meter.result.duration,self.meter.result.pkg[0],self.meter.result.dram[0],0)
+				data.add_data(self.meter.result.duration,self.meter.result.pkg[0],self.meter.result.dram[0],0, self.init_temp, 0 ,cpu.cpu_temperature())
 
 			
 
