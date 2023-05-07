@@ -1,9 +1,13 @@
 import argparse
+import cpu
 from rapl_measures import CollectorRAPL
+
 
 def main(command, folder, file,temperature, energy, memory, multithreaded, interval, repetitions):
     
     # TODO: add temperature
+    cpu.set_temp(30,40,0.15)
+
     # TODO: implement --no-energy
     
     collector = CollectorRAPL(command, folder, file, interval, multithreaded, repetitions, energy, memory)

@@ -1,6 +1,7 @@
 import subprocess
 import multiprocessing
 import sys
+import time
 
 def cpu_temp() -> int:
     return int(subprocess.check_output(
@@ -28,7 +29,7 @@ def round_robin():
             number = number + 1
 
 
-def heat_up_cpu(temperature):
+def heat_up_cpu(temperature, interval=0.15):
     """Functions to heat CPU 
     
     Based on the implementation of https://gist.github.com/ishan1608/87cb762f31b7af70a867 
@@ -36,19 +37,34 @@ def heat_up_cpu(temperature):
     """
     process_cnt = 1
     processes = []
+    
     q = multiprocessing.Queue()
 
-    print("[CPU] - Spawning Processes to to Heat up CPU")
-    while(process_cnt <= multiprocessing.cpu_count() or cpu_temperature() > temperature):
-        temp = multiprocessing.Process(target=round_robin)
-        processes.append(temp)
-        temp.start()
-        process_cnt += 1
+    print("[CPU] - CPU temperature to get high enough")
 
-    print("[CPU] - Awaiting for spawned Processes to Finish or CPU temperature get high enough")
     cpu_temp = cpu_temperature()
-    while (cpu_temp < temperature):
+    prev_temp = cpu_temp
+
+    while(cpu_temp < temperature) or (prev_temp < temperature):
+
+        for process in processes:
+            if not process.is_alive():
+                process_cnt -= 1
+                process.join(timeout=0.4)
+                print("[CPU] - Terminated process sucessfully joined")
+
+            
+        while(process_cnt <= multiprocessing.cpu_count()):
+            print("[CPU] - Spawning Process to to Heat up CPU")
+            temp = multiprocessing.Process(target=round_robin)
+            processes.append(temp)
+            temp.start()
+            process_cnt += 1
+
+        time.sleep(interval)
+        prev_temp = cpu_temp
         cpu_temp = cpu_temperature()
+
 
     for process in processes:
         print("[CPU] - Terminating process")
@@ -58,6 +74,34 @@ def heat_up_cpu(temperature):
             process.join(timeout=0.4)
             print("[CPU] - Terminated process sucessfully joined")
 
-    print("[CPU] - Finished heating up cpu")
+
+    print(f"[CPU] - Finished Heating up. Currently at {cpu_temp}ºC")
     q.close()
 
+    return cpu_temp
+
+def cool_down_cpu(temperature, interval = 0.15):
+    print("[CPU] - Awaiting for cpu to cool down")
+    
+    temp = cpu_temperature()
+    prev_temp = temp
+
+    while temp > temperature or prev_temp > temperature:
+        print(str(prev_temp) + " - " + str(temp))
+        time.sleep(interval)
+        prev_temp = temp
+        temp = cpu_temperature()
+
+    print(f"[CPU] - Finished cooling down. Currently at {temp}ºC")
+    return temp
+
+def set_temp(min_temp, max_temp, interval=0.15):
+    cur_temp = cpu_temperature()
+    print(cur_temp)
+
+    if cur_temp < min_temp:
+        return heat_up_cpu(min_temp, interval)
+    elif cur_temp > max_temp:
+        return cool_down_cpu(max_temp, interval)
+    else:
+        return cur_temp
