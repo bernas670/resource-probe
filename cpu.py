@@ -2,6 +2,7 @@ import subprocess
 import multiprocessing
 import sys
 import time
+from pprint import pprint
 
 def cpu_temp() -> int:
     return int(subprocess.check_output(
@@ -69,10 +70,9 @@ def heat_up_cpu(temperature, interval=0.15):
     for process in processes:
         print("[CPU] - Terminating process")
         process.kill()
+        process.join()
+        print("[CPU] - Terminated process sucessfully joined")
 
-        if not process.is_alive():
-            process.join(timeout=0.4)
-            print("[CPU] - Terminated process sucessfully joined")
 
 
     print(f"[CPU] - Finished Heating up. Currently at {cpu_temp}ºC")
