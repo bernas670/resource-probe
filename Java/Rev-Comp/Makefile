@@ -40,21 +40,21 @@ clean:
 
 run:
 #	(cd ./java-6 && $(JAVA6)java revcomp6); cd ..
-	(cd ./java-7 && $(JAVA7)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-8.0 && $(JAVA80)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-8.1 && $(JAVA81)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-9 && $(JAVA9)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-10 && $(JAVA10)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-11 && $(JAVA11)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-12 && $(JAVA12)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-13 && $(JAVA13)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-14 && $(JAVA14)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-15 && $(JAVA15)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-16 && $(JAVA16)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-17 && $(JAVA17)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-18 && $(JAVA18)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-19 && $(JAVA19)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
-	(cd ./java-20 && $(JAVA20)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input10000.txt); cd ..
+	(cd ./java-7 && $(JAVA7)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-8.0 && $(JAVA80)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-8.1 && $(JAVA81)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-9 && $(JAVA9)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-10 && $(JAVA10)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-11 && $(JAVA11)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-12 && $(JAVA12)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-13 && $(JAVA13)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-14 && $(JAVA14)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-15 && $(JAVA15)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-16 && $(JAVA16)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-17 && $(JAVA17)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-18 && $(JAVA18)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-19 && $(JAVA19)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
+	(cd ./java-20 && $(JAVA20)java -Xmx3072m revcomp6 0 < /home/diguest/Documents/Dissertação/resource-probe/revcomp-input25000000.txt); cd ..
 
 	
 

@@ -1,16 +1,16 @@
 import argparse
 import cpu
+import subprocess, time
 from rapl_measures import CollectorRAPL
 
 
 def main(command, folder, file,min_temp, max_temp, temp_int, energy, memory, multithreaded, interval, repetitions):
     
-
     # TODO: implement --no-energy
     
     collector = CollectorRAPL(command, folder, file,min_temp,max_temp,temp_int,interval, multithreaded, repetitions, energy, memory)
     collector.collect()
-    
+        
     return 
 
 
