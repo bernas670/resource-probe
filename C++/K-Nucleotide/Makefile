@@ -59,23 +59,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/mandelbrot-9 21
-#	./clang-3.5/mandelbrot-9 21
-#	./clang-3.6/mandelbrot-9 21
-#	./clang-3.7/mandelbrot-9 21
-#	./clang-3.8/mandelbrot-9 21
-#	./clang-4.0/mandelbrot-9 21
-#	./clang-5.0/mandelbrot-9 21
-#	./clang-6.0/mandelbrot-9 21
-#	./clang-7.0/mandelbrot-9 21
-#	./clang-8.0/mandelbrot-9 21
-#	./clang-9.0/mandelbrot-9 21
-#	./clang-10.0/mandelbrot-9 21
-#	./clang-11.1/mandelbrot-9 21
-#	./clang-12.0/mandelbrot-9 21
-#	./clang-13.0/mandelbrot-9 21
-#	./clang-14.0/mandelbrot-9 21
-#	./clang-15.0/mandelbrot-9 21
+	./clang-3.4/knucleotide 21
+	./clang-3.5/knucleotide 21
+	./clang-3.6/knucleotide 21
+	./clang-3.7/knucleotide 21
+	./clang-3.8/knucleotide 21
+	./clang-4.0/knucleotide 21
+	./clang-5.0/knucleotide 21
+	./clang-6.0/knucleotide 21
+	./clang-7.0/knucleotide 21
+	./clang-8.0/knucleotide 21
+	./clang-9.0/knucleotide 21
+	./clang-10.0/knucleotide 21
+	./clang-11.1/knucleotide 21
+	./clang-12.0/knucleotide 21
+	./clang-13.0/knucleotide 21
+	./clang-14.0/knucleotide 21
+	./clang-15.0/knucleotide 21
 
 	
 
@@ -102,21 +102,21 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-#	$(CLang34)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang34) mandelbrot-9.cpp -o ./clang-3.4/mandelbrot-9 -stdlib=libc++
-#	$(CLang35)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang35) mandelbrot-9.cpp -o ./clang-3.5/mandelbrot-9 -stdlib=libc++
-#	$(CLang36)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang36) mandelbrot-9.cpp -o ./clang-3.6/mandelbrot-9 -stdlib=libc++
-#	$(CLang37)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang37) mandelbrot-9.cpp -o ./clang-3.7/mandelbrot-9 -stdlib=libc++
-#	$(CLang38)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang38) mandelbrot-9.cpp -o ./clang-3.8/mandelbrot-9 -stdlib=libc++
-#	$(CLang4)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang4) mandelbrot-9.cpp -o ./clang-4.0/mandelbrot-9 -stdlib=libc++
-#	$(CLang5)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang5) mandelbrot-9.cpp -o ./clang-5.0/mandelbrot-9 -stdlib=libc++
-#	$(CLang6)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang6) mandelbrot-9.cpp -o ./clang-6.0/mandelbrot-9 -stdlib=libc++
-#	$(CLang7)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang7) mandelbrot-9.cpp -o ./clang-7.0/mandelbrot-9 -stdlib=libc++
-#	$(CLang8)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang8) mandelbrot-9.cpp -o ./clang-8.0/mandelbrot-9 -stdlib=libc++
-#	$(CLang9)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang9) mandelbrot-9.cpp -o ./clang-9.0/mandelbrot-9 -stdlib=libc++
-#	$(CLang10)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang10) mandelbrot-9.cpp -o ./clang-10.0/mandelbrot-9 -stdlib=libc++
-#	$(CLang11)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang11) mandelbrot-9.cpp -o ./clang-11.1/mandelbrot-9 -stdlib=libc++
-#	$(CLang12)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang12) mandelbrot-9.cpp -o ./clang-12.0/mandelbrot-9 -stdlib=libc++
-#	$(CLang13)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang13) mandelbrot-9.cpp -o ./clang-13.0/mandelbrot-9 -stdlib=libc++
-#	$(CLang14)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang14) mandelbrot-9.cpp -o ./clang-14.0/mandelbrot-9 -stdlib=libc++
-#	$(CLang15)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang15) mandelbrot-9.cpp -o ./clang-15.0/mandelbrot-9 -stdlib=libc++
+#	$(CLang34)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang34) knucleotide.cpp -o ./clang-3.4/knucleotide -stdlib=libstdc++
+#	$(CLang35)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang35) knucleotide.cpp -o ./clang-3.5/knucleotide -stdlib=libstdc++
+#	$(CLang36)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang36) knucleotide.cpp -o ./clang-3.6/knucleotide -stdlib=libstdc++
+#	$(CLang37)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang37) knucleotide.cpp -o ./clang-3.7/knucleotide -stdlib=libstdc++
+#	$(CLang38)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang38) knucleotide.cpp -o ./clang-3.8/knucleotide -stdlib=libstdc++
+#	$(CLang4)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang4) knucleotide.cpp -o ./clang-4.0/knucleotide -stdlib=libstdc++
+#	$(CLang5)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang5) knucleotide.cpp -o ./clang-5.0/knucleotide -stdlib=libstdc++
+	$(CLang6)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang6) knucleotide.cpp -o ./clang-6.0/knucleotide -stdlib=libstdc++
+	$(CLang7)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang7) knucleotide.cpp -o ./clang-7.0/knucleotide -stdlib=libstdc++
+	$(CLang8)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang8) knucleotide.cpp -o ./clang-8.0/knucleotide -stdlib=libstdc++
+#	$(CLang9)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang9) knucleotide.cpp -o ./clang-9.0/knucleotide -stdlib=libstdc++
+	$(CLang10)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang10) knucleotide.cpp -o ./clang-10.0/knucleotide -stdlib=libstdc++
+	$(CLang11)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang11) knucleotide.cpp -o ./clang-11.1/knucleotide -stdlib=libstdc++
+	$(CLang12)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang12) knucleotide.cpp -o ./clang-12.0/knucleotide -stdlib=libstdc++
+	$(CLang13)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang13) knucleotide.cpp -o ./clang-13.0/knucleotide -stdlib=libstdc++
+	$(CLang14)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang14) knucleotide.cpp -o ./clang-14.0/knucleotide -stdlib=libstdc++
+	$(CLang15)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang15) knucleotide.cpp -o ./clang-15.0/knucleotide -stdlib=libstdc++
 	

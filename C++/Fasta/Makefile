@@ -59,23 +59,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/fasta-6 21
-#	./clang-3.5/fasta-6 21
-#	./clang-3.6/fasta-6 21
-#	./clang-3.7/fasta-6 21
-#	./clang-3.8/fasta-6 21
-#	./clang-4.0/fasta-6 21
-#	./clang-5.0/fasta-6 21
-#	./clang-6.0/fasta-6 21
-#	./clang-7.0/fasta-6 21
-#	./clang-8.0/fasta-6 21
-#	./clang-9.0/fasta-6 21
-#	./clang-10.0/fasta-6 21
-#	./clang-11.1/fasta-6 21
-#	./clang-12.0/fasta-6 21
-#	./clang-13.0/fasta-6 21
-#	./clang-14.0/fasta-6 21
-#	./clang-15.0/fasta-6 21
+#	./clang-3.4/fasta-6 25000000
+	./clang-3.5/fasta-6 25000000
+	./clang-3.6/fasta-6 25000000
+	./clang-3.7/fasta-6 25000000
+	./clang-3.8/fasta-6 25000000
+	./clang-4.0/fasta-6 25000000
+	./clang-5.0/fasta-6 25000000
+	./clang-6.0/fasta-6 25000000
+	./clang-7.0/fasta-6 25000000
+	./clang-8.0/fasta-6 25000000
+#	./clang-9.0/fasta-6 25000000
+	./clang-10.0/fasta-6 25000000
+	./clang-11.1/fasta-6 25000000
+	./clang-12.0/fasta-6 25000000
+	./clang-13.0/fasta-6 25000000
+	./clang-14.0/fasta-6 25000000
+	./clang-15.0/fasta-6 25000000
 
 	
 
@@ -102,22 +102,22 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-#	$(CLang34)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang34) fasta-6.cpp -o ./clang-3.4/fasta-6 -stdlib=libc++
-#	$(CLang35)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang35) fasta-6.cpp -o ./clang-3.5/fasta-6 -stdlib=libc++
-#	$(CLang36)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang36) fasta-6.cpp -o ./clang-3.6/fasta-6 -stdlib=libc++
-#	$(CLang37)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang37) fasta-6.cpp -o ./clang-3.7/fasta-6 -stdlib=libc++
-#	$(CLang38)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang38) fasta-6.cpp -o ./clang-3.8/fasta-6 -stdlib=libc++
-#	$(CLang4)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang4) fasta-6.cpp -o ./clang-4.0/fasta-6 -stdlib=libc++
-#	$(CLang5)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang5) fasta-6.cpp -o ./clang-5.0/fasta-6 -stdlib=libc++
-#	$(CLang6)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang6) fasta-6.cpp -o ./clang-6.0/fasta-6 -stdlib=libc++
-#	$(CLang7)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang7) fasta-6.cpp -o ./clang-7.0/fasta-6 -stdlib=libc++
-#	$(CLang8)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang8) fasta-6.cpp -o ./clang-8.0/fasta-6 -stdlib=libc++
-#	$(CLang9)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang9) fasta-6.cpp -o ./clang-9.0/fasta-6 -stdlib=libc++
-#	$(CLang10)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang10) fasta-6.cpp -o ./clang-10.0/fasta-6 -stdlib=libc++
-#	$(CLang11)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang11) fasta-6.cpp -o ./clang-11.1/fasta-6 -stdlib=libc++
-#	$(CLang12)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang12) fasta-6.cpp -o ./clang-12.0/fasta-6 -stdlib=libc++
-#	$(CLang13)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang13) fasta-6.cpp -o ./clang-13.0/fasta-6 -stdlib=libc++
-#	$(CLang14)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang14) fasta-6.cpp -o ./clang-14.0/fasta-6 -stdlib=libc++
-#	$(CLang15)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang15) fasta-6.cpp -o ./clang-15.0/fasta-6 -stdlib=libc++
+#	$(CLang34)clang++ -pipe -O3 -std=c++11 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang34) fasta-6.cpp -o ./clang-3.4/fasta-6 -stdlib=libc++
+	$(CLang35)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang35) fasta-6.cpp -o ./clang-3.5/fasta-6 -stdlib=libc++
+	$(CLang36)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang36) fasta-6.cpp -o ./clang-3.6/fasta-6 -stdlib=libc++
+	$(CLang37)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang37) fasta-6.cpp -o ./clang-3.7/fasta-6 -stdlib=libc++
+	$(CLang38)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang38) fasta-6.cpp -o ./clang-3.8/fasta-6 -stdlib=libc++
+	$(CLang4)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang4) fasta-6.cpp -o ./clang-4.0/fasta-6 -stdlib=libc++
+	$(CLang5)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang5) fasta-6.cpp -o ./clang-5.0/fasta-6 -stdlib=libc++
+	$(CLang6)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang6) fasta-6.cpp -o ./clang-6.0/fasta-6 -stdlib=libc++
+	$(CLang7)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang7) fasta-6.cpp -o ./clang-7.0/fasta-6 -stdlib=libc++
+	$(CLang8)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang8) fasta-6.cpp -o ./clang-8.0/fasta-6 -stdlib=libc++
+#	$(CLang9)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang9) fasta-6.cpp -o ./clang-9.0/fasta-6 -stdlib=libc++
+	$(CLang10)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang10) fasta-6.cpp -o ./clang-10.0/fasta-6 -stdlib=libc++
+	$(CLang11)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang11) fasta-6.cpp -o ./clang-11.1/fasta-6 -stdlib=libc++
+	$(CLang12)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang12) fasta-6.cpp -o ./clang-12.0/fasta-6 -stdlib=libc++
+	$(CLang13)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang13) fasta-6.cpp -o ./clang-13.0/fasta-6 -stdlib=libc++
+	$(CLang14)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang14) fasta-6.cpp -o ./clang-14.0/fasta-6 -stdlib=libc++
+	$(CLang15)clang++ -pipe -O3 -O2 -std=c++11 -fomit-frame-pointer -march=native -I$(IncCLang15) fasta-6.cpp -o ./clang-15.0/fasta-6 -stdlib=libc++
 	
 	

@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/spectralnorm-8 21
-#	./clang-3.5/spectralnorm-8 21
-#	./clang-3.6/spectralnorm-8 21
-#	./clang-3.7/spectralnorm-8 21
-#	./clang-3.8/spectralnorm-8 21
-#	./clang-4.0/spectralnorm-8 21
-#	./clang-5.0/spectralnorm-8 21
-#	./clang-6.0/spectralnorm-8 21
-#	./clang-7.0/spectralnorm-8 21
-#	./clang-8.0/spectralnorm-8 21
-#	./clang-9.0/spectralnorm-8 21
-#	./clang-10.0/spectralnorm-8 21
-#	./clang-11.1/spectralnorm-8 21
-#	./clang-12.0/spectralnorm-8 21
-#	./clang-13.0/spectralnorm-8 21
-#	./clang-14.0/spectralnorm-8 21
-#	./clang-15.0/spectralnorm-8 21
+#	./clang-3.4/spectralnorm-1 5500
+	./clang-3.5/spectralnorm-1 5500
+	./clang-3.6/spectralnorm-1 5500
+	./clang-3.7/spectralnorm-1 5500
+	./clang-3.8/spectralnorm-1 5500
+	./clang-4.0/spectralnorm-1 5500
+	./clang-5.0/spectralnorm-1 5500
+	./clang-6.0/spectralnorm-1 5500
+	./clang-7.0/spectralnorm-1 5500
+	./clang-8.0/spectralnorm-1 5500
+#	./clang-9.0/spectralnorm-1 5500
+	./clang-10.0/spectralnorm-1 5500
+	./clang-11.1/spectralnorm-1 5500
+	./clang-12.0/spectralnorm-1 5500
+	./clang-13.0/spectralnorm-1 5500
+	./clang-14.0/spectralnorm-1 5500
+	./clang-15.0/spectralnorm-1 5500
 
 	
 
@@ -84,21 +84,21 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-#	$(CLang34)clang++ spectralnorm-8.cpp -o ./clang-3.4/spectralnorm-8
-#	$(CLang35)clang++ spectralnorm-8.cpp -o ./clang-3.5/spectralnorm-8
-#	$(CLang36)clang++ spectralnorm-8.cpp -o ./clang-3.6/spectralnorm-8
-#	$(CLang37)clang++ spectralnorm-8.cpp -o ./clang-3.7/spectralnorm-8
-#	$(CLang38)clang++ spectralnorm-8.cpp -o ./clang-3.8/spectralnorm-8
-#	$(CLang4)clang++ spectralnorm-8.cpp -o ./clang-4.0/spectralnorm-8
-#	$(CLang5)clang++ spectralnorm-8.cpp -o ./clang-5.0/spectralnorm-8
-#	$(CLang6)clang++ spectralnorm-8.cpp -o ./clang-6.0/spectralnorm-8
-#	$(CLang7)clang++ spectralnorm-8.cpp -o ./clang-7.0/spectralnorm-8
-#	$(CLang8)clang++ spectralnorm-8.cpp -o ./clang-8.0/spectralnorm-8
-#	$(CLang9)clang++ spectralnorm-8.cpp -o ./clang-9.0/spectralnorm-8
-#	$(CLang10)clang++ spectralnorm-8.cpp -o ./clang-10.0/spectralnorm-8
-#	$(CLang11)clang++ spectralnorm-8.cpp -o ./clang-11.1/spectralnorm-8
-#	$(CLang12)clang++ spectralnorm-8.cpp -o ./clang-12.0/spectralnorm-8
-#	$(CLang13)clang++ spectralnorm-8.cpp -o ./clang-13.0/spectralnorm-8
-#	$(CLang14)clang++ spectralnorm-8.cpp -o ./clang-14.0/spectralnorm-8
-#	$(CLang15)clang++ spectralnorm-8.cpp -o ./clang-15.0/spectralnorm-8
+#	$(CLang34)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-8.cpp -o ./clang-3.4/spectralnorm-1 -stdlib=libc++
+	$(CLang35)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-3.5/spectralnorm-1 -stdlib=libc++
+	$(CLang36)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-3.6/spectralnorm-1 -stdlib=libc++
+	$(CLang37)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-3.7/spectralnorm-1 -stdlib=libc++
+	$(CLang38)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-3.8/spectralnorm-1 -stdlib=libc++
+	$(CLang4)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-4.0/spectralnorm-1 -stdlib=libc++
+	$(CLang5)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-5.0/spectralnorm-1 -stdlib=libc++
+	$(CLang6)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-6.0/spectralnorm-1 -stdlib=libc++
+	$(CLang7)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-7.0/spectralnorm-1 -stdlib=libc++
+	$(CLang8)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-8.0/spectralnorm-1 -stdlib=libc++
+#	$(CLang9)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-9.0/spectralnorm-1 -stdlib=libc++
+	$(CLang10)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-10.0/spectralnorm-1 -stdlib=libc++
+	$(CLang11)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-11.1/spectralnorm-1 -stdlib=libc++
+	$(CLang12)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-12.0/spectralnorm-1 -stdlib=libc++
+	$(CLang13)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-13.0/spectralnorm-1 -stdlib=libc++
+	$(CLang14)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-14.0/spectralnorm-1 -stdlib=libc++
+	$(CLang15)clang++ -pipe -O3 -fomit-frame-pointer -march=native spectralnorm-1.cpp -o ./clang-15.0/spectralnorm-1 -stdlib=libc++
 	

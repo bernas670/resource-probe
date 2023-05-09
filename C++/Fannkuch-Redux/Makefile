@@ -59,23 +59,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/fannkuchredux-7 21
-#	./clang-3.5/fannkuchredux-7 21
-#	./clang-3.6/fannkuchredux-7 21
-#	./clang-3.7/fannkuchredux-7 21
-#	./clang-3.8/fannkuchredux-7 21
-#	./clang-4.0/fannkuchredux-7 21
-#	./clang-5.0/fannkuchredux-7 21
-#	./clang-6.0/fannkuchredux-7 21
-#	./clang-7.0/fannkuchredux-7 21
-#	./clang-8.0/fannkuchredux-7 21
-#	./clang-9.0/fannkuchredux-7 21
-#	./clang-10.0/fannkuchredux-7 21
-#	./clang-11.1/fannkuchredux-7 21
-#	./clang-12.0/fannkuchredux-7 21
-#	./clang-13.0/fannkuchredux-7 21
-#	./clang-14.0/fannkuchredux-7 21
-#	./clang-15.0/fannkuchredux-7 21
+	./clang-3.4/fannkuchredux-7 12
+	./clang-3.5/fannkuchredux-7 12
+	./clang-3.6/fannkuchredux-7 12
+	./clang-3.7/fannkuchredux-7 12
+	./clang-3.8/fannkuchredux-7 12
+	./clang-4.0/fannkuchredux-7 12
+	./clang-5.0/fannkuchredux-7 12
+	./clang-6.0/fannkuchredux-7 12
+	./clang-7.0/fannkuchredux-7 12
+	./clang-8.0/fannkuchredux-7 12
+#	./clang-9.0/fannkuchredux-7 12
+	./clang-10.0/fannkuchredux-7 12
+	./clang-11.1/fannkuchredux-7 12
+	./clang-12.0/fannkuchredux-7 12
+	./clang-13.0/fannkuchredux-7 12
+	./clang-14.0/fannkuchredux-7 12
+	./clang-15.0/fannkuchredux-7 12
 
 	
 
@@ -102,21 +102,21 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-#	$(CLang34)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang34) fannkuchredux-7.cpp -o ./clang-3.4/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang35)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang35) fannkuchredux-7.cpp -o ./clang-3.5/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang36)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang36) fannkuchredux-7.cpp -o ./clang-3.6/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang37)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang37) fannkuchredux-7.cpp -o ./clang-3.7/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang38)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang38) fannkuchredux-7.cpp -o ./clang-3.8/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang4)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang4) fannkuchredux-7.cpp -o ./clang-4.0/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang5)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang5) fannkuchredux-7.cpp -o ./clang-5.0/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang6)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang6) fannkuchredux-7.cpp -o ./clang-6.0/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang7)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang7) fannkuchredux-7.cpp -o ./clang-7.0/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang8)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang8) fannkuchredux-7.cpp -o ./clang-8.0/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang9)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang9) fannkuchredux-7.cpp -o ./clang-9.0/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang10)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang10) fannkuchredux-7.cpp -o ./clang-10.0/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang11)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang11) fannkuchredux-7.cpp -o ./clang-11.1/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang12)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang12) fannkuchredux-7.cpp -o ./clang-12.0/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang13)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang13) fannkuchredux-7.cpp -o ./clang-13.0/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang14)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang14) fannkuchredux-7.cpp -o ./clang-14.0/fannkuchredux-7 -stdlib=libc++ -mssse3
-#	$(CLang15)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang15) fannkuchredux-7.cpp -o ./clang-15.0/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang34)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang34) fannkuchredux-7.cpp -o ./clang-3.4/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang35)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang35) fannkuchredux-7.cpp -o ./clang-3.5/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang36)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang36) fannkuchredux-7.cpp -o ./clang-3.6/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang37)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang37) fannkuchredux-7.cpp -o ./clang-3.7/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang38)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang38) fannkuchredux-7.cpp -o ./clang-3.8/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang4)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang4) fannkuchredux-7.cpp -o ./clang-4.0/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang5)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang5) fannkuchredux-7.cpp -o ./clang-5.0/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang6)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang6) fannkuchredux-7.cpp -o ./clang-6.0/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang7)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang7) fannkuchredux-7.cpp -o ./clang-7.0/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang8)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang8) fannkuchredux-7.cpp -o ./clang-8.0/fannkuchredux-7 -stdlib=libc++ -mssse3
+#	$(CLang9)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang9) fannkuchredux-7.cpp -o ./clang-9.0/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang10)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang10) fannkuchredux-7.cpp -o ./clang-10.0/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang11)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang11) fannkuchredux-7.cpp -o ./clang-11.1/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang12)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang12) fannkuchredux-7.cpp -o ./clang-12.0/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang13)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang13) fannkuchredux-7.cpp -o ./clang-13.0/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang14)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang14) fannkuchredux-7.cpp -o ./clang-14.0/fannkuchredux-7 -stdlib=libc++ -mssse3
+	$(CLang15)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang15) fannkuchredux-7.cpp -o ./clang-15.0/fannkuchredux-7 -stdlib=libc++ -mssse3
 	

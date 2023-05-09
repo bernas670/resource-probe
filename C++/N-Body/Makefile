@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/nbody-9 21
-#	./clang-3.5/nbody-9 21
-#	./clang-3.6/nbody-9 21
-#	./clang-3.7/nbody-9 21
-#	./clang-3.8/nbody-9 21
-#	./clang-4.0/nbody-9 21
-#	./clang-5.0/nbody-9 21
-#	./clang-6.0/nbody-9 21
-#	./clang-7.0/nbody-9 21
-#	./clang-8.0/nbody-9 21
-#	./clang-9.0/nbody-9 21
-#	./clang-10.0/nbody-9 21
-#	./clang-11.1/nbody-9 21
-#	./clang-12.0/nbody-9 21
-#	./clang-13.0/nbody-9 21
-#	./clang-14.0/nbody-9 21
-#	./clang-15.0/nbody-9 21
+#	./clang-3.4/nbody-7 50000000
+#	./clang-3.5/nbody-7 50000000
+#	./clang-3.6/nbody-7 50000000
+#	./clang-3.7/nbody-7 50000000
+#	./clang-3.8/nbody-7 50000000
+#	./clang-4.0/nbody-7 50000000
+#	./clang-5.0/nbody-7 50000000
+	./clang-6.0/nbody-7 50000000
+	./clang-7.0/nbody-7 50000000
+	./clang-8.0/nbody-7 50000000
+#	./clang-9.0/nbody-7 50000000
+	./clang-10.0/nbody-7 50000000
+	./clang-11.1/nbody-7 50000000
+	./clang-12.0/nbody-7 50000000
+	./clang-13.0/nbody-7 50000000
+	./clang-14.0/nbody-7 50000000
+	./clang-15.0/nbody-7 50000000
 
 	
 
@@ -84,21 +84,21 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-#	$(CLang34)clang++ nbody-9.cpp -o ./clang-3.4/nbody-9
-#	$(CLang35)clang++ nbody-9.cpp -o ./clang-3.5/nbody-9
-#	$(CLang36)clang++ nbody-9.cpp -o ./clang-3.6/nbody-9
-#	$(CLang37)clang++ nbody-9.cpp -o ./clang-3.7/nbody-9
-#	$(CLang38)clang++ nbody-9.cpp -o ./clang-3.8/nbody-9
-#	$(CLang4)clang++ nbody-9.cpp -o ./clang-4.0/nbody-9
-#	$(CLang5)clang++ nbody-9.cpp -o ./clang-5.0/nbody-9
-#	$(CLang6)clang++ nbody-9.cpp -o ./clang-6.0/nbody-9
-#	$(CLang7)clang++ nbody-9.cpp -o ./clang-7.0/nbody-9
-#	$(CLang8)clang++ nbody-9.cpp -o ./clang-8.0/nbody-9
-#	$(CLang9)clang++ nbody-9.cpp -o ./clang-9.0/nbody-9
-#	$(CLang10)clang++ nbody-9.cpp -o ./clang-10.0/nbody-9
-#	$(CLang11)clang++ nbody-9.cpp -o ./clang-11.1/nbody-9
-#	$(CLang12)clang++ nbody-9.cpp -o ./clang-12.0/nbody-9
-#	$(CLang13)clang++ nbody-9.cpp -o ./clang-13.0/nbody-9
-#	$(CLang14)clang++ nbody-9.cpp -o ./clang-14.0/nbody-9
-#	$(CLang15)clang++ nbody-9.cpp -o ./clang-15.0/nbody-9
+#	$(CLang34)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-3.4/nbody-7 -stdlib=libc++ 
+#	$(CLang35)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-3.5/nbody-7 -stdlib=libc++
+#	$(CLang36)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-3.6/nbody-7 -stdlib=libc++
+#	$(CLang37)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-3.7/nbody-7 -stdlib=libc++
+#	$(CLang38)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-3.8/nbody-7 -stdlib=libc++
+#	$(CLang4)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-4.0/nbody-7 -stdlib=libc++
+#	$(CLang5)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-5.0/nbody-7 -stdlib=libc++
+	$(CLang6)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-6.0/nbody-7 -stdlib=libc++
+	$(CLang7)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-7.0/nbody-7 -stdlib=libc++
+	$(CLang8)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-8.0/nbody-7 -stdlib=libc++
+#	$(CLang9)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-9.0/nbody-7 -stdlib=libc++
+	$(CLang10)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-10.0/nbody-7 -stdlib=libc++
+	$(CLang11)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-11.1/nbody-7 -stdlib=libc++
+	$(CLang12)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-12.0/nbody-7 -stdlib=libc++
+	$(CLang13)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-13.0/nbody-7 -stdlib=libc++
+	$(CLang14)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-14.0/nbody-7 -stdlib=libc++
+	$(CLang15)clang++ -pipe -O3 -fomit-frame-pointer -march=native  nbody-7.cpp -o ./clang-15.0/nbody-7 -stdlib=libc++
 	

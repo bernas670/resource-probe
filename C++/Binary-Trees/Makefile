@@ -66,16 +66,16 @@ run:
 #	./clang-3.8/binarytrees-8 21
 #	./clang-4.0/binarytrees-8 21
 #	./clang-5.0/binarytrees-8 21
-#	./clang-6.0/binarytrees-8 21 -w
-#	./clang-7.0/binarytrees-8 21 -w
-#	./clang-8.0/binarytrees-8 21 -w
+	./clang-6.0/binarytrees-8 21 
+	./clang-7.0/binarytrees-8 21 
+	./clang-8.0/binarytrees-8 21 
 #	./clang-9.0/binarytrees-8 21 
-#	./clang-10.0/binarytrees-8 21 -w
-#	./clang-11.1/binarytrees-8 21 -w
-#	./clang-12.0/binarytrees-8 21 -w
-#	./clang-13.0/binarytrees-8 21 -w
-#	./clang-14.0/binarytrees-8 21 -w
-#	./clang-15.0/binarytrees-8 21 -w
+	./clang-10.0/binarytrees-8 21 
+	./clang-11.1/binarytrees-8 21 
+	./clang-12.0/binarytrees-8 21 
+	./clang-13.0/binarytrees-8 21 
+	./clang-14.0/binarytrees-8 21 
+	./clang-15.0/binarytrees-8 21 
 
 	
 
@@ -102,21 +102,21 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-#	$(CLang34)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang34) binarytrees-8.cpp -o ./clang-3.4/binarytrees-8 -stdlib=libc++
-#	$(CLang35)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang35) binarytrees-8.cpp -o ./clang-3.5/binarytrees-8 -stdlib=libc++
-#	$(CLang36)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang36) binarytrees-8.cpp -o ./clang-3.6/binarytrees-8 -stdlib=libc++
-#	$(CLang37)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang37) binarytrees-8.cpp -o ./clang-3.7/binarytrees-8 -stdlib=libc++
-#	$(CLang38)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang38) binarytrees-8.cpp -o ./clang-3.8/binarytrees-8 -stdlib=libc++
-#	$(CLang4)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang4) binarytrees-8.cpp -o ./clang-4.0/binarytrees-8 -stdlib=libc++
-#	$(CLang5)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang5) binarytrees-8.cpp -o ./clang-5.0/binarytrees-8 -stdlib=libc++
-#	$(CLang6)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang6) binarytrees-8.cpp -o ./clang-6.0/binarytrees-8 
-#	$(CLang7)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang7) binarytrees-8.cpp -o ./clang-7.0/binarytrees-8 -stdlib=libc++
-#	$(CLang8)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang8) binarytrees-8.cpp -o ./clang-8.0/binarytrees-8 -stdlib=libc++
-#	$(CLang9)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang9) binarytrees-8.cpp -o ./clang-9.0/binarytrees-8 -stdlib=libc++
-#	$(CLang10)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang10) binarytrees-8.cpp -o ./clang-10.0/binarytrees-8 -stdlib=libc++
-#	$(CLang11)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang11) binarytrees-8.cpp -o ./clang-11.1/binarytrees-8 -stdlib=libc++
-#	$(CLang12)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang12) binarytrees-8.cpp -o ./clang-12.0/binarytrees-8 -stdlib=libc++
-#	$(CLang13)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang13) binarytrees-8.cpp -o ./clang-13.0/binarytrees-8 -stdlib=libc++
-#	$(CLang14)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang14) binarytrees-8.cpp -o ./clang-14.0/binarytrees-8 -stdlib=libc++
-#	$(CLang15)clang++ -pipe -O3 -fomit-frame-pointer -march=native -fopenmp -I$(IncCLang15) binarytrees-8.cpp -o ./clang-15.0/binarytrees-8 -stdlib=libc++
+#	$(CLang34)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang34) binarytrees-8.cpp -o ./clang-3.4/binarytrees-8 -stdlib=libc++
+#	$(CLang35)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang35) binarytrees-8.cpp -o ./clang-3.5/binarytrees-8 -stdlib=libc++
+#	$(CLang36)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang36) binarytrees-8.cpp -o ./clang-3.6/binarytrees-8 -stdlib=libc++
+#	$(CLang37)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang37) binarytrees-8.cpp -o ./clang-3.7/binarytrees-8 -stdlib=libc++
+#	$(CLang38)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang38) binarytrees-8.cpp -o ./clang-3.8/binarytrees-8 -stdlib=libc++
+#	$(CLang4)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang4) binarytrees-8.cpp -o ./clang-4.0/binarytrees-8 -stdlib=libc++
+#	$(CLang5)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang5) binarytrees-8.cpp -o ./clang-5.0/binarytrees-8 -stdlib=libc++
+	$(CLang6)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang6) binarytrees-8.cpp -o ./clang-6.0/binarytrees-8 -stdlib=libc++
+	$(CLang7)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang7) binarytrees-8.cpp -o ./clang-7.0/binarytrees-8 -stdlib=libc++
+	$(CLang8)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang8) binarytrees-8.cpp -o ./clang-8.0/binarytrees-8 -stdlib=libc++
+#	$(CLang9)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang9) binarytrees-8.cpp -o ./clang-9.0/binarytrees-8 -stdlib=libc++
+	$(CLang10)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang10) binarytrees-8.cpp -o ./clang-10.0/binarytrees-8 -stdlib=libc++
+	$(CLang11)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang11) binarytrees-8.cpp -o ./clang-11.1/binarytrees-8 -stdlib=libc++
+	$(CLang12)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang12) binarytrees-8.cpp -o ./clang-12.0/binarytrees-8 -stdlib=libc++
+	$(CLang13)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang13) binarytrees-8.cpp -o ./clang-13.0/binarytrees-8 -stdlib=libc++
+	$(CLang14)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang14) binarytrees-8.cpp -o ./clang-14.0/binarytrees-8 -stdlib=libc++
+	$(CLang15)clang++ -pipe -O3 -fomit-frame-pointer -march=native -I$(IncCLang15) binarytrees-8.cpp -o ./clang-15.0/binarytrees-8 -stdlib=libc++
 	

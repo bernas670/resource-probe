@@ -41,23 +41,23 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/pidigits-5 21
-#	./clang-3.5/pidigits-5 21
-#	./clang-3.6/pidigits-5 21
-#	./clang-3.7/pidigits-5 21
-#	./clang-3.8/pidigits-5 21
-#	./clang-4.0/pidigits-5 21
-#	./clang-5.0/pidigits-5 21
-#	./clang-6.0/pidigits-5 21
-#	./clang-7.0/pidigits-5 21
-#	./clang-8.0/pidigits-5 21
-#	./clang-9.0/pidigits-5 21
-#	./clang-10.0/pidigits-5 21
-#	./clang-11.1/pidigits-5 21
-#	./clang-12.0/pidigits-5 21
-#	./clang-13.0/pidigits-5 21
-#	./clang-14.0/pidigits-5 21
-#	./clang-15.0/pidigits-5 21
+#	./clang-3.4/regexredux-6 < ../../regexredux-input5000000.txt
+#	./clang-3.5/regexredux-6 < ../../regexredux-input5000000.txt
+#	./clang-3.6/regexredux-6 < ../../regexredux-input5000000.txt
+#	./clang-3.7/regexredux-6 < ../../regexredux-input5000000.txt
+#	./clang-3.8/regexredux-6 < ../../regexredux-input5000000.txt
+#	./clang-4.0/regexredux-6 < ../../regexredux-input5000000.txt
+	./clang-5.0/regexredux-6 < ../../regexredux-input5000000.txt
+	./clang-6.0/regexredux-6 < ../../regexredux-input5000000.txt
+	./clang-7.0/regexredux-6 < ../../regexredux-input5000000.txt
+	./clang-8.0/regexredux-6 < ../../regexredux-input5000000.txt
+#	./clang-9.0/regexredux-6 < ../../regexredux-input5000000.txt
+	./clang-10.0/regexredux-6 < ../../regexredux-input5000000.txt
+	./clang-11.1/regexredux-6 < ../../regexredux-input5000000.txt
+	./clang-12.0/regexredux-6 < ../../regexredux-input5000000.txt
+	./clang-13.0/regexredux-6 < ../../regexredux-input5000000.txt
+	./clang-14.0/regexredux-6 < ../../regexredux-input5000000.txt
+	./clang-15.0/regexredux-6 < ../../regexredux-input5000000.txt
 
 	
 
@@ -84,21 +84,21 @@ make_dirs:
 	mkdir -p clang-15.0
 
 copy_files:
-#	$(CLang34)clang++ pidigits-5.cpp -o ./clang-3.4/pidigits-5
-#	$(CLang35)clang++ pidigits-5.cpp -o ./clang-3.5/pidigits-5
-#	$(CLang36)clang++ pidigits-5.cpp -o ./clang-3.6/pidigits-5
-#	$(CLang37)clang++ pidigits-5.cpp -o ./clang-3.7/pidigits-5
-#	$(CLang38)clang++ pidigits-5.cpp -o ./clang-3.8/pidigits-5
-#	$(CLang4)clang++ pidigits-5.cpp -o ./clang-4.0/pidigits-5
-#	$(CLang5)clang++ pidigits-5.cpp -o ./clang-5.0/pidigits-5
-#	$(CLang6)clang++ pidigits-5.cpp -o ./clang-6.0/pidigits-5
-#	$(CLang7)clang++ pidigits-5.cpp -o ./clang-7.0/pidigits-5
-#	$(CLang8)clang++ pidigits-5.cpp -o ./clang-8.0/pidigits-5
-#	$(CLang9)clang++ pidigits-5.cpp -o ./clang-9.0/pidigits-5
-#	$(CLang10)clang++ pidigits-5.cpp -o ./clang-10.0/pidigits-5
-#	$(CLang11)clang++ pidigits-5.cpp -o ./clang-11.1/pidigits-5
-#	$(CLang12)clang++ pidigits-5.cpp -o ./clang-12.0/pidigits-5
-#	$(CLang13)clang++ pidigits-5.cpp -o ./clang-13.0/pidigits-5
-#	$(CLang14)clang++ pidigits-5.cpp -o ./clang-14.0/pidigits-5
-#	$(CLang15)clang++ pidigits-5.cpp -o ./clang-15.0/pidigits-5
+#	$(CLang34)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-3.4/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+#	$(CLang35)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-3.5/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+#	$(CLang36)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-3.6/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+#	$(CLang37)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-3.7/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+#	$(CLang38)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-3.8/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+#	$(CLang4)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-4.0/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+	$(CLang5)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-5.0/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+	$(CLang6)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-6.0/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+	$(CLang7)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-7.0/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+	$(CLang8)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-8.0/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+#	$(CLang9)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-9.0/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+	$(CLang10)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-10.0/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+	$(CLang11)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-11.1/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+	$(CLang12)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-12.0/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+	$(CLang13)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-13.0/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+	$(CLang14)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-14.0/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
+	$(CLang15)clang++ -pipe -O3 -fomit-frame-pointer -march=native  -std=c++17 regexredux-6.cpp -o ./clang-15.0/regexredux-6 -stdlib=libc++ -lpcre2-8 -lpthread 
 	
