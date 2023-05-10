@@ -62,6 +62,25 @@ run:
 	
 
 measure:
+#	python3 ../../main.py "./clang-3.4/pidigits-5 10000" "./clang-3.4" "cpp-pidigits-3.4" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.5/pidigits-5 10000" "./clang-3.5" "cpp-pidigits-3.5" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.6/pidigits-5 10000" "./clang-3.6" "cpp-pidigits-3.6" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.7/pidigits-5 10000" "./clang-3.7" "cpp-pidigits-3.7" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.8/pidigits-5 10000" "./clang-3.8" "cpp-pidigits-3.8" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-4.0/pidigits-5 10000" "./clang-4.0" "cpp-pidigits-4.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-5.0/pidigits-5 10000" "./clang-5.0" "cpp-pidigits-5.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-6.0/pidigits-5 10000" "./clang-6.0" "cpp-pidigits-6.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-7.0/pidigits-5 10000" "./clang-7.0" "cpp-pidigits-7.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-8.0/pidigits-5 10000" "./clang-8.0" "cpp-pidigits-8.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-9.0/pidigits-5 10000" "./clang-9.0" "cpp-pidigits-9.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-10.0/pidigits-5 10000" "./clang-10.0" "cpp-pidigits-10.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-11.1/pidigits-5 10000" "./clang-11.1" "cpp-pidigits-11.1" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-12.0/pidigits-5 10000" "./clang-12.0" "cpp-pidigits-12.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-13.0/pidigits-5 10000" "./clang-13.0" "cpp-pidigits-13.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-14.0/pidigits-5 10000" "./clang-14.0" "cpp-pidigits-14.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-15.0/pidigits-5 10000" "./clang-15.0" "cpp-pidigits-15.0" 40 45 0.01 -r 10
+
+
 
 
 make_dirs:

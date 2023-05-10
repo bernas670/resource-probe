@@ -41,27 +41,45 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-3.5/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-3.6/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-3.7/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-3.8/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-4.0/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-5.0/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-6.0/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-7.0/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-8.0/revcomp-6 < ../../revcomp-input25000000.txt
-#	./clang-9.0/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-10.0/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-11.1/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-12.0/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-13.0/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-14.0/revcomp-6 < ../../revcomp-input25000000.txt
-	./clang-15.0/revcomp-6 < ../../revcomp-input25000000.txt
+#	./clang-3.4/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-3.5/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-3.6/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-3.7/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-3.8/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-4.0/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-5.0/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-6.0/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-7.0/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-8.0/revcomp-6 0 < ../../revcomp-input25000000.txt
+#	./clang-9.0/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-10.0/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-11.1/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-12.0/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-13.0/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-14.0/revcomp-6 0 < ../../revcomp-input25000000.txt
+	./clang-15.0/revcomp-6 0 < ../../revcomp-input25000000.txt
 
 	
 
 measure:
+#	python3 ../../main.py "./clang-3.4/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-3.4" "cpp-revcomp-3.4" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.5/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-3.5" "cpp-revcomp-3.5" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.6/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-3.6" "cpp-revcomp-3.6" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.7/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-3.7" "cpp-revcomp-3.7" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.8/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-3.8" "cpp-revcomp-3.8" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-4.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-4.0" "cpp-revcomp-4.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-5.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-5.0" "cpp-revcomp-5.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-6.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-6.0" "cpp-revcomp-6.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-7.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-7.0" "cpp-revcomp-7.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-8.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-8.0" "cpp-revcomp-8.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-9.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-9.0" "cpp-revcomp-9.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-10.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-10.0" "cpp-revcomp-10.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-11.1/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-11.1" "cpp-revcomp-11.1" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-12.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-12.0" "cpp-revcomp-12.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-13.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-13.0" "cpp-revcomp-13.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-14.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-14.0" "cpp-revcomp-14.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-15.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-15.0" "cpp-revcomp-15.0" 40 45 0.01 -r 10
+
 
 
 make_dirs:

@@ -30,6 +30,18 @@ run:
 	
 
 measure:
+	python3 ../../main.py "python2.6 ./python2.6/nbody-2.py 50000000" "./python2.6" "py-nbody-2.6" 40 45 0.01 -r 10
+	python3 ../../main.py "python2.7 ./python2.7/nbody-2.py 50000000" "./python2.7" "py-nbody-2.7" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.0 ./python3.0/nbody-2.py 50000000" "./python3.0" "py-nbody-3.0" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.4 ./python3.4/nbody-2.py 50000000" "./python3.4" "py-nbody-3.4" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.5 ./python3.5/nbody-2.py 50000000" "./python3.5" "py-nbody-3.5" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.6 ./python3.6/nbody-2.py 50000000" "./python3.6" "py-nbody-3.6" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.7 ./python3.7/nbody-2.py 50000000" "./python3.7" "py-nbody-3.7" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.8 ./python3.8/nbody-2.py 50000000" "./python3.8" "py-nbody-3.8" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.9 ./python3.9/nbody-2.py 50000000" "./python3.9" "py-nbody-3.9" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.10 ./python3.10/nbody-2.py 50000000" "./python3.10" "py-nbody-3.10" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.11 ./python3.11/nbody-2.py 50000000" "./python3.11" "py-nbody-3.11" 40 45 0.01 -r 10
+
 
 
 make_dirs:

@@ -59,6 +59,22 @@ run:
 	
 
 measure:
+	(cd ./java-6 && python3 ../../../main.py "$(JAVA6)java fannkuchredux3 12" "." "java-fannkuchredux-6" 40 45 0.01 -r 10); cd ..
+	(cd ./java-7 && python3 ../../../main.py "$(JAVA7)java fannkuchredux3 12" "." "java-fannkuchredux-7" 40 45 0.01 -r 10); cd ..
+	(cd ./java-8.0 && python3 ../../../main.py "$(JAVA80)java fannkuchredux3 12" "." "java-fannkuchredux-8.0" 40 45 0.01 -r 10); cd ..
+	(cd ./java-8.1 && python3 ../../../main.py "$(JAVA81)java fannkuchredux3 12" "." "java-fannkuchredux-8.1" 40 45 0.01 -r 10); cd ..
+	(cd ./java-9 && python3 ../../../main.py "$(JAVA9)java fannkuchredux3 12" "." "java-fannkuchredux-9" 40 45 0.01 -r 10); cd ..
+	(cd ./java-10 && python3 ../../../main.py "$(JAVA10)java fannkuchredux3 12" "." "java-fannkuchredux-10" 40 45 0.01 -r 10); cd ..
+	(cd ./java-11 && python3 ../../../main.py "$(JAVA11)java fannkuchredux3 12" "." "java-fannkuchredux-11" 40 45 0.01 -r 10); cd ..
+	(cd ./java-12 && python3 ../../../main.py "$(JAVA12)java fannkuchredux3 12" "." "java-fannkuchredux-12" 40 45 0.01 -r 10); cd ..
+	(cd ./java-13 && python3 ../../../main.py "$(JAVA13)java fannkuchredux3 12" "." "java-fannkuchredux-13" 40 45 0.01 -r 10); cd ..
+	(cd ./java-14 && python3 ../../../main.py "$(JAVA14)java fannkuchredux3 12" "." "java-fannkuchredux-14" 40 45 0.01 -r 10); cd ..
+	(cd ./java-15 && python3 ../../../main.py "$(JAVA15)java fannkuchredux3 12" "." "java-fannkuchredux-15" 40 45 0.01 -r 10); cd ..
+	(cd ./java-16 && python3 ../../../main.py "$(JAVA16)java fannkuchredux3 12" "." "java-fannkuchredux-16" 40 45 0.01 -r 10); cd ..
+	(cd ./java-17 && python3 ../../../main.py "$(JAVA17)java fannkuchredux3 12" "." "java-fannkuchredux-17" 40 45 0.01 -r 10); cd ..
+	(cd ./java-18 && python3 ../../../main.py "$(JAVA18)java fannkuchredux3 12" "." "java-fannkuchredux-18" 40 45 0.01 -r 10); cd ..
+	(cd ./java-19 && python3 ../../../main.py "$(JAVA19)java fannkuchredux3 12" "." "java-fannkuchredux-19" 40 45 0.01 -r 10); cd ..
+	(cd ./java-20 && python3 ../../../main.py "$(JAVA20)java fannkuchredux3 12" "." "java-fannkuchredux-20" 40 45 0.01 -r 10); cd ..
 
 
 make_dirs:

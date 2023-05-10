@@ -205,7 +205,7 @@ int main()
     std::thread output_thread(output);
     std::vector<std::thread> workers;
 
-    fprintf(stderr, "Num workers = %zu\n", num_workers);
+    fprintf(stdout, "Num workers = %zu\n", num_workers);
     for (size_t i = 0; i < num_workers; ++i)
         workers.emplace_back(worker_main, i, num_workers);
 

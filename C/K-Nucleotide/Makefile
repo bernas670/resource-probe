@@ -62,6 +62,23 @@ run:
 	
 
 measure:
+	python3 ../../main.py "./clang-3.4/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-3.4" "c-knucleotide-3.4" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.5/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-3.5" "c-knucleotide-3.5" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.6/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-3.6" "c-knucleotide-3.6" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.7/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-3.7" "c-knucleotide-3.7" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.8/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-3.8" "c-knucleotide-3.8" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-4.0/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-4.0" "c-knucleotide-4.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-5.0/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-5.0" "c-knucleotide-5.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-6.0/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-6.0" "c-knucleotide-6.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-7.0/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-7.0" "c-knucleotide-7.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-8.0/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-8.0" "c-knucleotide-8.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-9.0/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-9.0" "c-knucleotide-9.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-10.0/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-10.0" "c-knucleotide-10.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-11.1/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-11.1" "c-knucleotide-11.1" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-12.0/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-12.0" "c-knucleotide-12.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-13.0/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-13.0" "c-knucleotide-13.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-14.0/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-14.0" "c-knucleotide-14.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-15.0/knucleotide 0 < ../../knucleotide-input25000000.txt" "./clang-15.0" "c-knucleotide-15.0" 40 45 0.01 -r 10
 
 
 make_dirs:

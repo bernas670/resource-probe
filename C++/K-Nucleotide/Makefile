@@ -80,6 +80,25 @@ run:
 	
 
 measure:
+#	python3 ../../main.py "./clang-3.4/binarytrees-8 21" "./clang-3.4" "cpp-bintrees-3.4" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.5/binarytrees-8 21" "./clang-3.5" "cpp-bintrees-3.5" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.6/binarytrees-8 21" "./clang-3.6" "cpp-bintrees-3.6" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.7/binarytrees-8 21" "./clang-3.7" "cpp-bintrees-3.7" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.8/binarytrees-8 21" "./clang-3.8" "cpp-bintrees-3.8" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-4.0/binarytrees-8 21" "./clang-4.0" "cpp-bintrees-4.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-5.0/binarytrees-8 21" "./clang-5.0" "cpp-bintrees-5.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-6.0/binarytrees-8 21" "./clang-6.0" "cpp-bintrees-6.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-7.0/binarytrees-8 21" "./clang-7.0" "cpp-bintrees-7.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-8.0/binarytrees-8 21" "./clang-8.0" "cpp-bintrees-8.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-9.0/binarytrees-8 21" "./clang-9.0" "cpp-bintrees-9.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-10.0/binarytrees-8 21" "./clang-10.0" "cpp-bintrees-10.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-11.1/binarytrees-8 21" "./clang-11.1" "cpp-bintrees-11.1" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-12.0/binarytrees-8 21" "./clang-12.0" "cpp-bintrees-12.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-13.0/binarytrees-8 21" "./clang-13.0" "cpp-bintrees-13.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-14.0/binarytrees-8 21" "./clang-14.0" "cpp-bintrees-14.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-15.0/binarytrees-8 21" "./clang-15.0" "cpp-bintrees-15.0" 40 45 0.01 -r 10
+
+
 
 
 make_dirs:
@@ -109,14 +128,14 @@ copy_files:
 #	$(CLang38)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang38) knucleotide.cpp -o ./clang-3.8/knucleotide -stdlib=libstdc++
 #	$(CLang4)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang4) knucleotide.cpp -o ./clang-4.0/knucleotide -stdlib=libstdc++
 #	$(CLang5)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang5) knucleotide.cpp -o ./clang-5.0/knucleotide -stdlib=libstdc++
-	$(CLang6)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang6) knucleotide.cpp -o ./clang-6.0/knucleotide -stdlib=libstdc++
-	$(CLang7)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang7) knucleotide.cpp -o ./clang-7.0/knucleotide -stdlib=libstdc++
-	$(CLang8)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang8) knucleotide.cpp -o ./clang-8.0/knucleotide -stdlib=libstdc++
+#	$(CLang6)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang6) knucleotide.cpp -o ./clang-6.0/knucleotide -stdlib=libstdc++
+#	$(CLang7)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang7) knucleotide.cpp -o ./clang-7.0/knucleotide -stdlib=libstdc++
+#	$(CLang8)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang8) knucleotide.cpp -o ./clang-8.0/knucleotide -stdlib=libstdc++
 #	$(CLang9)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang9) knucleotide.cpp -o ./clang-9.0/knucleotide -stdlib=libstdc++
-	$(CLang10)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang10) knucleotide.cpp -o ./clang-10.0/knucleotide -stdlib=libstdc++
-	$(CLang11)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang11) knucleotide.cpp -o ./clang-11.1/knucleotide -stdlib=libstdc++
-	$(CLang12)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang12) knucleotide.cpp -o ./clang-12.0/knucleotide -stdlib=libstdc++
-	$(CLang13)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang13) knucleotide.cpp -o ./clang-13.0/knucleotide -stdlib=libstdc++
-	$(CLang14)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang14) knucleotide.cpp -o ./clang-14.0/knucleotide -stdlib=libstdc++
-	$(CLang15)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang15) knucleotide.cpp -o ./clang-15.0/knucleotide -stdlib=libstdc++
+#	$(CLang10)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang10) knucleotide.cpp -o ./clang-10.0/knucleotide -stdlib=libstdc++
+#	$(CLang11)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang11) knucleotide.cpp -o ./clang-11.1/knucleotide -stdlib=libstdc++
+#	$(CLang12)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang12) knucleotide.cpp -o ./clang-12.0/knucleotide -stdlib=libstdc++
+#	$(CLang13)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang13) knucleotide.cpp -o ./clang-13.0/knucleotide -stdlib=libstdc++
+#	$(CLang14)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang14) knucleotide.cpp -o ./clang-14.0/knucleotide -stdlib=libstdc++
+#	$(CLang15)clang++ -pipe -O3 -std=c++14 -fomit-frame-pointer -march=native -I$(IncCLang15) knucleotide.cpp -o ./clang-15.0/knucleotide -stdlib=libstdc++
 	

@@ -59,6 +59,22 @@ run:
 	
 
 measure:
+#	(cd ./java-6 && python3 ../../../main.py "$(JAVA6)java binarytrees7 21" "." "java-bintrees-6" 40 45 0.01 -r 10); cd ..
+#	(cd ./java-7 && python3 ../../../main.py "$(JAVA7)java binarytrees7 21" "." "java-bintrees-7" 40 45 0.01 -r 10); cd ..
+	(cd ./java-8.0 && python3 ../../../main.py "$(JAVA80)java binarytrees7 21" "." "java-bintrees-8.0" 40 45 0.01 -r 10); cd ..
+	(cd ./java-8.1 && python3 ../../../main.py "$(JAVA81)java binarytrees7 21" "." "java-bintrees-8.1" 40 45 0.01 -r 10); cd ..
+	(cd ./java-9 && python3 ../../../main.py "$(JAVA9)java binarytrees7 21" "." "java-bintrees-9" 40 45 0.01 -r 10); cd ..
+	(cd ./java-10 && python3 ../../../main.py "$(JAVA10)java binarytrees7 21" "." "java-bintrees-10" 40 45 0.01 -r 10); cd ..
+	(cd ./java-11 && python3 ../../../main.py "$(JAVA11)java binarytrees7 21" "." "java-bintrees-11" 40 45 0.01 -r 10); cd ..
+	(cd ./java-12 && python3 ../../../main.py "$(JAVA12)java binarytrees7 21" "." "java-bintrees-12" 40 45 0.01 -r 10); cd ..
+	(cd ./java-13 && python3 ../../../main.py "$(JAVA13)java binarytrees7 21" "." "java-bintrees-13" 40 45 0.01 -r 10); cd ..
+	(cd ./java-14 && python3 ../../../main.py "$(JAVA14)java binarytrees7 21" "." "java-bintrees-14" 40 45 0.01 -r 10); cd ..
+	(cd ./java-15 && python3 ../../../main.py "$(JAVA15)java binarytrees7 21" "." "java-bintrees-15" 40 45 0.01 -r 10); cd ..
+	(cd ./java-16 && python3 ../../../main.py "$(JAVA16)java binarytrees7 21" "." "java-bintrees-16" 40 45 0.01 -r 10); cd ..
+	(cd ./java-17 && python3 ../../../main.py "$(JAVA17)java binarytrees7 21" "." "java-bintrees-17" 40 45 0.01 -r 10); cd ..
+	(cd ./java-18 && python3 ../../../main.py "$(JAVA18)java binarytrees7 21" "." "java-bintrees-18" 40 45 0.01 -r 10); cd ..
+	(cd ./java-19 && python3 ../../../main.py "$(JAVA19)java binarytrees7 21" "." "java-bintrees-19" 40 45 0.01 -r 10); cd ..
+	(cd ./java-20 && python3 ../../../main.py "$(JAVA20)java binarytrees7 21" "." "java-bintrees-20" 40 45 0.01 -r 10); cd ..
 
 
 make_dirs:

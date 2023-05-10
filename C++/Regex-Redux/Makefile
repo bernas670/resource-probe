@@ -41,27 +41,46 @@ clean:
 	rm -r -f clang-15.0
 
 run:
-#	./clang-3.4/regexredux-6 < ../../regexredux-input5000000.txt
-#	./clang-3.5/regexredux-6 < ../../regexredux-input5000000.txt
-#	./clang-3.6/regexredux-6 < ../../regexredux-input5000000.txt
-#	./clang-3.7/regexredux-6 < ../../regexredux-input5000000.txt
-#	./clang-3.8/regexredux-6 < ../../regexredux-input5000000.txt
-#	./clang-4.0/regexredux-6 < ../../regexredux-input5000000.txt
-	./clang-5.0/regexredux-6 < ../../regexredux-input5000000.txt
-	./clang-6.0/regexredux-6 < ../../regexredux-input5000000.txt
-	./clang-7.0/regexredux-6 < ../../regexredux-input5000000.txt
-	./clang-8.0/regexredux-6 < ../../regexredux-input5000000.txt
-#	./clang-9.0/regexredux-6 < ../../regexredux-input5000000.txt
-	./clang-10.0/regexredux-6 < ../../regexredux-input5000000.txt
-	./clang-11.1/regexredux-6 < ../../regexredux-input5000000.txt
-	./clang-12.0/regexredux-6 < ../../regexredux-input5000000.txt
-	./clang-13.0/regexredux-6 < ../../regexredux-input5000000.txt
-	./clang-14.0/regexredux-6 < ../../regexredux-input5000000.txt
-	./clang-15.0/regexredux-6 < ../../regexredux-input5000000.txt
+#	./clang-3.4/regexredux-6 0 < ../../regexredux-input5000000.txt
+#	./clang-3.5/regexredux-6 0 < ../../regexredux-input5000000.txt
+#	./clang-3.6/regexredux-6 0 < ../../regexredux-input5000000.txt
+#	./clang-3.7/regexredux-6 0 < ../../regexredux-input5000000.txt
+#	./clang-3.8/regexredux-6 0 < ../../regexredux-input5000000.txt
+#	./clang-4.0/regexredux-6 0 < ../../regexredux-input5000000.txt
+	./clang-5.0/regexredux-6 0 < ../../regexredux-input5000000.txt
+	./clang-6.0/regexredux-6 0 < ../../regexredux-input5000000.txt
+	./clang-7.0/regexredux-6 0 < ../../regexredux-input5000000.txt
+	./clang-8.0/regexredux-6 0 < ../../regexredux-input5000000.txt
+#	./clang-9.0/regexredux-6 0 < ../../regexredux-input5000000.txt
+	./clang-10.0/regexredux-6 0 < ../../regexredux-input5000000.txt
+	./clang-11.1/regexredux-6 0 < ../../regexredux-input5000000.txt
+	./clang-12.0/regexredux-6 0 < ../../regexredux-input5000000.txt
+	./clang-13.0/regexredux-6 0 < ../../regexredux-input5000000.txt
+	./clang-14.0/regexredux-6 0 < ../../regexredux-input5000000.txt
+	./clang-15.0/regexredux-6 0 < ../../regexredux-input5000000.txt
 
 	
 
 measure:
+#	python3 ../../main.py "./clang-3.4/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-3.4" "cpp-regexredux-3.4" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.5/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-3.5" "cpp-regexredux-3.5" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.6/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-3.6" "cpp-regexredux-3.6" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.7/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-3.7" "cpp-regexredux-3.7" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.8/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-3.8" "cpp-regexredux-3.8" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-4.0/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-4.0" "cpp-regexredux-4.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-5.0/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-5.0" "cpp-regexredux-5.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-6.0/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-6.0" "cpp-regexredux-6.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-7.0/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-7.0" "cpp-regexredux-7.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-8.0/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-8.0" "cpp-regexredux-8.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-9.0/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-9.0" "cpp-regexredux-9.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-10.0/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-10.0" "cpp-regexredux-10.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-11.1/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-11.1" "cpp-regexredux-11.1" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-12.0/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-12.0" "cpp-regexredux-12.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-13.0/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-13.0" "cpp-regexredux-13.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-14.0/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-14.0" "cpp-regexredux-14.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-15.0/regexredux-6 0 < ../../regexredux-input5000000.txt  " "./clang-15.0" "cpp-regexredux-15.0" 40 45 0.01 -r 10
+
+
 
 
 make_dirs:

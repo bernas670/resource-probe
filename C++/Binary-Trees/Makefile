@@ -80,6 +80,24 @@ run:
 	
 
 measure:
+#	python3 ../../main.py "./clang-3.4/binarytrees-8 21" "./clang-3.4" "cpp-bintrees-3.4" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.5/binarytrees-8 21" "./clang-3.5" "cpp-bintrees-3.5" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.6/binarytrees-8 21" "./clang-3.6" "cpp-bintrees-3.6" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.7/binarytrees-8 21" "./clang-3.7" "cpp-bintrees-3.7" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.8/binarytrees-8 21" "./clang-3.8" "cpp-bintrees-3.8" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-4.0/binarytrees-8 21" "./clang-4.0" "cpp-bintrees-4.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-5.0/binarytrees-8 21" "./clang-5.0" "cpp-bintrees-5.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-6.0/binarytrees-8 21" "./clang-6.0" "cpp-bintrees-6.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-7.0/binarytrees-8 21" "./clang-7.0" "cpp-bintrees-7.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-8.0/binarytrees-8 21" "./clang-8.0" "cpp-bintrees-8.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-9.0/binarytrees-8 21" "./clang-9.0" "cpp-bintrees-9.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-10.0/binarytrees-8 21" "./clang-10.0" "cpp-bintrees-10.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-11.1/binarytrees-8 21" "./clang-11.1" "cpp-bintrees-11.1" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-12.0/binarytrees-8 21" "./clang-12.0" "cpp-bintrees-12.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-13.0/binarytrees-8 21" "./clang-13.0" "cpp-bintrees-13.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-14.0/binarytrees-8 21" "./clang-14.0" "cpp-bintrees-14.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-15.0/binarytrees-8 21" "./clang-15.0" "cpp-bintrees-15.0" 40 45 0.01 -r 10
+
 
 
 make_dirs:

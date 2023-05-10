@@ -154,7 +154,6 @@ class CollectorRAPL:
 			# ret = cmp.wait()
 
 			self.meter.end()
-   
 			if process.returncode != 0:
 				raise Exception("[" + self.cmd +"] - Error when executing this command")
 

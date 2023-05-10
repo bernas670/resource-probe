@@ -62,6 +62,24 @@ run:
 	
 
 measure:
+#	python3 ../../main.py "./clang-3.4/nbody-7 50000000" "./clang-3.4" "cpp-nbody-3.4" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.5/nbody-7 50000000" "./clang-3.5" "cpp-nbody-3.5" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.6/nbody-7 50000000" "./clang-3.6" "cpp-nbody-3.6" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.7/nbody-7 50000000" "./clang-3.7" "cpp-nbody-3.7" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.8/nbody-7 50000000" "./clang-3.8" "cpp-nbody-3.8" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-4.0/nbody-7 50000000" "./clang-4.0" "cpp-nbody-4.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-5.0/nbody-7 50000000" "./clang-5.0" "cpp-nbody-5.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-6.0/nbody-7 50000000" "./clang-6.0" "cpp-nbody-6.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-7.0/nbody-7 50000000" "./clang-7.0" "cpp-nbody-7.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-8.0/nbody-7 50000000" "./clang-8.0" "cpp-nbody-8.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-9.0/nbody-7 50000000" "./clang-9.0" "cpp-nbody-9.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-10.0/nbody-7 50000000" "./clang-10.0" "cpp-nbody-10.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-11.1/nbody-7 50000000" "./clang-11.1" "cpp-nbody-11.1" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-12.0/nbody-7 50000000" "./clang-12.0" "cpp-nbody-12.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-13.0/nbody-7 50000000" "./clang-13.0" "cpp-nbody-13.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-14.0/nbody-7 50000000" "./clang-14.0" "cpp-nbody-14.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-15.0/nbody-7 50000000" "./clang-15.0" "cpp-nbody-15.0" 40 45 0.01 -r 10
+
 
 
 make_dirs:

@@ -57,6 +57,7 @@ public class binarytrees7 {
 
         System.out.println("long lived tree of depth " + maxDepth + 
             "\t check: " + longLivedTree.itemCheck());
+
     }
 
     private static TreeNode bottomUpTree(final int depth) {

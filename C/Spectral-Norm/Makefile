@@ -62,6 +62,23 @@ run:
 	
 
 measure:
+#	python3 ../../main.py "./clang-3.4/spectralnorm-8 5500" "./clang-3.4" "c-spectralnorm-3.4" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.5/spectralnorm-8 5500" "./clang-3.5" "c-spectralnorm-3.5" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-3.6/spectralnorm-8 5500" "./clang-3.6" "c-spectralnorm-3.6" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.7/spectralnorm-8 5500" "./clang-3.7" "c-spectralnorm-3.7" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.8/spectralnorm-8 5500" "./clang-3.8" "c-spectralnorm-3.8" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-4.0/spectralnorm-8 5500" "./clang-4.0" "c-spectralnorm-4.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-5.0/spectralnorm-8 5500" "./clang-5.0" "c-spectralnorm-5.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-6.0/spectralnorm-8 5500" "./clang-6.0" "c-spectralnorm-6.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-7.0/spectralnorm-8 5500" "./clang-7.0" "c-spectralnorm-7.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-8.0/spectralnorm-8 5500" "./clang-8.0" "c-spectralnorm-8.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-9.0/spectralnorm-8 5500" "./clang-9.0" "c-spectralnorm-9.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-10.0/spectralnorm-8 5500" "./clang-10.0" "c-spectralnorm-10.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-11.1/spectralnorm-8 5500" "./clang-11.1" "c-spectralnorm-11.1" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-12.0/spectralnorm-8 5500" "./clang-12.0" "c-spectralnorm-12.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-13.0/spectralnorm-8 5500" "./clang-13.0" "c-spectralnorm-13.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-14.0/spectralnorm-8 5500" "./clang-14.0" "c-spectralnorm-14.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-15.0/spectralnorm-8 5500" "./clang-15.0" "c-spectralnorm-15.0" 40 45 0.01 -r 10
 
 
 make_dirs:

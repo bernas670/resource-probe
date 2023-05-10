@@ -80,6 +80,25 @@ run:
 	
 
 measure:
+#	python3 ../../main.py "./clang-3.4/fasta-6 25000000" "./clang-3.4" "cpp-fasta-3.4" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.5/fasta-6 25000000" "./clang-3.5" "cpp-fasta-3.5" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.6/fasta-6 25000000" "./clang-3.6" "cpp-fasta-3.6" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.7/fasta-6 25000000" "./clang-3.7" "cpp-fasta-3.7" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.8/fasta-6 25000000" "./clang-3.8" "cpp-fasta-3.8" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-4.0/fasta-6 25000000" "./clang-4.0" "cpp-fasta-4.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-5.0/fasta-6 25000000" "./clang-5.0" "cpp-fasta-5.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-6.0/fasta-6 25000000" "./clang-6.0" "cpp-fasta-6.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-7.0/fasta-6 25000000" "./clang-7.0" "cpp-fasta-7.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-8.0/fasta-6 25000000" "./clang-8.0" "cpp-fasta-6.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-9.0/fasta-6 25000000" "./clang-9.0" "cpp-fasta-9.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-10.0/fasta-6 25000000" "./clang-10.0" "cpp-fasta-10.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-11.1/fasta-6 25000000" "./clang-11.1" "cpp-fasta-11.1" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-12.0/fasta-6 25000000" "./clang-12.0" "cpp-fasta-12.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-13.0/fasta-6 25000000" "./clang-13.0" "cpp-fasta-13.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-14.0/fasta-6 25000000" "./clang-14.0" "cpp-fasta-14.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-15.0/fasta-6 25000000" "./clang-15.0" "cpp-fasta-15.0" 40 45 0.01 -r 10
+
+
 
 
 make_dirs:

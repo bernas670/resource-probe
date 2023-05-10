@@ -59,6 +59,22 @@ run:
 	
 
 measure:
+	(cd ./java-6 && python3 ../../../main.py "$(JAVA6)java mandelbrot6 16000" "." "java-mandelbrot-6" 40 45 0.01 -r 10); cd ..
+	(cd ./java-7 && python3 ../../../main.py "$(JAVA7)java mandelbrot6 16000" "." "java-mandelbrot-7" 40 45 0.01 -r 10); cd ..
+	(cd ./java-8.0 && python3 ../../../main.py "$(JAVA80)java mandelbrot6 16000" "." "java-mandelbrot-8.0" 40 45 0.01 -r 10); cd ..
+	(cd ./java-8.1 && python3 ../../../main.py "$(JAVA81)java mandelbrot6 16000" "." "java-mandelbrot-8.1" 40 45 0.01 -r 10); cd ..
+	(cd ./java-9 && python3 ../../../main.py "$(JAVA9)java mandelbrot6 16000" "." "java-mandelbrot-9" 40 45 0.01 -r 10); cd ..
+	(cd ./java-10 && python3 ../../../main.py "$(JAVA10)java mandelbrot6 16000" "." "java-mandelbrot-10" 40 45 0.01 -r 10); cd ..
+	(cd ./java-11 && python3 ../../../main.py "$(JAVA11)java mandelbrot6 16000" "." "java-mandelbrot-11" 40 45 0.01 -r 10); cd ..
+	(cd ./java-12 && python3 ../../../main.py "$(JAVA12)java mandelbrot6 16000" "." "java-mandelbrot-12" 40 45 0.01 -r 10); cd ..
+	(cd ./java-13 && python3 ../../../main.py "$(JAVA13)java mandelbrot6 16000" "." "java-mandelbrot-13" 40 45 0.01 -r 10); cd ..
+	(cd ./java-14 && python3 ../../../main.py "$(JAVA14)java mandelbrot6 16000" "." "java-mandelbrot-14" 40 45 0.01 -r 10); cd ..
+	(cd ./java-15 && python3 ../../../main.py "$(JAVA15)java mandelbrot6 16000" "." "java-mandelbrot-15" 40 45 0.01 -r 10); cd ..
+	(cd ./java-16 && python3 ../../../main.py "$(JAVA16)java mandelbrot6 16000" "." "java-mandelbrot-16" 40 45 0.01 -r 10); cd ..
+	(cd ./java-17 && python3 ../../../main.py "$(JAVA17)java mandelbrot6 16000" "." "java-mandelbrot-17" 40 45 0.01 -r 10); cd ..
+	(cd ./java-18 && python3 ../../../main.py "$(JAVA18)java mandelbrot6 16000" "." "java-mandelbrot-18" 40 45 0.01 -r 10); cd ..
+	(cd ./java-19 && python3 ../../../main.py "$(JAVA19)java mandelbrot6 16000" "." "java-mandelbrot-19" 40 45 0.01 -r 10); cd ..
+	(cd ./java-20 && python3 ../../../main.py "$(JAVA20)java mandelbrot6 16000" "." "java-mandelbrot-20" 40 45 0.01 -r 10); cd ..
 
 
 make_dirs:

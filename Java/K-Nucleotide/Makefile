@@ -39,26 +39,42 @@ clean:
 	rm -r -f java-20
 
 run:
-	(cd ./java-6 && $(JAVA6)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..  
-	(cd ./java-7 && $(JAVA7)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-8.0 && $(JAVA80)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-8.1 && $(JAVA81)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-9 && $(JAVA9)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-10 && $(JAVA10)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-11 && $(JAVA11)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-12 && $(JAVA12)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-13 && $(JAVA13)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-14 && $(JAVA14)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-15 && $(JAVA15)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-16 && $(JAVA16)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-17 && $(JAVA17)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-18 && $(JAVA18)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-19 && $(JAVA19)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
-	(cd ./java-20 && $(JAVA20)java knucleotide6 0 < /home/diguest/Documents/Dissertação/resource-probe/knucleotide-input25000000.txt); cd ..
+	(cd ./java-6 && $(JAVA6)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..  
+	(cd ./java-7 && $(JAVA7)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-8.0 && $(JAVA80)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-8.1 && $(JAVA81)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-9 && $(JAVA9)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-10 && $(JAVA10)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-11 && $(JAVA11)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-12 && $(JAVA12)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-13 && $(JAVA13)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-14 && $(JAVA14)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-15 && $(JAVA15)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-16 && $(JAVA16)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-17 && $(JAVA17)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-18 && $(JAVA18)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-19 && $(JAVA19)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
+	(cd ./java-20 && $(JAVA20)java knucleotide6 0 < ../../../knucleotide-input25000000.txt); cd ..
 
 	
 
 measure:
+	(cd ./java-6 && python3 ../../../main.py "$(JAVA6)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-6" 40 45 0.01 -r 10); cd ..
+	(cd ./java-7 && python3 ../../../main.py "$(JAVA7)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-7" 40 45 0.01 -r 10); cd ..
+	(cd ./java-8.0 && python3 ../../../main.py "$(JAVA80)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-8.0" 40 45 0.01 -r 10); cd ..
+	(cd ./java-8.1 && python3 ../../../main.py "$(JAVA81)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-8.1" 40 45 0.01 -r 10); cd ..
+	(cd ./java-9 && python3 ../../../main.py "$(JAVA9)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-9" 40 45 0.01 -r 10); cd ..
+	(cd ./java-10 && python3 ../../../main.py "$(JAVA10)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-10" 40 45 0.01 -r 10); cd ..
+	(cd ./java-11 && python3 ../../../main.py "$(JAVA11)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-11" 40 45 0.01 -r 10); cd ..
+	(cd ./java-12 && python3 ../../../main.py "$(JAVA12)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-12" 40 45 0.01 -r 10); cd ..
+	(cd ./java-13 && python3 ../../../main.py "$(JAVA13)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-13" 40 45 0.01 -r 10); cd ..
+	(cd ./java-14 && python3 ../../../main.py "$(JAVA14)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-14" 40 45 0.01 -r 10); cd ..
+	(cd ./java-15 && python3 ../../../main.py "$(JAVA15)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-15" 40 45 0.01 -r 10); cd ..
+	(cd ./java-16 && python3 ../../../main.py "$(JAVA16)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-16" 40 45 0.01 -r 10); cd ..
+	(cd ./java-17 && python3 ../../../main.py "$(JAVA17)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-17" 40 45 0.01 -r 10); cd ..
+	(cd ./java-18 && python3 ../../../main.py "$(JAVA18)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-18" 40 45 0.01 -r 10); cd ..
+	(cd ./java-19 && python3 ../../../main.py "$(JAVA19)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-19" 40 45 0.01 -r 10); cd ..
+	(cd ./java-20 && python3 ../../../main.py "$(JAVA20)java knucleotide6 0 < ../../../knucleotide-input25000000.txt" "." "java-knucleotide-20" 40 45 0.01 -r 10); cd ..
 
 
 make_dirs:

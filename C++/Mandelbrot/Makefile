@@ -62,6 +62,24 @@ run:
 	
 
 measure:
+#	python3 ../../main.py "./clang-3.4/mandelbrot-9 16000" "./clang-3.4" "cpp-mandelbrot-3.4" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.5/mandelbrot-9 16000" "./clang-3.5" "cpp-mandelbrot-3.5" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.6/mandelbrot-9 16000" "./clang-3.6" "cpp-mandelbrot-3.6" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.7/mandelbrot-9 16000" "./clang-3.7" "cpp-mandelbrot-3.7" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.8/mandelbrot-9 16000" "./clang-3.8" "cpp-mandelbrot-3.8" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-4.0/mandelbrot-9 16000" "./clang-4.0" "cpp-mandelbrot-4.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-5.0/mandelbrot-9 16000" "./clang-5.0" "cpp-mandelbrot-5.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-6.0/mandelbrot-9 16000" "./clang-6.0" "cpp-mandelbrot-6.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-7.0/mandelbrot-9 16000" "./clang-7.0" "cpp-mandelbrot-7.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-8.0/mandelbrot-9 16000" "./clang-8.0" "cpp-mandelbrot-8.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-9.0/mandelbrot-9 16000" "./clang-9.0" "cpp-mandelbrot-9.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-10.0/mandelbrot-9 16000" "./clang-10.0" "cpp-mandelbrot-10.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-11.1/mandelbrot-9 16000" "./clang-11.1" "cpp-mandelbrot-11.1" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-12.0/mandelbrot-9 16000" "./clang-12.0" "cpp-mandelbrot-12.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-13.0/mandelbrot-9 16000" "./clang-13.0" "cpp-mandelbrot-13.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-14.0/mandelbrot-9 16000" "./clang-14.0" "cpp-mandelbrot-14.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-15.0/mandelbrot-9 16000" "./clang-15.0" "cpp-mandelbrot-15.0" 40 45 0.01 -r 10
+
 
 
 make_dirs:

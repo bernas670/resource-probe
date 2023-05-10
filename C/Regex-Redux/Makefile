@@ -62,6 +62,23 @@ run:
 	
 
 measure:
+	python3 ../../main.py "./clang-3.4/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-3.4" "c-regexredux-3.4" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.5/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-3.5" "c-regexredux-3.5" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.6/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-3.6" "c-regexredux-3.6" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.7/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-3.7" "c-regexredux-3.7" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.8/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-3.8" "c-regexredux-3.8" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-4.0/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-4.0" "c-regexredux-4.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-5.0/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-5.0" "c-regexredux-5.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-6.0/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-6.0" "c-regexredux-6.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-7.0/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-7.0" "c-regexredux-7.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-8.0/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-8.0" "c-regexredux-8.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-9.0/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-9.0" "c-regexredux-9.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-10.0/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-10.0" "c-regexredux-10.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-11.1/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-11.1" "c-regexredux-11.1" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-12.0/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-12.0" "c-regexredux-12.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-13.0/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-13.0" "c-regexredux-13.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-14.0/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-14.0" "c-regexredux-14.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-15.0/regexredux-5 0 < ../../regexredux-input5000000.txt" "./clang-15.0" "c-regexredux-15.0" 40 45 0.01 -r 10
 
 
 make_dirs:

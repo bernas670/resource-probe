@@ -30,6 +30,18 @@ run:
 	
 
 measure:
+#	python3 ../../main.py "python2.6 ./python2.6/pidigits-4.py 10000" "./python2.6" "py-pidigits-2.6" 40 45 0.01 -r 10
+#	python3 ../../main.py "python2.7 ./python2.7/pidigits-4.py 10000" "./python2.7" "py-pidigits-2.7" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.0 ./python3.0/pidigits-4.py 10000" "./python3.0" "py-pidigits-3.0" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.4 ./python3.4/pidigits-4.py 10000" "./python3.4" "py-pidigits-3.4" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.5 ./python3.5/pidigits-4.py 10000" "./python3.5" "py-pidigits-3.5" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.6 ./python3.6/pidigits-4.py 10000" "./python3.6" "py-pidigits-3.6" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.7 ./python3.7/pidigits-4.py 10000" "./python3.7" "py-pidigits-3.7" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.8 ./python3.8/pidigits-4.py 10000" "./python3.8" "py-pidigits-3.8" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.9 ./python3.9/pidigits-4.py 10000" "./python3.9" "py-pidigits-3.9" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.10 ./python3.10/pidigits-4.py 10000" "./python3.10" "py-pidigits-3.10" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.11 ./python3.11/pidigits-4.py 10000" "./python3.11" "py-pidigits-3.11" 40 45 0.01 -r 10
+
 
 
 make_dirs:

@@ -30,7 +30,17 @@ run:
 	
 
 measure:
-
+#	python3 ../../main.py "python2.6 ./python2.6/fasta-3.py 25000000" "./python2.6" "py-fasta-2.6" 40 45 0.01 -r 10
+#	python3 ../../main.py "python2.7 ./python2.7/fasta-3.py 25000000" "./python2.7" "py-fasta-2.7" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.0 ./python3.0/fasta-3.py 25000000" "./python3.0" "py-fasta-3.0" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.4 ./python3.4/fasta-3.py 25000000" "./python3.4" "py-fasta-3.4" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.5 ./python3.5/fasta-3.py 25000000" "./python3.5" "py-fasta-3.5" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.6 ./python3.6/fasta-3.py 25000000" "./python3.6" "py-fasta-3.6" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.7 ./python3.7/fasta-3.py 25000000" "./python3.7" "py-fasta-3.7" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.8 ./python3.8/fasta-3.py 25000000" "./python3.8" "py-fasta-3.8" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.9 ./python3.9/fasta-3.py 25000000" "./python3.9" "py-fasta-3.9" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.10 ./python3.10/fasta-3.py 25000000" "./python3.10" "py-fasta-3.10" 40 45 0.01 -r 10
+	python3 ../../main.py "python3.11 ./python3.11/fasta-3.py 25000000" "./python3.11" "py-fasta-3.11" 40 45 0.01 -r 10
 
 make_dirs:
 	mkdir -p python2.6

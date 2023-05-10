@@ -80,6 +80,25 @@ run:
 	
 
 measure:
+	python3 ../../main.py "./clang-3.4/fannkuchredux-7 12" "./clang-3.4" "cpp-fannkuchredux-3.4" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.5/fannkuchredux-7 12" "./clang-3.5" "cpp-fannkuchredux-3.5" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.6/fannkuchredux-7 12" "./clang-3.6" "cpp-fannkuchredux-3.6" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.7/fannkuchredux-7 12" "./clang-3.7" "cpp-fannkuchredux-3.7" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-3.8/fannkuchredux-7 12" "./clang-3.8" "cpp-fannkuchredux-3.8" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-4.0/fannkuchredux-7 12" "./clang-4.0" "cpp-fannkuchredux-4.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-5.0/fannkuchredux-7 12" "./clang-5.0" "cpp-fannkuchredux-5.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-6.0/fannkuchredux-7 12" "./clang-6.0" "cpp-fannkuchredux-6.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-7.0/fannkuchredux-7 12" "./clang-7.0" "cpp-fannkuchredux-7.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-8.0/fannkuchredux-7 12" "./clang-8.0" "cpp-fannkuchredux-8.0" 40 45 0.01 -r 10
+#	python3 ../../main.py "./clang-9.0/fannkuchredux-7 12" "./clang-9.0" "cpp-fannkuchredux-9.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-10.0/fannkuchredux-7 12" "./clang-10.0" "cpp-fannkuchredux-10.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-11.1/fannkuchredux-7 12" "./clang-11.1" "cpp-fannkuchredux-11.1" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-12.0/fannkuchredux-7 12" "./clang-12.0" "cpp-fannkuchredux-12.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-13.0/fannkuchredux-7 12" "./clang-13.0" "cpp-fannkuchredux-13.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-14.0/fannkuchredux-7 12" "./clang-14.0" "cpp-fannkuchredux-14.0" 40 45 0.01 -r 10
+	python3 ../../main.py "./clang-15.0/fannkuchredux-7 12" "./clang-15.0" "cpp-fannkuchredux-15.0" 40 45 0.01 -r 10
+
+
 
 
 make_dirs:
