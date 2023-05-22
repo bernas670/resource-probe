@@ -19,6 +19,7 @@ class DataRAPL:
 		self.mid_temp = []
 
 	def add_data(self, dur, pkg, dram, mem,init_temp,mid_temp,fin_temp):
+		print("[Measure] - Adding Data")
 		self.durations.append(dur)
 		self.package.append(pkg)
 		self.dram.append(dram)
@@ -32,7 +33,7 @@ class DataRAPL:
 		with open(path + "/data_" + name + ".csv","w") as file:
 			writer = csv.writer(file)
 			writer.writerow(['duration','package','dram','peak_rss','initial_temp','mid_temp','final_temp'])
-
+			print("[Measure]- Saving Data")
 			length = len(self.durations)
 			for i in range(length):
 				writer.writerow([self.durations[i],
@@ -131,8 +132,14 @@ class CollectorRAPL:
    
 			if self.memory:
 				peak_rss = int(self.ret_codes.stderr.read().decode().strip())
-				sub_data.add_data(self.meter.result.duration,self.meter.result.pkg[0],self.meter.result.dram[0],peak_rss,self.init_temp,0,cpu.cpu_temperature())
+				print("Duration = ",self.meter.result.duration)
+				print("Data = ",self.meter.result)
+				print("Package = ",self.meter.result.pkg[0])
+				print("DRAM = ",self.meter.result.dram[0])
+				print("Peak RSS = ",peak_rss)
 
+				sub_data.add_data(self.meter.result.duration,self.meter.result.pkg[0],self.meter.result.dram[0],peak_rss,self.init_temp,0,cpu.cpu_temperature())
+				
 				self.ret_codes = None
    
 			sub_data.save_data(self.path,self.name + str(i),True)
@@ -157,12 +164,28 @@ class CollectorRAPL:
 			if process.returncode != 0:
 				raise Exception("[" + self.cmd +"] - Error when executing this command")
 
+
+			pkg = "ERROR"
+			dram = "ERROR"
+
+			if not self.meter.result.pkg == None:
+				pkg = self.meter.result.pkg[0]
+			else:
+				raise Exception("[PyRAPL] - failed to read energy values")
+
+			if not self.meter.result.dram == None:
+				dram = self.meter.result.dram[0]
+			else:
+				raise Exception("[PyRAPL] - failed to read energy values")	
+
 			if self.memory:
 				# TODO: add logic to save peak_rss
 				peak_rss = int(process.stderr.read().decode().strip())
-				data.add_data(self.meter.result.duration,self.meter.result.pkg[0],self.meter.result.dram[0],peak_rss, self.init_temp, 0 ,cpu.cpu_temperature())
+				print(pkg,dram)
+
+				data.add_data(self.meter.result.duration,pkg,dram,peak_rss, self.init_temp, 0 ,cpu.cpu_temperature())
 			else:
-				data.add_data(self.meter.result.duration,self.meter.result.pkg[0],self.meter.result.dram[0],0, self.init_temp, 0 ,cpu.cpu_temperature())
+				data.add_data(self.meter.result.duration,pkg,dram,0, self.init_temp, 0 ,cpu.cpu_temperature())
 
 			
 
