@@ -81,6 +81,48 @@ measure:
 	python3 ../../main.py "./clang-15.0/spectralnorm-8 5500" "./clang-15.0" "c-spectralnorm-15.0" 40 45 0.01 -r 10
 
 
+define measure_mem
+	for number in 1 2 3 4 5 6 7 8 9 10; do \
+		valgrind --tool=massif --stacks=yes --massif-out-file=$(2)/$(3)_$$number $(1) ; done
+endef
+
+memory:
+#	$(call measure_mem,./clang-3.4/spectralnorm-8 5500,./clang-3.4,mem_test)
+#	python3 ../../mem_parser.py "./clang-3.4/" "c-spectralnorm-3.4"
+#	$(call measure_mem,./clang-3.5/spectralnorm-8 5500,./clang-3.5,mem_test)
+#	python3 ../../mem_parser.py "./clang-3.5/" "c-spectralnorm-3.5"
+#	$(call measure_mem,./clang-3.6/spectralnorm-8 5500,./clang-3.6,mem_test)
+#	python3 ../../mem_parser.py "./clang-3.6/" "c-spectralnorm-3.6"
+	$(call measure_mem,./clang-3.7/spectralnorm-8 5500,./clang-3.7,mem_test)
+	python3 ../../mem_parser.py "./clang-3.7/" "c-spectralnorm-3.7"
+	$(call measure_mem,./clang-3.8/spectralnorm-8 5500,./clang-3.8,mem_test)
+	python3 ../../mem_parser.py "./clang-3.8/" "c-spectralnorm-3.8"
+	$(call measure_mem,./clang-4.0/spectralnorm-8 5500,./clang-4.0,mem_test)
+	python3 ../../mem_parser.py "./clang-4.0/" "c-spectralnorm-4.0"
+	$(call measure_mem,./clang-5.0/spectralnorm-8 5500,./clang-5.0,mem_test)
+	python3 ../../mem_parser.py "./clang-5.0/" "c-spectralnorm-5.0"
+	$(call measure_mem,./clang-6.0/spectralnorm-8 5500,./clang-6.0,mem_test)
+	python3 ../../mem_parser.py "./clang-6.0/" "c-spectralnorm-6.0"
+	$(call measure_mem,./clang-7.0/spectralnorm-8 5500,./clang-7.0,mem_test)
+	python3 ../../mem_parser.py "./clang-7.0/" "c-spectralnorm-7.0"
+	$(call measure_mem,./clang-8.0/spectralnorm-8 5500,./clang-8.0,mem_test)
+	python3 ../../mem_parser.py "./clang-8.0/" "c-spectralnorm-8.0"
+#	$(call measure_mem,./clang-9.0/spectralnorm-8 5500,./clang-9.0,mem_test)
+#	python3 ../../mem_parser.py "./clang-9.0/" "c-spectralnorm-9.0"
+	$(call measure_mem,./clang-10.0/spectralnorm-8 5500,./clang-10.0,mem_test)
+	python3 ../../mem_parser.py "./clang-10.0/" "c-spectralnorm-10.0"
+	$(call measure_mem,./clang-11.1/spectralnorm-8 5500,./clang-11.1,mem_test)
+	python3 ../../mem_parser.py "./clang-11.1/" "c-spectralnorm-11.1"
+	$(call measure_mem,./clang-12.0/spectralnorm-8 5500,./clang-12.0,mem_test)
+	python3 ../../mem_parser.py "./clang-12.0/" "c-spectralnorm-12.0"
+	$(call measure_mem,./clang-13.0/spectralnorm-8 5500,./clang-13.0,mem_test)
+	python3 ../../mem_parser.py "./clang-13.0/" "c-spectralnorm-13.0"
+	$(call measure_mem,./clang-14.0/spectralnorm-8 5500,./clang-14.0,mem_test)
+	python3 ../../mem_parser.py "./clang-14.0/" "c-spectralnorm-14.0"
+	$(call measure_mem,./clang-15.0/spectralnorm-8 5500,./clang-15.0,mem_test)
+	python3 ../../mem_parser.py "./clang-15.0/" "c-spectralnorm-15.0"
+
+
 make_dirs:
 	mkdir -p clang-3.4
 	mkdir -p clang-3.5
