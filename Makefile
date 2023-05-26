@@ -17,12 +17,10 @@ measure:
 	python3 compile_all.py measure
 	python3 disable_services.py -r
 
-	
-missing:	
-	sudo chmod -R a+r /sys/class/powercap/intel-rapl
+
+memory:
 	python3 disable_services.py
-#	cd Python/Mandelbrot && make measure
-	cd Python/Spectral-Norm && make measure
+	python3 compile_all.py memory
 	python3 disable_services.py -r
 
 # TODO: Add other options

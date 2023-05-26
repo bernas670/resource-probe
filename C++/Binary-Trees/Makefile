@@ -99,6 +99,47 @@ measure:
 	python3 ../../main.py "./clang-15.0/binarytrees-8 21" "./clang-15.0" "cpp-bintrees-15.0" 40 45 0.01 -r 10
 
 
+define measure_mem
+	for number in 1 2 3 4 5 6 7 8 9 10; do \
+		valgrind --tool=massif --stacks=yes --massif-out-file=$(2)/$(3)_$$number $(1) ; done
+endef
+
+memory:
+#	$(call measure_mem,./clang-3.4/binarytrees-8 21,./clang-3.4,mem_test)
+#	python3 ../../mem_parser.py "./clang-3.4/" "cpp-bintrees-3.4"
+#	$(call measure_mem,./clang-3.5/binarytrees-8 21,./clang-3.5,mem_test)
+#	python3 ../../mem_parser.py "./clang-3.5/" "cpp-bintrees-3.5"
+#	$(call measure_mem,./clang-3.6/binarytrees-8 21,./clang-3.6,mem_test)
+#	python3 ../../mem_parser.py "./clang-3.6/" "cpp-bintrees-3.6"
+#	$(call measure_mem,./clang-3.7/binarytrees-8 21,./clang-3.7,mem_test)
+#	python3 ../../mem_parser.py "./clang-3.7/" "cpp-bintrees-3.7"
+#	$(call measure_mem,./clang-3.8/binarytrees-8 21,./clang-3.8,mem_test)
+#	python3 ../../mem_parser.py "./clang-3.8/" "cpp-bintrees-3.8"
+#	$(call measure_mem,./clang-4.0/binarytrees-8 21,./clang-4.0,mem_test)
+#	python3 ../../mem_parser.py "./clang-4.0/" "cpp-bintrees-4.0"
+#	$(call measure_mem,./clang-5.0/binarytrees-8 21,./clang-5.0,mem_test)
+#	python3 ../../mem_parser.py "./clang-5.0/" "cpp-bintrees-5.0"
+	$(call measure_mem,./clang-6.0/binarytrees-8 21,./clang-6.0,mem_test)
+	python3 ../../mem_parser.py "./clang-6.0/" "cpp-bintrees-6.0"
+	$(call measure_mem,./clang-7.0/binarytrees-8 21,./clang-7.0,mem_test)
+	python3 ../../mem_parser.py "./clang-7.0/" "cpp-bintrees-7.0"
+	$(call measure_mem,./clang-8.0/binarytrees-8 21,./clang-8.0,mem_test)
+	python3 ../../mem_parser.py "./clang-8.0/" "cpp-bintrees-8.0"
+#	$(call measure_mem,./clang-9.0/binarytrees-8 21,./clang-9.0,mem_test)
+#	python3 ../../mem_parser.py "./clang-9.0/" "cpp-bintrees-9.0"
+	$(call measure_mem,./clang-10.0/binarytrees-8 21,./clang-10.0,mem_test)
+	python3 ../../mem_parser.py "./clang-10.0/" "cpp-bintrees-10.0"
+	$(call measure_mem,./clang-11.1/binarytrees-8 21,./clang-11.1,mem_test)
+	python3 ../../mem_parser.py "./clang-11.1/" "cpp-bintrees-11.1"
+	$(call measure_mem,./clang-12.0/binarytrees-8 21,./clang-12.0,mem_test)
+	python3 ../../mem_parser.py "./clang-12.0/" "cpp-bintrees-12.0"
+	$(call measure_mem,./clang-13.0/binarytrees-8 21,./clang-13.0,mem_test)
+	python3 ../../mem_parser.py "./clang-13.0/" "cpp-bintrees-13.0"
+	$(call measure_mem,./clang-14.0/binarytrees-8 21,./clang-14.0,mem_test)
+	python3 ../../mem_parser.py "./clang-14.0/" "cpp-bintrees-14.0"
+	$(call measure_mem,./clang-15.0/binarytrees-8 21,./clang-15.0,mem_test)
+	python3 ../../mem_parser.py "./clang-15.0/" "cpp-bintrees-15.0"
+
 
 make_dirs:
 	mkdir -p clang-3.4

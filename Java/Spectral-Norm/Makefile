@@ -76,6 +76,45 @@ measure:
 	(cd ./java-19 && python3 ../../../main.py "$(JAVA19)java spectralnorm3 5500" "." "java-spectralnorm-19" 40 45 0.01 -r 10); cd ..
 	(cd ./java-20 && python3 ../../../main.py "$(JAVA20)java spectralnorm3 5500" "." "java-spectralnorm-20" 40 45 0.01 -r 10); cd ..
 
+define measure_mem
+	for number in 1 2 3 4 5 6 7 8 9 10; do \
+		valgrind --tool=massif --stacks=yes --massif-out-file=$(2)/$(3)_$$number $(1) ; done
+endef
+
+memory:
+#	cd ./java-6 && $(call measure_mem,$(JAVA6)java spectralnorm3 5500,./,mem_test) ; cd ..
+#	python3 ../../mem_parser.py "./java-6/" "java-spectralnorm-6"
+#	cd ./java-7 && $(call measure_mem,$(JAVA7)java spectralnorm3 5500,./,mem_test) ; cd ..
+#	python3 ../../mem_parser.py "./java-7/" "java-spectralnorm-7"
+#	cd ./java-8.0 && $(call measure_mem,$(JAVA80)java spectralnorm3 5500,./,mem_test) ; cd ..
+#	python3 ../../mem_parser.py "./java-8.0/" "java-spectralnorm-8.0"
+#	cd ./java-8.1 && $(call measure_mem,$(JAVA81)java spectralnorm3 5500,./,mem_test) ; cd ..
+#	python3 ../../mem_parser.py "./java-8.1/" "java-spectralnorm-8.1"
+#	cd ./java-9 && $(call measure_mem,$(JAVA9)java spectralnorm3 5500,./,mem_test) ; cd ..
+#	python3 ../../mem_parser.py "./java-9/" "java-spectralnorm-9"
+	cd ./java-10 && $(call measure_mem,$(JAVA10)java spectralnorm3 5500,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-10/" "java-spectralnorm-10"
+	cd ./java-11 && $(call measure_mem,$(JAVA11)java spectralnorm3 5500,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-11/" "java-spectralnorm-11"
+	cd ./java-12 && $(call measure_mem,$(JAVA12)java spectralnorm3 5500,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-12/" "java-spectralnorm-12"
+	cd ./java-13 && $(call measure_mem,$(JAVA13)java spectralnorm3 5500,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-13/" "java-spectralnorm-13"
+	cd ./java-14 && $(call measure_mem,$(JAVA14)java spectralnorm3 5500,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-14/" "java-spectralnorm-14"
+	cd ./java-15 && $(call measure_mem,$(JAVA15)java spectralnorm3 5500,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-15/" "java-spectralnorm-15"
+	cd ./java-16 && $(call measure_mem,$(JAVA16)java spectralnorm3 5500,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-16/" "java-spectralnorm-16"
+	cd ./java-17 && $(call measure_mem,$(JAVA17)java spectralnorm3 5500,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-17/" "java-spectralnorm-17"
+	cd ./java-18 && $(call measure_mem,$(JAVA18)java spectralnorm3 5500,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-18/" "java-spectralnorm-18"
+	cd ./java-19 && $(call measure_mem,$(JAVA19)java spectralnorm3 5500,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-19/" "java-spectralnorm-19"
+	cd ./java-20 && $(call measure_mem,$(JAVA20)java spectralnorm3 5500,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-20/" "java-spectralnorm-20"
+
 
 make_dirs:
 	mkdir -p java-6

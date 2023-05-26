@@ -77,6 +77,46 @@ measure:
 	(cd ./java-20 && python3 ../../../main.py "$(JAVA20)java mandelbrot6 16000" "." "java-mandelbrot-20" 40 45 0.01 -r 10); cd ..
 
 
+define measure_mem
+	for number in 1 2 3 4 5 6 7 8 9 10; do \
+		valgrind --tool=massif --stacks=yes --massif-out-file=$(2)/$(3)_$$number $(1) ; done
+endef
+
+memory:
+	cd ./java-6 && $(call measure_mem,$(JAVA6)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-6/" "java-mandelbrot-6"
+	cd ./java-7 && $(call measure_mem,$(JAVA7)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-7/" "java-mandelbrot-7"
+	cd ./java-8.0 && $(call measure_mem,$(JAVA80)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-8.0/" "java-mandelbrot-8.0"
+	cd ./java-8.1 && $(call measure_mem,$(JAVA81)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-8.1/" "java-mandelbrot-8.1"
+	cd ./java-9 && $(call measure_mem,$(JAVA9)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-9/" "java-mandelbrot-9"
+	cd ./java-10 && $(call measure_mem,$(JAVA10)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-10/" "java-mandelbrot-10"
+	cd ./java-11 && $(call measure_mem,$(JAVA11)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-11/" "java-mandelbrot-11"
+	cd ./java-12 && $(call measure_mem,$(JAVA12)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-12/" "java-mandelbrot-12"
+	cd ./java-13 && $(call measure_mem,$(JAVA13)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-13/" "java-mandelbrot-13"
+	cd ./java-14 && $(call measure_mem,$(JAVA14)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-14/" "java-mandelbrot-14"
+	cd ./java-15 && $(call measure_mem,$(JAVA15)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-15/" "java-mandelbrot-15"
+	cd ./java-16 && $(call measure_mem,$(JAVA16)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-16/" "java-mandelbrot-16"
+	cd ./java-17 && $(call measure_mem,$(JAVA17)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-17/" "java-mandelbrot-17"
+	cd ./java-18 && $(call measure_mem,$(JAVA18)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-18/" "java-mandelbrot-18"
+	cd ./java-19 && $(call measure_mem,$(JAVA19)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-19/" "java-mandelbrot-19"
+	cd ./java-20 && $(call measure_mem,$(JAVA20)java mandelbrot6 16000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-20/" "java-mandelbrot-20"
+
+
 make_dirs:
 	mkdir -p java-6
 	mkdir -p java-7

@@ -76,6 +76,45 @@ measure:
 	(cd ./java-19 && python3 ../../../main.py "$(JAVA19)java nbody5 50000000" "." "java-nbody-19" 40 45 0.01 -r 10); cd ..
 	(cd ./java-20 && python3 ../../../main.py "$(JAVA20)java nbody5 50000000" "." "java-nbody-20" 40 45 0.01 -r 10); cd ..
 
+define measure_mem
+	for number in 1 2 3 4 5 6 7 8 9 10; do \
+		valgrind --tool=massif --stacks=yes --massif-out-file=$(2)/$(3)_$$number $(1) ; done
+endef
+
+memory:
+	cd ./java-6 && $(call measure_mem,$(JAVA6)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-6/" "java-nbody-6"
+	cd ./java-7 && $(call measure_mem,$(JAVA7)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-7/" "java-nbody-7"
+	cd ./java-8.0 && $(call measure_mem,$(JAVA80)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-8.0/" "java-nbody-8.0"
+	cd ./java-8.1 && $(call measure_mem,$(JAVA81)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-8.1/" "java-nbody-8.1"
+	cd ./java-9 && $(call measure_mem,$(JAVA9)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-9/" "java-nbody-9"
+	cd ./java-10 && $(call measure_mem,$(JAVA10)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-10/" "java-nbody-10"
+	cd ./java-11 && $(call measure_mem,$(JAVA11)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-11/" "java-nbody-11"
+	cd ./java-12 && $(call measure_mem,$(JAVA12)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-12/" "java-nbody-12"
+	cd ./java-13 && $(call measure_mem,$(JAVA13)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-13/" "java-nbody-13"
+	cd ./java-14 && $(call measure_mem,$(JAVA14)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-14/" "java-nbody-14"
+	cd ./java-15 && $(call measure_mem,$(JAVA15)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-15/" "java-nbody-15"
+	cd ./java-16 && $(call measure_mem,$(JAVA16)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-16/" "java-nbody-16"
+	cd ./java-17 && $(call measure_mem,$(JAVA17)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-17/" "java-nbody-17"
+	cd ./java-18 && $(call measure_mem,$(JAVA18)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-18/" "java-nbody-18"
+	cd ./java-19 && $(call measure_mem,$(JAVA19)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-19/" "java-nbody-19"
+	cd ./java-20 && $(call measure_mem,$(JAVA20)java nbody5 50000000,./,mem_test) ; cd ..
+	python3 ../../mem_parser.py "./java-20/" "java-nbody-20"
+
 
 make_dirs:
 	mkdir -p java-6

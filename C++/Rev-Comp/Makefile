@@ -80,6 +80,47 @@ measure:
 	python3 ../../main.py "./clang-14.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-14.0" "cpp-revcomp-14.0" 40 45 0.01 -r 10
 	python3 ../../main.py "./clang-15.0/revcomp-6 0 < ../../revcomp-input25000000.txt  " "./clang-15.0" "cpp-revcomp-15.0" 40 45 0.01 -r 10
 
+define measure_mem
+	for number in 1 2 3 4 5 6 7 8 9 10; do \
+		valgrind --tool=massif --stacks=yes --massif-out-file=$(2)/$(3)_$$number $(1) ; done
+endef
+
+memory:
+#	$(call measure_mem,./clang-3.4/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-3.4,mem_test)
+#	python3 ../../mem_parser.py "./clang-3.4/" "cpp-revcomp-3.4"
+	$(call measure_mem,./clang-3.5/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-3.5,mem_test)
+	python3 ../../mem_parser.py "./clang-3.5/" "cpp-revcomp-3.5"
+	$(call measure_mem,./clang-3.6/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-3.6,mem_test)
+	python3 ../../mem_parser.py "./clang-3.6/" "cpp-revcomp-3.6"
+	$(call measure_mem,./clang-3.7/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-3.7,mem_test)
+	python3 ../../mem_parser.py "./clang-3.7/" "cpp-revcomp-3.7"
+	$(call measure_mem,./clang-3.8/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-3.8,mem_test)
+	python3 ../../mem_parser.py "./clang-3.8/" "cpp-revcomp-3.8"
+	$(call measure_mem,./clang-4.0/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-4.0,mem_test)
+	python3 ../../mem_parser.py "./clang-4.0/" "cpp-revcomp-4.0"
+	$(call measure_mem,./clang-5.0/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-5.0,mem_test)
+	python3 ../../mem_parser.py "./clang-5.0/" "cpp-revcomp-5.0"
+	$(call measure_mem,./clang-6.0/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-6.0,mem_test)
+	python3 ../../mem_parser.py "./clang-6.0/" "cpp-revcomp-6.0"
+	$(call measure_mem,./clang-7.0/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-7.0,mem_test)
+	python3 ../../mem_parser.py "./clang-7.0/" "cpp-revcomp-7.0"
+	$(call measure_mem,./clang-8.0/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-8.0,mem_test)
+	python3 ../../mem_parser.py "./clang-8.0/" "cpp-revcomp-8.0"
+#	$(call measure_mem,./clang-9.0/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-9.0,mem_test)
+#	python3 ../../mem_parser.py "./clang-9.0/" "cpp-revcomp-9.0"
+	$(call measure_mem,./clang-10.0/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-10.0,mem_test)
+	python3 ../../mem_parser.py "./clang-10.0/" "cpp-revcomp-10.0"
+	$(call measure_mem,./clang-11.1/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-11.1,mem_test)
+	python3 ../../mem_parser.py "./clang-11.1/" "cpp-revcomp-11.1"
+	$(call measure_mem,./clang-12.0/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-12.0,mem_test)
+	python3 ../../mem_parser.py "./clang-12.0/" "cpp-revcomp-12.0"
+	$(call measure_mem,./clang-13.0/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-13.0,mem_test)
+	python3 ../../mem_parser.py "./clang-13.0/" "cpp-revcomp-13.0"
+	$(call measure_mem,./clang-14.0/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-14.0,mem_test)
+	python3 ../../mem_parser.py "./clang-14.0/" "cpp-revcomp-14.0"
+	$(call measure_mem,./clang-15.0/revcomp-6 0 < ../../revcomp-input25000000.txt,./clang-15.0,mem_test)
+	python3 ../../mem_parser.py "./clang-15.0/" "cpp-revcomp-15.0"
+
 
 
 make_dirs:
