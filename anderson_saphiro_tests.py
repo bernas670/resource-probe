@@ -107,8 +107,10 @@ def is_normal_dist(s1,a1,da1):
 
     if len(n_normal) == 3:
         return False
-    else:
+    elif len(normal) == 3:
         return True
+    else:
+        return None
         
 
 
@@ -117,7 +119,7 @@ def spearman_coef(df1,df2):
     return p
         
 
-def get_spearman_data(df,writer,cf_exists):
+def get_spearman_data(df,writer,cf_exists,normals):
 
     if not cf_exists:
         writer.writerow([
@@ -129,12 +131,29 @@ def get_spearman_data(df,writer,cf_exists):
                         'spearman_dram-peak_rss',
                         ])
         
-    dur_pckg = spearman_coef(df['duration'],df['package'])
-    dur_dram = spearman_coef(df['duration'],df['dram'])
-    dur_rss = spearman_coef(df['duration'],df['peak_rss'])
-    pckg_dram = spearman_coef(df['package'],df['dram'])
-    pckg_rss = spearman_coef(df['package'],df['peak_rss'])
-    dram_rss = spearman_coef(df['dram'],df['peak_rss'])
+    
+    dur_pckg=dur_dram=dur_rss=pckg_dram=pckg_rss=dram_rss = "NOT VALID"
+
+    if(not ((normals[0] == normals[1] and normals[0] == True) or (normals[0] == None or normals[1] == None )) ):
+        dur_pckg = spearman_coef(df['duration'],df['package'])
+
+    if(not ((normals[0] == normals[2] and normals[0] == True) or (normals[0] == None or normals[2] == None )) ):
+        dur_dram = spearman_coef(df['duration'],df['dram'])
+
+    if(not ((normals[0] == normals[3] and normals[0] == True) or (normals[0] == None or normals[3] == None )) ):
+        dur_rss = spearman_coef(df['duration'],df['peak_rss'])
+
+    if(not ((normals[1] == normals[2] and normals[1] == True) or (normals[1] == None or normals[2] == None )) ):
+        pckg_dram = spearman_coef(df['package'],df['dram'])
+
+    if(not ((normals[1] == normals[3] and normals[1] == True) or (normals[1] == None or normals[3] == None )) ):
+        pckg_rss = spearman_coef(df['package'],df['peak_rss'])
+
+    if(not ((normals[2] == normals[3] and normals[2] == True) or (normals[2] == None or normals[3] == None )) ):
+        dram_rss = spearman_coef(df['dram'],df['peak_rss'])
+    
+
+
 
     writer.writerow([
                     dur_pckg,
@@ -192,22 +211,22 @@ def get_pearson_data(df,writer,pf_exists,normals):
 
     dur_pckg=dur_dram=dur_rss=pckg_dram=pckg_rss=dram_rss = ["NOT VALID","NOT VALID","NOT VALID"]
 
-    if(h_dur_pckg < 0.05 and normals[0] == normals[1]):
+    if(h_dur_pckg < 0.05 and normals[0] == normals[1] and normals[0] == True):
         dur_pckg = pearson_coef(df['duration'],df['package'])
 
-    if(h_dur_dram < 0.05 and normals[0] == normals[2]):
+    if(h_dur_dram < 0.05 and normals[0] == normals[2] and normals[0] == True):
         dur_dram = pearson_coef(df['duration'],df['dram'])
 
-    if(h_dur_rss < 0.05 and normals[0] == normals[3]):
+    if(h_dur_rss < 0.05 and normals[0] == normals[3] and normals[0] == True):
         dur_rss = pearson_coef(df['duration'],df['peak_rss'])
 
-    if(h_pckg_dram < 0.05 and normals[1] == normals[2]):
+    if(h_pckg_dram < 0.05 and normals[1] == normals[2] and normals[1] == True):
         pckg_dram = pearson_coef(df['package'],df['dram'])
 
-    if(h_pckg_rss < 0.05 and normals[1] == normals[3]):
+    if(h_pckg_rss < 0.05 and normals[1] == normals[3] and normals[1] == True):
         pckg_rss = pearson_coef(df['package'],df['peak_rss'])
 
-    if(h_dram_rss < 0.05 and normals[2] == normals[3]):
+    if(h_dram_rss < 0.05 and normals[2] == normals[3] and normals[2] == True):
         dram_rss = pearson_coef(df['dram'],df['peak_rss'])
 
     writer.writerow([
@@ -238,11 +257,6 @@ def get_pearson_data(df,writer,pf_exists,normals):
                     ])
 
 
-
-    
-    
-
-
 def get_test_data(path, file, n_file, c_file, p_file):
     df = pd.read_csv(path + "/" + file)
 
@@ -267,7 +281,7 @@ def get_test_data(path, file, n_file, c_file, p_file):
         for i in range(4):
             is_normal.append(is_normal_dist(normal[i * 3], normal[i * 3 + 1], normal[i * 3 + 2]))
 
-        get_spearman_data(df,writer2,cf_exists)
+        get_spearman_data(df,writer2,cf_exists,is_normal)
 
         get_pearson_data(df,writer3,pf_exists,is_normal)
 
